@@ -1,0 +1,17 @@
+name: psx2rip
+url: https://github.com/thebillington/psx2rip
+status: Open Source
+
+summary: >
+  Bash utility to rip PSX and PS2 game discs to compressed CHD format with
+  automatic game identification via DuckStation and PCSX2 databases.
+
+highlights:
+  - Automates disc detection, identification, ripping and compression
+  - Supports both CD and DVD based PlayStation titles
+  - Uses chdman for lossless CHD compression
+
+tags:
+  - bash
+  - devops
+  - gamedev

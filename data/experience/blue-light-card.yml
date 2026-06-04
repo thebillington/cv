@@ -1,0 +1,75 @@
+company: Blue Light Card
+title: Full Stack Engineer
+start: 2026-02
+end: present
+
+summary: >
+  Full Stack Engineer within the Growth & Engagement team, owning
+  authentication and member services. Driving technical decisions across
+  architecture, quarterly planning and delivery for strategic platform
+  initiatives. Led the extraction of the Members service from a legacy
+  monorepo into a standalone repository and infrastructure stack, establishing
+  the foundation for future globalisation efforts and retirement of legacy PHP
+  services. Delivered dedicated infrastructure, deployment pipelines, migration
+  tooling and operational runbooks while coordinating rollout strategies
+  including traffic splitting and rollback planning. Improved platform
+  reliability by optimising Auth0 integrations, reducing dependency on
+  downstream services through JWT claim enrichment and delivering secure
+  native-to-web session transfer capabilities. Built automation and data
+  validation tooling supporting large-scale migrations and platform
+  modernisation efforts.
+
+achievements:
+  - title: Extracted Members service from monorepo to standalone repo
+    description: Replaced SST with Terraform, built a deployment and dev pipeline, automated endpoint parity test suite covering all API endpoints, and wrote a runbook to support other devs on similar stack migrations.
+    impact: high
+    tags:
+      - architecture
+      - migration
+      - terraform
+      - aws
+      - platform
+      - testing
+      - automation
+
+  - title: Wrote Python scripts for legacy JSON-to-database migration validation
+    description: Validated data integrity across three brands during migration, diffing thousands of employer records to identify and fix inconsistencies.
+    impact: high
+    tags:
+      - automation
+      - python
+      - data
+      - migration
+
+  - title: Mapped complete auth infrastructure across Auth0, Cognito and legacy PHP
+    description: Documented action pipelines, migration flows and the custom authorizer to inform architecture decisions.
+    impact: medium
+    tags:
+      - architecture
+      - security
+      - documentation
+
+  - title: Fixed P1 critical bugs in renewal and profile API flows
+    description: Resolved issue where members hitting renewal weren't triggering the profile API call, preventing access to the renewal flow; investigated and resolved associated UX race conditions.
+    impact: high
+    tags:
+      - delivery
+      - testing
+
+  - title: Migrated AU deployment pipeline to ephemeral GitHub Actions tokens
+    description: Replaced SSO-authenticated PAT tokens with ephemeral GitHub Actions tokens, eliminating manual intervention required every 3 days due to token expiry.
+    impact: medium
+    tags:
+      - devops
+      - github-actions
+      - security
+      - aws
+      - automation
+
+  - title: Resolved verification method defects across brands
+    description: Fixed incorrect missing trusted domain verification and absent UX labels, writing scripts to diff and correct data at scale.
+    impact: medium
+    tags:
+      - delivery
+      - automation
+      - testing

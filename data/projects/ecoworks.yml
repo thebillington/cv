@@ -1,0 +1,18 @@
+name: Ecoworks Monitoring System
+url: https://github.com/thebillington/ecoworks-monitoring
+status: Personal Project
+
+summary: >
+  Built the monitoring system to simplify the process of registering
+  volunteers on site. The system uses SSO for auth and GSheets as a database,
+  allowing staff to perform charity commission annual reporting.
+
+highlights:
+  - SSO-based authentication for volunteer registration
+  - Google Sheets as a database for charity reporting
+  - Simplified charity commission annual reporting process
+
+tags:
+  - python
+  - data
+  - architecture

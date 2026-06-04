@@ -1,0 +1,48 @@
+categories:
+  - name: Languages
+    skills:
+      - Typescript
+      - Python
+      - Kotlin
+      - Java
+      - gbZ80 Assembly
+      - 6502 Assembly
+
+  - name: Frontend
+    skills:
+      - Next
+      - HTML/CSS
+      - Tailwind
+
+  - name: Backend & API
+    skills:
+      - Node
+      - API Gateway
+      - Lambda
+      - OpenAPI
+      - REST API Design
+
+  - name: Mobile
+    skills:
+      - Android/Kotlin
+      - Jetpack Compose
+      - Compose Multiplatform
+
+  - name: Platform & Infrastructure
+    skills:
+      - AWS
+      - Terraform
+      - CI/CD
+      - GitHub Actions
+      - Serverless
+
+  - name: Leadership & Management
+    skills:
+      - Team Building
+      - Engineering Strategy
+      - Technical Architecture
+      - Stakeholder Management
+      - Coaching & Mentoring
+      - Delivery Management
+      - Agile / Scrum
+      - OKR Planning

@@ -1,0 +1,52 @@
+company: Pion
+title: Android Engineer
+start: 2020-09
+end: 2022-01
+
+summary: >
+  Android Engineer responsible for developing and modernising the Student Beans
+  mobile application. Led improvements to application architecture, including
+  migration of networking infrastructure and adoption of Room for local
+  persistence. Rebuilt navigation using scoped ViewModels, reducing coupling
+  and improving maintainability. Delivered features end-to-end in Kotlin while
+  collaborating closely with backend and data engineering teams. Owned
+  implementation of a company-wide impression tracking platform, defining event
+  schemas, building client-side tracking infrastructure and enabling
+  customer-facing analytics through Looker dashboards.
+
+achievements:
+  - title: Modernised data layer with OkHttp and Room ORM
+    description: Migrated from Retrofit to OkHttp and implemented Room ORM for local persistence, improving performance and developer experience.
+    impact: high
+    tags:
+      - android
+      - kotlin
+      - architecture
+      - migration
+
+  - title: Rebuilt navigation using scoped ViewModels
+    description: Reduced coupling and simplified development by rebuilding the navigation architecture with scoped ViewModels.
+    impact: medium
+    tags:
+      - android
+      - kotlin
+      - architecture
+
+  - title: Developed and shipped features end-to-end in Kotlin
+    description: Worked with backend engineers to agree contracts and shipped features across the full mobile stack.
+    impact: medium
+    tags:
+      - android
+      - kotlin
+      - delivery
+      - api
+
+  - title: Owned delivery of impression tracking project
+    description: Worked with data engineering to define Iglu schemas generating unique impression UUIDs per page view, with background services tracking loaded, viewed and clicked offers. Built Looker dashboards in the self-serve CMS for client performance viewing.
+    impact: high
+    tags:
+      - data
+      - delivery
+      - automation
+      - architecture
+      - platform

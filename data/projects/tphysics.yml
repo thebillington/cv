@@ -1,0 +1,18 @@
+name: tphysics
+url: https://github.com/thebillington/tphysics
+status: Open Source
+
+summary: >
+  An Open Source Game Engine built using Python. Many schools refuse to
+  install game libraries such as pygame; therefore I developed a simple
+  engine that works without prior dependencies, with a focus on education.
+
+highlights:
+  - Open Source Python game engine with no external dependencies
+  - Built for education, designed to work in restrictive school environments
+  - Simple API for teaching programming concepts through game development
+
+tags:
+  - python
+  - education
+  - gamedev

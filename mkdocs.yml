@@ -1,0 +1,35 @@
+site_name: Billy Rebecchi - CV
+site_description: CV and career history of Billy Rebecchi
+site_url: https://thebillington.github.io/cv
+repo_url: https://github.com/thebillington/cv
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - About: index.md
+  - Experience: experience.md
+  - Projects: projects.md
+  - Skills: skills.md
+  - Education: education.md
+  - CV Download: cv-download.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/thebillington
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/thebillington
+
+plugins:
+  - search
+  - macros

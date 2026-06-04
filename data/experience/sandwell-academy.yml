@@ -1,0 +1,36 @@
+company: Sandwell Academy
+title: Curriculum Leader for Computer Science
+start: 2017-09
+end: 2019-06
+
+summary: >
+  Curriculum Leader for Computer Science responsible for delivery of GCSE and
+  A-Level Computer Science. Designed curriculum materials, delivered classroom
+  teaching and managed assessment processes. Developed strong communication,
+  presentation and stakeholder management skills while translating complex
+  technical concepts into accessible learning experiences.
+
+achievements:
+  - title: Delivered A-Level and GCSE Computer Science to classes of 30
+    description: Classroom teacher managing behaviour, planning lessons, and delivering formative and summative assessment.
+    impact: medium
+    tags:
+      - communication
+      - delivery
+      - leadership
+
+  - title: Designed open-source Computer Science curriculum
+    description: Designed GCSE and A-Level (J276/H446) curriculum content available open source and still widely used today in classrooms via Staffs University CSISC.
+    impact: high
+    tags:
+      - leadership
+      - delivery
+      - communication
+      - documentation
+
+  - title: Developed soft skills in high-pressure environment
+    description: Gained confidence in public speaking, ability to work under pressure, managed difficult conversations, and adhered to tight deadlines during exam season.
+    impact: low
+    tags:
+      - communication
+      - leadership

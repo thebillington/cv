@@ -1,0 +1,39 @@
+company: Appoly
+title: Junior Software Engineer
+start: 2019-06
+end: 2020-08
+
+summary: >
+  Software Engineer working across a wide range of client projects spanning
+  Android, iOS, backend systems and hardware integrations. Regularly delivered
+  features within unfamiliar codebases and technology stacks, requiring rapid
+  understanding of business requirements and technical constraints. Developed
+  custom networking solutions including binary image processing services over
+  raw TCP/IP and low-level FTP integrations supporting communication with
+  legacy industrial hardware systems.
+
+achievements:
+  - title: Delivered features across legacy Java and modern Kotlin apps
+    description: Regularly jumped into unfamiliar codebases on behalf of clients to deliver new features and deploy to the Play Store.
+    impact: medium
+    tags:
+      - android
+      - java
+      - kotlin
+      - delivery
+
+  - title: Built Python server for binary image streams over raw TCP/IP
+    description: Handled hardware integration by parsing images out of an open TCP connection and sending them to a Laravel server.
+    impact: medium
+    tags:
+      - python
+      - architecture
+      - backend
+
+  - title: Implemented socket-level FTP client in iOS
+    description: Supported Windows NT server communication to pull pressure and flow statistics from a gas refill monitoring device.
+    impact: low
+    tags:
+      - ios
+      - data
+      - architecture

@@ -1,0 +1,61 @@
+company: Sano Genetics
+title: Engineering Manager
+start: 2025-06
+end: 2026-02
+
+summary: >
+  Engineering Manager leading the Logistics squad within a health-tech research
+  platform. Responsible for aligning engineering delivery with product strategy
+  and business objectives while supporting a cross-functional team. Led
+  migration of kits and orders from legacy studies into a unified V2 workflow,
+  enabling removal of deprecated code paths and simplifying operational
+  processes. Designed technical specifications for logistics provider
+  integrations, automating kit dispatch, return and assay workflows. Built
+  systems for ingestion and matching of external genetic datasets, enabling
+  participant cohorting and targeted communications at scale.
+
+achievements:
+  - title: Led delivery in blue crew aligned to business strategy
+    description: Aligned feature development with long-term business goals, leading to improved product-minded development focused on driving value for participants.
+    impact: high
+    tags:
+      - management
+      - leadership
+      - delivery
+      - stakeholder-management
+
+  - title: Migrated kits and orders from legacy studies into V2 workflow
+    description: Removed old code and created parity across databases, enabling removal of deprecated nullable fields.
+    impact: high
+    tags:
+      - migration
+      - delivery
+      - data
+      - architecture
+
+  - title: Designed and delivered technical PRDs for genetic results and logistics
+    description: Worked with logistics providers to implement APIs and automate kit dispatch, return and assay process.
+    impact: high
+    tags:
+      - delivery
+      - management
+      - stakeholder-management
+      - architecture
+
+  - title: Built system to pull genetic data from external sources
+    description: Matched data to participants in the Sano platform via UUID and cohorting users to send targeted communications.
+    impact: medium
+    tags:
+      - data
+      - python
+      - automation
+      - architecture
+
+  - title: Built Slack bot in Python for triage user rota
+    description: Created automations based on current rota, creating transparency for triage workflows and improving engineering response times.
+    impact: medium
+    tags:
+      - automation
+      - python
+      - process-improvement
+      - devops

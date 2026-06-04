@@ -1,0 +1,65 @@
+company: Pion
+title: Engineering Manager
+start: 2022-01
+end: 2025-06
+
+summary: >
+  Engineering Manager responsible for engineering effectiveness, platform
+  initiatives and operational excellence across multiple squads. Developed
+  Python-based analytics pipelines to surface DORA and SPACE metrics from
+  GitLab data, enabling data-driven improvements to engineering performance.
+  Led engineering delivery for ISO27001 compliance, introducing automated
+  vulnerability reporting and security monitoring processes. Built reusable
+  backend and frontend service templates to accelerate development and improve
+  consistency across teams. Redesigned incident management practices,
+  introducing structured reporting and blameless post-mortems that improved
+  operational maturity and learning across the organisation.
+
+achievements:
+  - title: Developed Python pipelines for DORA/SPACE metrics from GitLab data
+    description: Ingested GitLab data to surface DORA and SPACE metrics, enabling early detection of delivery bottlenecks and improving cycle time across the board.
+    impact: high
+    tags:
+      - devops
+      - python
+      - automation
+      - data
+      - delivery
+      - leadership
+
+  - title: Built Python Slack bots for weekly eNPS pulse surveys and on-call rotas
+    description: Automated engineering pulse surveys and surfaced on-call rotas, improving team engagement and operational visibility.
+    impact: medium
+    tags:
+      - automation
+      - python
+      - process-improvement
+      - leadership
+
+  - title: Led engineering ISO27001 delivery
+    description: Worked with general counsel to ensure compliance with ISO27001 standards; built automated CVE reporting into pipelines, resulting in zero active CVEs.
+    impact: high
+    tags:
+      - security
+      - delivery
+      - management
+      - automation
+      - leadership
+
+  - title: Built template services for backend and frontend development
+    description: Created template services for backend (Node/TypeScript) and frontend (Next/TypeScript) with detailed documentation, reducing TTL for new service development.
+    impact: high
+    tags:
+      - platform
+      - architecture
+      - automation
+      - delivery
+
+  - title: Redesigned incident management processes
+    description: Improved reliability and reduced recovery time through structured reporting and root-cause analysis via blameless post-mortems.
+    impact: medium
+    tags:
+      - process-improvement
+      - management
+      - leadership
+      - delivery

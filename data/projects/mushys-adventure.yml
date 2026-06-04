@@ -1,0 +1,16 @@
+name: "Mushy's Adventure"
+url: https://github.com/thebillington/mushys_adventure
+status: Personal Project
+
+summary: >
+  A platformer Game Boy game written in gbZ80 Assembly for the Global Game
+  Jam 2021 competition. The game runs on real hardware.
+
+highlights:
+  - Written in gbZ80 Assembly for original Game Boy hardware
+  - Created for Global Game Jam 2021 competition
+  - Runs on real hardware, not just emulators
+
+tags:
+  - gamedev
+  - assembly
