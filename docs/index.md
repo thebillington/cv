@@ -1,10 +1,10 @@
-# Billy Rebecchi
+# {{ data.profile.name }}
 
-**Engineering Manager & Full Stack Engineer**
+**{{ data.profile.title }}**
 
 ---
 
-Engineering Manager and Full Stack Engineer with 10+ years of experience building and leading software teams. Proven track record of delivering complex platform migrations, building high-performing teams, and shipping production-quality software across web, mobile, and infrastructure.
+{{ data.profile.summary }}
 
 ## Quick Links
 
@@ -15,6 +15,6 @@ Engineering Manager and Full Stack Engineer with 10+ years of experience buildin
 
 ## Contact
 
-- **Email:** billy.rebecchi@googlemail.com
-- **GitHub:** [github.com/thebillington](https://github.com/thebillington)
-- **LinkedIn:** [linkedin.com/in/thebillington](https://linkedin.com/in/thebillington)
+- **Email:** {{ data.profile.email }}
+- **GitHub:** [{{ data.profile.links.github }}]({{ data.profile.links.github }})
+- **LinkedIn:** [{{ data.profile.links.linkedin }}]({{ data.profile.links.linkedin }})

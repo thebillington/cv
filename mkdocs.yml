@@ -32,4 +32,5 @@ extra:
 
 plugins:
   - search
-  - macros
+  - macros:
+      module_name: main

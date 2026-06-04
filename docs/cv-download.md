@@ -2,11 +2,7 @@
 
 Download the latest version of my CV:
 
-- [Full CV (2 pages)](cv-latest.pdf)
-- [Short CV (1 page)](cv-short.pdf)
-
-## Variants
-
+- [Full CV](cv-full.pdf)
 - [Senior Engineer](cv-senior-engineer.pdf)
 - [Staff Engineer](cv-staff-engineer.pdf)
 - [Engineering Manager](cv-engineering-manager.pdf)
