@@ -25,6 +25,10 @@ TEMPLATES_DIR = os.path.join(ROOT_DIR, "templates")
 
 def ensure_output_dirs():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    # Clean stale PDFs (only keep ones generated this run)
+    for f in os.listdir(OUTPUT_DIR):
+        if f.endswith(".pdf"):
+            os.remove(os.path.join(OUTPUT_DIR, f))
 
 
 def write_data_json(data, name="data"):
@@ -76,21 +80,9 @@ def build_all_pdfs():
 
     success = True
 
-    success &= build_pdf("focused.typ", full_json, "cv-full")
-
-    variants = [
-        ("senior-engineer.typ", "cv-senior-engineer"),
-        ("staff-engineer.typ", "cv-staff-engineer"),
-        ("engineering-manager.typ", "cv-engineering-manager"),
-        ("platform-engineer.typ", "cv-platform-engineer"),
-    ]
-    for template, output_name in variants:
-        success &= build_pdf(template, full_json, output_name)
-
-    shutil.copy(
-        os.path.join(OUTPUT_DIR, "cv-full.pdf"),
-        os.path.join(OUTPUT_DIR, "cv-latest.pdf"),
-    )
+    profile = data["profile"]
+    name = f"cv-{profile['name'].lower().replace(' ', '-')}"
+    success &= build_pdf("focused.typ", full_json, name)
 
     return success
 
