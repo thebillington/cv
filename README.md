@@ -1,15 +1,15 @@
 # CV-as-Code
 
-A CV management system that treats career history as structured data rather than a manually maintained document.
+A CV management system that treats career history as structured data rather than a manually maintained document. Both the PDF and website are generated from the same YAML source files.
 
 ## Architecture
 
 ```
 data/               YAML source-of-truth files
-templates/          Typst PDF templates
+templates/          Typst PDF template
 scripts/            Python build and generation tools
-docs/               MkDocs website pages
-output/             Generated PDFs and website
+docs/               MkDocs website templates (Jinja2)
+output/             Generated PDF and website
 .github/workflows/  CI/CD pipeline
 ```
 
@@ -25,27 +25,19 @@ brew install typst
 # Build everything
 python scripts/build.py
 
-# Build only PDFs
+# Build only PDF
 python scripts/build.py --pdf
 
 # Build only website
 python scripts/build.py --website
 ```
 
-## Generate Specific CVs
+Output: `output/cv-billy-rebecchi.pdf` and website at `output/site/`.
+
+## Generate CV
 
 ```bash
-# Full two-page CV
-python scripts/generate_cv.py full
-
-# One-page short CV
-python scripts/generate_cv.py short
-
-# Variant CV
-python scripts/generate_cv.py --variant engineering-manager
-python scripts/generate_cv.py --variant senior-engineer
-python scripts/generate_cv.py --variant staff-engineer
-python scripts/generate_cv.py --variant platform-engineer
+python scripts/generate_cv.py
 ```
 
 ## Tailor CV from Job Description
@@ -85,28 +77,18 @@ achievements:
       - terraform
 ```
 
-## CV Variants
-
-| Variant | Focus Areas |
-|---|---|
-| Senior Engineer | Architecture, technical delivery, hands-on implementation |
-| Staff Engineer | Cross-team influence, technical strategy, org impact |
-| Engineering Manager | Leadership, delivery, coaching, stakeholder management |
-| Platform Engineer | Terraform, AWS, infrastructure, CI/CD, automation |
-
 ## CI/CD
 
 On every push to `main`:
-1. PDFs are generated from YAML data
-2. Website is built with MkDocs
+1. PDF is generated from YAML data
+2. Website is built with MkDocs (pulling content from YAML via macros plugin)
 3. Both are deployed to GitHub Pages
 
 ## AI Support
 
 Prompts are available in `docs/ai-prompts.md` for using LLMs to:
 - Rewrite achievements
-- Generate targeted summaries
-- Create tailored CV variants
-- Generate cover letters
+- Generate summaries
+- Write cover letters
 
 Source YAML should never be modified automatically.
