@@ -14,6 +14,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 
 from data_loader import load_all
 
@@ -21,6 +22,10 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.join(SCRIPT_DIR, "..")
 OUTPUT_DIR = os.path.join(ROOT_DIR, "output")
 TEMPLATES_DIR = os.path.join(ROOT_DIR, "templates")
+
+
+def cv_pdf_name(profile):
+    return f"cv-{profile['name'].lower().replace(' ', '-')}"
 
 
 def ensure_output_dirs():
@@ -71,9 +76,7 @@ def build_pdf(template_name, data_file, output_name):
     return True
 
 
-def build_all_pdfs():
-    data = load_all()
-
+def build_all_pdfs(data):
     write_data_json(data, "data-full")
 
     full_json = os.path.join(OUTPUT_DIR, "data-full.json")
@@ -81,19 +84,38 @@ def build_all_pdfs():
     success = True
 
     profile = data["profile"]
-    name = f"cv-{profile['name'].lower().replace(' ', '-')}"
+    name = cv_pdf_name(profile)
     success &= build_pdf("focused.typ", full_json, name)
 
     return success
 
 
-def build_website():
+def build_website(profile):
+    pdf_name = cv_pdf_name(profile)
+
+    mkdocs_yml = os.path.join(ROOT_DIR, "mkdocs.yml")
+    with open(mkdocs_yml, "r") as f:
+        config = f.read()
+    config = config.replace("__CV_PDF__", f"{pdf_name}.pdf")
+
+    tmp = tempfile.NamedTemporaryFile(
+        mode="w", suffix=".yml", delete=False, dir=ROOT_DIR
+    )
+    tmp.write(config)
+    tmp.close()
+
     result = subprocess.run(
-        ["mkdocs", "build", "--site-dir", os.path.join(OUTPUT_DIR, "site")],
+        [
+            "mkdocs", "build",
+            "--config-file", tmp.name,
+            "--site-dir", os.path.join(OUTPUT_DIR, "site"),
+        ],
         capture_output=True,
         text=True,
         cwd=ROOT_DIR,
     )
+
+    os.unlink(tmp.name)
 
     if result.returncode != 0:
         print(f"Error building website: {result.stderr}", file=sys.stderr)
@@ -116,14 +138,16 @@ def main():
 
     ensure_output_dirs()
 
+    data = load_all()
+
     if args.website:
-        success = build_website()
+        success = build_website(data["profile"])
     elif args.pdf:
-        success = build_all_pdfs()
+        success = build_all_pdfs(data)
     else:
-        success = build_all_pdfs()
+        success = build_all_pdfs(data)
         if success:
-            success = build_website()
+            success = build_website(data["profile"])
 
     sys.exit(0 if success else 1)
 
