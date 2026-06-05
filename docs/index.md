@@ -8,7 +8,7 @@
 
 ## Quick Links
 
-- [Download CV (PDF)](cv-latest.pdf)
+- [Download CV (PDF)](cv-{{ data.profile.name.lower().replace(" ", "-") }}.pdf)
 - [View Experience](experience.md)
 - [View Projects](projects.md)
 - [View Skills](skills.md)
