@@ -103,6 +103,10 @@
   c += text(size: 8.5pt, fill: luma(130))[
     To see all of my open source projects check #link(data.profile.links.github)[#data.profile.links.github]
   ]
+  c += linebreak()
+  c += text(size: 8.5pt, fill: luma(130))[
+    Or visit my portfolio at #link(data.profile.links.portfolio)[#data.profile.links.portfolio]
+  ]
 
   c
 }
