@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }} - {{ config.site_name }}">
+  <meta property="og:description" content="{{ config.site_description }}">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta property="og:image" content="https://thebillington.co.uk/og-image.png">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:locale" content="en_GB">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} - {{ config.site_name }}">
+  <meta name="twitter:description" content="{{ config.site_description }}">
+  <meta name="twitter:image" content="https://thebillington.co.uk/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ config.extra.person.name | tojson }},
+    "url": {{ config.site_url | tojson }},
+    "image": "https://thebillington.co.uk/og-image.png",
+    "jobTitle": {{ config.extra.person.title | tojson }},
+    "description": {{ config.extra.person.description | tojson }},
+    "email": {{ config.extra.person.email | tojson }},
+    "sameAs": [
+      {{ config.extra.person.github | tojson }},
+      {{ config.extra.person.linkedin | tojson }}
+    ]
+  }
+  </script>
+{% endblock %}
