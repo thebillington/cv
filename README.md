@@ -92,3 +92,4 @@ Prompts are available in `docs/ai-prompts.md` for using LLMs to:
 - Write cover letters
 
 Source YAML should never be modified automatically.
+
