@@ -12,6 +12,7 @@
 - [View Experience](experience.md)
 - [View Projects](projects.md)
 - [View Skills](skills.md)
+- [Showreel]({{ data.profile.links.portfolio }})
 
 ## Contact
 

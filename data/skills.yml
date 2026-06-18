@@ -36,6 +36,15 @@ categories:
       - GitHub Actions
       - Serverless
 
+  - name: AI & ML
+    skills:
+      - LLMs / Local Models
+      - MCP Protocol
+      - AI Agent Development
+      - Prompt Engineering
+      - OpenCode
+      - Qwen
+
   - name: Leadership & Management
     skills:
       - Team Building

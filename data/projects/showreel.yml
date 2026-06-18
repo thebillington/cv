@@ -1,0 +1,22 @@
+name: Personal Project Showreel
+url: https://thebillington.co.uk
+status: Personal Project
+
+summary: >
+  Deployed a collection of personal projects to GitHub Pages using opencode
+  and free LLMs. Includes a JavaScript-based Game Boy Color emulator running
+  assembled ROMs directly in the browser and a custom WebAssembly CPython
+  REPL enabling students to interact with the tphysics game engine without
+  local dependencies.
+
+highlights:
+  - Game Boy Color emulator running assembled GB ROMs in-browser
+  - WebAssembly CPython REPL for student access to tphysics game engine
+  - Multiple legacy projects modernised and deployed to GitHub Pages
+
+tags:
+  - python
+  - webassembly
+  - gamedev
+  - education
+  - ai

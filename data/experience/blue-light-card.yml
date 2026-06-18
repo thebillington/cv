@@ -17,11 +17,16 @@ summary: >
   downstream services through JWT claim enrichment and delivering secure
   native-to-web session transfer capabilities. Built automation and data
   validation tooling supporting large-scale migrations and platform
-  modernisation efforts.
+  modernisation efforts. Established AI adoption policy and tooling standards
+  to de-risk the transition to AI-assisted development, built custom MCP
+  servers delegating tasks to local open-source LLMs to reduce token spend,
+  and created tooling for automated CloudWatch investigations, Grafana
+  dashboard generation and API changes validation with agent-targeted
+  documentation.
 
 achievements:
   - title: Extracted Members service from monorepo to standalone repo
-    description: Replaced SST with Terraform, built a deployment and dev pipeline, automated endpoint parity test suite covering all API endpoints, and wrote a runbook to support other devs on similar stack migrations.
+    description: Replaced SST with Terraform, built a deployment and dev pipeline, automated endpoint parity test suite covering all API endpoints and wrote a runbook to support other devs on similar stack migrations.
     impact: high
     tags:
       - architecture
@@ -65,6 +70,51 @@ achievements:
       - security
       - aws
       - automation
+
+  - title: Built local MCP server delegating tasks to open-source LLMs
+    description: Deployed Qwen3:30b via opencode MCP to offload simple implementation tasks from Claude Enterprise, significantly reducing token spend while maintaining code quality.
+    impact: high
+    tags:
+      - ai
+      - automation
+      - architecture
+      - platform
+
+  - title: Established AI adoption policy and tooling standards
+    description: Defined guidelines for responsible AI use, de-risked transition by encouraging open tooling over unvetted private agents and ensured secure handling of proprietary codebases.
+    impact: high
+    tags:
+      - ai
+      - management
+      - leadership
+      - security
+
+  - title: Built Grafana MCP server for automated dashboard creation
+    description: Developed an MCP server allowing AI agents to run CloudWatch investigations and translate findings directly into Grafana dashboards with automated alerting rules.
+    impact: high
+    tags:
+      - ai
+      - automation
+      - devops
+      - architecture
+
+  - title: Built test tooling with UI for API changes validation
+    description: Created tooling that deploys feature branches to dev, runs automated tests against new and staging code and generates diff reports with history files. Each run produces an agent-targeted README enabling engineers to paste a history path and discuss findings with AI.
+    impact: high
+    tags:
+      - testing
+      - automation
+      - ai
+      - platform
+
+  - title: Built knowledge matrix mapping GitHub repos to AWS accounts
+    description: Created a searchable mapping enabling engineers to rapidly identify which AWS profile and CloudWatch log group corresponds to any repository, reducing investigation time.
+    impact: medium
+    tags:
+      - automation
+      - devops
+      - aws
+      - platform
 
   - title: Resolved verification method defects across brands
     description: Fixed incorrect missing trusted domain verification and absent UX labels, writing scripts to diff and correct data at scale.
