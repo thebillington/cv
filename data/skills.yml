@@ -5,6 +5,7 @@ categories:
       - Python
       - Kotlin
       - Java
+      - Swift
       - gbZ80 Assembly
       - 6502 Assembly
 
@@ -13,6 +14,7 @@ categories:
       - Next
       - HTML/CSS
       - Tailwind
+      - React
 
   - name: Backend & API
     skills:
@@ -20,18 +22,19 @@ categories:
       - API Gateway
       - Lambda
       - OpenAPI
-      - REST API Design
+      - Auth0
+      - Cognito
 
   - name: Mobile
     skills:
       - Android/Kotlin
-      - Jetpack Compose
-      - Compose Multiplatform
+      - Swift/iOS
 
   - name: Platform & Infrastructure
     skills:
       - AWS
       - Terraform
+      - Terraform Cloud
       - CI/CD
       - GitHub Actions
       - Serverless
