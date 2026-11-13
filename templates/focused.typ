@@ -28,7 +28,7 @@
   )
 
   c += align(center, text(size: 8pt, fill: luma(130))[
-    Interactive CV: #link("https://thebillington.co.uk/cv")[https://thebillington.co.uk/cv]
+    Interactive CV: #link(data.profile.links.website)[#data.profile.links.website]
     #h(2fr)
     Portfolio: #link(data.profile.links.portfolio)[#data.profile.links.portfolio]
   ])
