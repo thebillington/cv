@@ -1,6 +1,6 @@
 # Skills
 
-The short version is on the [CV](Billy-Rebecchi-CV.pdf). This is the full list,
+The short version is on the [CV]({{ pdf_name }}). This is the full list,
 including the things I no longer use daily but can still hold a conversation
 about.
 

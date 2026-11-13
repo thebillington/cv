@@ -42,15 +42,18 @@ score to maximise by keyword stuffing.
 
 ## Review rounds
 
-Reviews are independent and adversarial, and each writes a memo to
-`docs/reviews/` before anything is changed.
+Reviews are independent and adversarial, and each writes a memo to `docs/`
+before anything is changed.
 
-1. **Forums**: test each document decision against practitioner sentiment
-   (Reddit, HN, recruiter guidance) rather than taste.
-2. **Market and seniority**: read as the hiring manager; is the scope visible,
-   does it read senior, does it answer "why is an ex-EM applying for this".
-3. **Design and extraction**: type, spacing, print, ATS extraction, mobile
-   layout and accessibility.
+1. **Forums** (`docs/reviews/round-1-forums.md`): tests each document decision
+   against practitioner sentiment (Reddit, HN, recruiter guidance) rather than
+   taste. Responses, including the recommendations that were declined, are in
+   `docs/reviews/round-2-response.md`.
+2. **Market and seniority** (`docs/research/market-keywords.md`): titles, pay,
+   the vocabulary adverts actually use, and what separates a senior CV from a
+   mid-level one.
+3. **Design and extraction** (`docs/design/`): type, colour, layout, print, ATS
+   extraction, mobile layout and accessibility.
 
 ## Tailoring
 

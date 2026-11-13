@@ -15,7 +15,7 @@
 </div>
 
 <div class="button-row">
-  <a class="md-button md-button--primary" href="Billy-Rebecchi-CV.pdf">Download CV (PDF)</a>
+  <a class="md-button md-button--primary" href="{{ pdf_name }}">Download CV (PDF)</a>
   <a class="md-button" href="{{ data.profile.links.github }}">GitHub</a>
   <a class="md-button" href="{{ data.profile.links.linkedin }}">LinkedIn</a>
   <a class="md-button" href="{{ data.profile.links.portfolio }}">Portfolio</a>
@@ -46,4 +46,4 @@
 </div>
 
 The [experience](experience.md) page has the full history with every role, or
-you can [download the two-page CV](Billy-Rebecchi-CV.pdf).
+you can [download the two-page CV]({{ pdf_name }}).
