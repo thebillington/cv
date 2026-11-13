@@ -6,13 +6,15 @@ team: Growth and Engagement
 
 summary: >-
   Full Stack Engineer in the Growth and Engagement team, owning authentication
-  and member services and driving technical decisions across architecture,
-  quarterly planning and delivery. Led the extraction of the Members service
-  from a legacy monorepo into its own repository and Terraform stack, with a
-  deployment pipeline, endpoint parity suite and runbook. Improved reliability
-  by optimising Auth0 integrations, enriching JWT claims and delivering secure
-  native-to-web session transfer. Set AI adoption policy and built the MCP
-  tooling that delegates work to local models.
+  and member services and leading technical direction for current platform
+  workstreams. Proposed and delivered the extraction of the Members service from
+  a legacy monorepo by RFC, including the Terraform stack, deployment pipeline,
+  endpoint parity suite and the monitoring and rollback design that made the
+  cutover reversible. Currently removing the legacy PHP proxy dependency,
+  building pipelines that allow the administration panel to run auditable
+  database queries, and supporting the rollout of a forced client update across
+  the member base. Established the squad's AI-assisted engineering standard and
+  represents the squad in architecture and planning decisions.
 
 stack:
   - TypeScript
@@ -24,10 +26,10 @@ stack:
   - Python
 
 achievements:
-  - title: Extracted the Members service from a legacy monorepo
+  - title: Proposed and delivered the Members service extraction
     description: >-
-      Moved the service to its own repository and Terraform stack, built the
-      deployment and development pipeline, and added an endpoint parity suite
+      Authored the RFC, then built the standalone repository, Terraform stack,
+      deployment and development pipelines, and an endpoint parity suite
       covering the full API so the cutover could be verified rather than
       assumed.
     impact: high
@@ -39,50 +41,66 @@ achievements:
       - platform
       - migration
       - testing
+      - rfc
 
-  - title: Built migration validation tooling for three brands
+  - title: Designed monitoring and rollback for the migration
     description: >-
-      Wrote Python scripts that diffed thousands of employer records between
-      the legacy JSON store and the new database, finding and fixing
-      inconsistencies before they reached members.
+      Instrumented the service so the cutover could be observed accurately and
+      reversed quickly, which is what made the approach acceptable to
+      engineering leadership.
     impact: high
     include_pdf: true
     tags:
-      - python
-      - data
+      - observability
+      - reliability
+      - architecture
       - migration
-      - automation
 
-  - title: Replaced SSO tokens in the AU deployment pipeline
+  - title: Removing the legacy PHP proxy dependency
     description: >-
-      Swapped long-lived PATs for ephemeral GitHub Actions tokens, removing a
-      manual rotation step that had to happen every three days.
-    impact: medium
+      Aligned the approach with engineering leadership, built the pipelines that
+      let the administration panel run auditable database queries, and supported
+      the rollout of the new web and forced update changes, putting retirement
+      of the legacy applications within reach.
+    impact: high
     include_pdf: true
     tags:
-      - devops
-      - github-actions
-      - security
-      - aws
+      - migration
+      - architecture
+      - delivery
+      - stakeholder-management
+      - php
 
-  - title: Set the AI adoption policy and tooling standards
+  - title: Owned the forced client update workstream
     description: >-
-      Defined how engineers use AI on proprietary code: open tooling over
-      unvetted private agents, review rules and secure handling of the
-      codebase.
+      Took on the technical complexity of forcing client updates across the
+      member base, working with the wider business on communications and member
+      operations support.
+    impact: high
+    include_pdf: false
+    tags:
+      - delivery
+      - stakeholder-management
+      - mobile
+
+  - title: Established the squad's AI-assisted engineering standard
+    description: >-
+      Defined the process for documenting AI-assisted work, published shared
+      configuration to the wider engineering team, ran demonstrations and set the
+      guardrails for handling proprietary code.
     impact: high
     include_pdf: true
     tags:
       - ai
       - leadership
       - security
+      - standards
 
   - title: Built MCP servers for agent automation
     description: >-
       One lets agents run CloudWatch investigations and turn findings into
-      Grafana dashboards with alerts; another delegates simple implementation
-      work to Qwen3 30B locally, cutting token spend while keeping code
-      quality.
+      Grafana dashboards with alerts; another delegates implementation work to a
+      local Qwen3 30B model, reducing token spend while keeping code quality.
     impact: high
     include_pdf: true
     tags:
@@ -93,9 +111,9 @@ achievements:
 
   - title: Built a UI for validating API changes
     description: >-
-      Deploys feature branches to dev, runs the test suite against new and
-      staging code, and writes a diff report with an agent-ready README so an
-      engineer can discuss the findings.
+      Deploys feature branches to a development environment, runs the suite
+      against new and staging code, and writes a diff report with agent-ready
+      documentation so an engineer can review the findings.
     impact: high
     include_pdf: true
     tags:
@@ -103,6 +121,43 @@ achievements:
       - automation
       - ai
       - platform
+
+  - title: Ran mob sessions through the renewals rebuild
+    description: >-
+      Organised collaborative sessions during the renewals decoupling and
+      rebuild, raising delivery quality and building shared ownership across the
+      squad.
+    impact: medium
+    include_pdf: false
+    tags:
+      - leadership
+      - delivery
+      - quality
+
+  - title: Validated data migrations across three brands
+    description: >-
+      Wrote the Python tooling that diffed thousands of employer records between
+      the legacy JSON store and the new database, finding and fixing
+      inconsistencies before release.
+    impact: high
+    include_pdf: false
+    tags:
+      - python
+      - data
+      - migration
+      - automation
+
+  - title: Triaged Australian member data issues
+    description: >-
+      Worked directly with the Australian team to analyse and resolve data
+      problems, communicating findings in business terms rather than technical
+      detail.
+    impact: medium
+    include_pdf: false
+    tags:
+      - data
+      - stakeholder-management
+      - analysis
 
   - title: Documented the authentication architecture
     description: >-
@@ -114,24 +169,3 @@ achievements:
       - architecture
       - security
       - documentation
-
-  - title: Fixed P1 defects in renewal and profile flows
-    description: >-
-      Traced why renewal did not trigger the profile API call and resolved the
-      associated race conditions in the UX.
-    impact: high
-    include_pdf: false
-    tags:
-      - delivery
-      - testing
-
-  - title: Built a knowledge matrix of repositories to AWS accounts
-    description: >-
-      Made it quick to find the right AWS profile and CloudWatch log group for
-      any repository.
-    impact: medium
-    include_pdf: false
-    tags:
-      - automation
-      - devops
-      - aws

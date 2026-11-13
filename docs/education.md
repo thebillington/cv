@@ -10,5 +10,5 @@
 {% endif %}
 {% endfor %}
 
-I taught computer science for two years before moving into software full time,
-which is where the explaining-to-people habit comes from.
+Two years teaching computer science preceded full-time software engineering;
+the curriculum materials remain in use.

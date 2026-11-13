@@ -45,5 +45,5 @@
 {% endfor %}
 </div>
 
-The [experience](experience.md) page has the full history with every role, or
-you can [download the two-page CV]({{ pdf_name }}).
+The [experience](experience.md) page carries the full history; the two-page
+CV is available above.

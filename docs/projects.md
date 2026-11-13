@@ -1,6 +1,6 @@
 # Projects
 
-Open source and side projects, mostly built to solve a problem I had.
+Open-source and personal projects, each built to solve a specific problem.
 
 {% for p in data.projects %}
 <h2><a href="{{ p.url }}">{{ p.name }}</a></h2>

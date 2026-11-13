@@ -14,6 +14,7 @@ data/          facts and wording (profile, skills, experience, projects, keyword
 templates/     one Typst template, cv.typ
 scripts/       build, PDF checks, preview, tailoring
 docs/          the website; itself generated from data/
+docs/interview/ the questions a new claim has to survive before it goes in
 assets/fonts/  Source Sans 3 / Source Serif 4 (SIL OFL), embedded in the PDF
 ```
 

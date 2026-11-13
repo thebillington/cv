@@ -61,6 +61,12 @@ before anything is changed.
 `scripts/generate_variant.py` picks the most relevant achievements per role and
 renders the same template. Neither rewrites a sentence.
 
+## Where claims come from
+
+`docs/interview/cv-interview.md` is the question set used to extract specifics
+(systems, scale, trade-offs, outcomes). A claim that cannot be answered there
+does not go in `data/`.
+
 ## Adding a role or achievement
 
 1. Edit `data/experience/<company>.yml`.

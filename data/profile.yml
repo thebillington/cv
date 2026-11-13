@@ -5,25 +5,27 @@ phone: "+44 7736 381977"
 location: United Kingdom
 
 summary: >-
-  Software engineer with seven years building and modernising production
-  systems in TypeScript, Python and Kotlin on AWS. Engineering manager for four
-  years, now hands-on again and owning problems from architecture through
-  rollout and support.
+  Software engineer with seven years building and modernising production systems
+  in TypeScript, Python and Kotlin on AWS. Four years in engineering management,
+  followed by a deliberate return to hands-on delivery. Currently leading the
+  extraction of a members service from a legacy monorepo, the removal of a
+  legacy PHP dependency and the squad's standard for AI-assisted engineering.
 
 intro: >-
   I build and modernise production systems, mostly in TypeScript, Python and
-  Kotlin, usually on AWS with Terraform. I spent four years managing engineers,
-  which taught me that delivery is a design problem as much as an engineering
-  one. Before that I taught computer science, and I still build things for the
-  classroom when I get the chance.
+  Kotlin on AWS. I managed engineers for four years before returning to
+  hands-on delivery, which is why I design for operability as well as delivery.
+  Before that I taught computer science, and I still maintain open-source tools
+  built for classrooms.
 
 highlights:
-  - Extracted a member service from a legacy monorepo onto its own Terraform
-    stack, pipeline and runbook
-  - Managed multiple engineering squads through migrations, incident response
-    and ISO 27001 delivery
-  - Built an open-source Python game engine that runs in locked-down school
-    environments
+  - Proposed and delivered the extraction of the Members service from a legacy
+    monorepo, including its Terraform stack, deployment pipeline and endpoint
+    parity suite
+  - Leading removal of a legacy PHP proxy dependency, retiring the applications
+    that depended on it
+  - Established the squad's AI-assisted engineering standard, covering process,
+    shared configuration and guardrails
 
 links:
   github: https://github.com/thebillington
