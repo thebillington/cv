@@ -1,20 +1,31 @@
-site_name: Billy Rebecchi - CV
-site_description: "Full Stack Software Engineer & Engineering Manager — CV and career history of Billy Rebecchi. TypeScript, Python, AWS, Kotlin, and Terraform."
+site_name: Billy Rebecchi
+site_description: "Full Stack Software Engineer and Engineering Manager. TypeScript, Python, Kotlin, AWS and Terraform."
 site_url: https://billy.rebecchi.uk/
-repo_url: https://github.com/thebillington/cv
 edit_uri: ""
 
 theme:
   name: material
   custom_dir: overrides
+  language: en
+  font: false
   palette:
-    scheme: slate
-    primary: indigo
-    accent: indigo
+    scheme: default
+    primary: custom
+    accent: custom
   features:
     - navigation.sections
     - navigation.top
     - content.code.copy
+
+extra_css:
+  - stylesheets/cv.css
+
+exclude_docs: |
+  research/
+  design/
+  reviews/
+  pipeline.md
+  _*.txt
 
 nav:
   - About: index.md
@@ -22,19 +33,15 @@ nav:
   - Projects: projects.md
   - Skills: skills.md
   - Education: education.md
-  - CV Download: __CV_PDF__
+  - Download CV: __CV_PDF__
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/thebillington
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/thebillington
+  generator: false
   person:
     name: Billy Rebecchi
     email: billy.rebecchi@googlemail.com
-    title: Full Stack Software Engineer & Engineering Manager
-    description: "Senior Full Stack Software Engineer with 7+ years' experience delivering platform, backend, frontend and mobile systems. Skilled across TypeScript, Python, Kotlin, Terraform and AWS."
+    title: Senior Software Engineer
+    description: "Software engineer with seven years building and modernising production systems in TypeScript, Python and Kotlin."
     github: https://github.com/thebillington
     linkedin: https://linkedin.com/in/thebillington
 

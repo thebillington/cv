@@ -2,60 +2,76 @@ company: Sano Genetics
 title: Engineering Manager
 start: 2025-06
 end: 2026-02
+team: Logistics
 
-summary: >
-  Engineering Manager leading the Logistics squad within a health-tech research
-  platform. Responsible for aligning engineering delivery with product strategy
-  and business objectives while supporting a cross-functional team. Led
-  migration of kits and orders from legacy studies into a unified V2 workflow,
-  enabling removal of deprecated code paths and simplifying operational
-  processes. Designed technical specifications for logistics provider
-  integrations, automating kit dispatch, return and assay workflows. Built
-  systems for ingestion and matching of external genetic datasets, enabling
-  participant cohorting and targeted communications at scale.
+summary: >-
+  Engineering Manager for the Logistics squad on a health research platform,
+  aligning delivery with product strategy and business objectives. Led the
+  migration of kits and orders from legacy studies into a single V2 workflow,
+  designed the technical integrations with logistics providers and built the
+  systems that pull external genetic datasets into the platform.
+
+stack:
+  - Python
+  - TypeScript
+  - AWS
+  - Slack API
 
 achievements:
-  - title: Led delivery in blue crew aligned to business strategy
-    description: Aligned feature development with long-term business goals, leading to improved product-minded development focused on driving value for participants.
+  - title: Led delivery of the squad against the product strategy
+    description: >-
+      Ran planning and delivery for a cross-functional team, keeping feature
+      work tied to long-term business goals and participant value.
     impact: high
+    include_pdf: false
     tags:
       - management
       - leadership
       - delivery
-      - stakeholder-management
 
-  - title: Migrated kits and orders from legacy studies into V2 workflow
-    description: Removed old code and created parity across databases, enabling removal of deprecated nullable fields.
+  - title: Migrated kits and orders to a single V2 workflow
+    description: >-
+      Moved data out of legacy studies, created parity across databases and
+      removed the deprecated nullable fields the old paths depended on.
     impact: high
+    include_pdf: true
     tags:
       - migration
       - delivery
       - data
       - architecture
 
-  - title: Designed and delivered technical PRDs for genetic results and logistics
-    description: Worked with logistics providers to implement APIs and automate kit dispatch, return and assay process.
+  - title: Designed and delivered PRDs for logistics integrations
+    description: >-
+      Worked with logistics providers on their APIs to automate kit dispatch,
+      return and assay, turning manual operations into a documented system.
     impact: high
+    include_pdf: true
     tags:
       - delivery
       - management
       - stakeholder-management
       - architecture
 
-  - title: Built system to pull genetic data from external sources
-    description: Matched data to participants in the Sano platform via UUID and cohorting users to send targeted communications.
+  - title: Built ingestion and matching for external genetic data
+    description: >-
+      Matched records to participants by UUID and built cohorts for targeted
+      communication at scale.
     impact: medium
+    include_pdf: true
     tags:
       - data
       - python
       - automation
       - architecture
 
-  - title: Built Slack bot in Python for triage user rota
-    description: Created automations based on current rota, creating transparency for triage workflows and improving engineering response times.
+  - title: Built a Slack bot for the triage rota
+    description: >-
+      Automated the current rota into a bot, making triage ownership visible
+      and cutting response times.
     impact: medium
+    include_pdf: false
     tags:
       - automation
       - python
       - process-improvement
-      - devops

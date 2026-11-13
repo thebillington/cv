@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../assets/fonts/SourceSans3-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../assets/fonts/SourceSans3-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../assets/fonts/SourceSans3-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../assets/fonts/SourceSerif4-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Same palette as the PDF, so the site and the document read as one thing. */
+  --cv-navy: #14314e;
+  --cv-steel: #2a6f97;
+  --cv-slate: #3f4a56;
+  --cv-meta: #5b6570;
+  --cv-ink: #1b1b1b;
+  --cv-paper: #fbfaf7;
+  --cv-panel: #f2f4f6;
+  --cv-rule: #d7dde3;
+
+  --md-primary-fg-color: #14314e;
+  --md-primary-fg-color--light: #24486d;
+  --md-primary-fg-color--dark: #0e2237;
+  --md-accent-fg-color: #2a6f97;
+  --md-typeset-a-color: #2a6f97;
+  --md-default-bg-color: #fbfaf7;
+  --md-text-font: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --md-code-font: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body,
+.md-typeset {
+  font-family: var(--md-text-font);
+  color: var(--cv-ink);
+}
+
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.62;
+}
+
+.md-content__inner {
+  max-width: 46rem;
+}
+
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  color: var(--cv-navy);
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h1 {
+  font-size: 2.1rem;
+  margin: 0 0 0.3rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2.5px solid var(--cv-steel);
+  display: inline-block;
+}
+
+.md-typeset h2 {
+  position: relative;
+  font-size: 1.15rem;
+  margin-top: 2.1rem;
+  padding: 0 0 0.3rem 0.65rem;
+  border-bottom: 1px solid var(--cv-rule);
+}
+
+/* A small steel bar marks the section, matching the rule in the PDF. */
+.md-typeset h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.45em;
+  width: 3px;
+  background: var(--cv-steel);
+}
+
+.md-typeset h3 {
+  font-size: 0.98rem;
+  margin-bottom: 0.1rem;
+}
+
+.md-typeset a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+.md-typeset a:hover {
+  color: var(--cv-navy);
+}
+
+/* Header, nav, footer */
+.md-header,
+.md-tabs {
+  background-color: var(--cv-navy);
+  box-shadow: none;
+}
+
+.md-footer,
+.md-footer-meta {
+  background-color: var(--cv-navy);
+}
+
+/* Hero */
+.md-typeset .hero {
+  margin: 0.2rem 0 0;
+}
+
+.md-typeset .hero-text {
+  min-width: 0;
+}
+
+.md-typeset .hero-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cv-steel);
+  margin: 0.1rem 0 0.5rem;
+}
+
+.md-typeset .hero-contact {
+  color: var(--cv-slate);
+  margin: 0;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.md-typeset .hero-contact .sep {
+  padding: 0 0.15rem;
+}
+
+/* Buttons: one rule for both states, equal widths, never touching the edge */
+.md-typeset .button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.md-typeset .button-row .md-button {
+  margin: 0;
+  padding: 0.5rem 1.1rem;
+  border-radius: 2px;
+  border: 1px solid var(--cv-steel);
+  color: var(--cv-steel);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.md-typeset .button-row .md-button--primary {
+  background-color: var(--cv-steel);
+  border-color: var(--cv-steel);
+  color: #ffffff;
+}
+
+.md-typeset .button-row .md-button:hover,
+.md-typeset .button-row .md-button:focus {
+  background-color: var(--cv-navy);
+  border-color: var(--cv-navy);
+  color: #ffffff;
+}
+
+/* Selected work: the one boxed element, used once so it still means something */
+.md-typeset .outcomes {
+  list-style: none;
+  padding: 0.95rem 1.1rem;
+  margin: 0.8rem 0 0;
+  background: var(--cv-panel);
+  border: 1px solid var(--cv-rule);
+  border-left: 3px solid var(--cv-steel);
+}
+
+.md-typeset .outcomes li {
+  margin: 0 0 0.6rem;
+}
+
+.md-typeset .outcomes li:last-child {
+  margin-bottom: 0;
+}
+
+/* Core skills block */
+.md-typeset .expertise {
+  margin-top: 0.6rem;
+}
+
+.md-typeset .expertise p {
+  margin: 0.2rem 0;
+  color: var(--cv-slate);
+}
+
+.md-typeset .expertise strong {
+  color: var(--cv-navy);
+  font-weight: 600;
+}
+
+/* Roles */
+.md-typeset .role-meta {
+  color: var(--cv-slate);
+  font-size: 0.95rem;
+  margin: 0.15rem 0 0;
+}
+
+.md-typeset .role-stack {
+  color: var(--cv-meta);
+  font-size: 0.82rem;
+  margin: 0.1rem 0 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.md-typeset .role-summary {
+  margin: 0.4rem 0 0.3rem;
+}
+
+.md-typeset .role-list {
+  margin-top: 0.2rem;
+}
+
+.md-typeset .role-list li {
+  margin-bottom: 0.3rem;
+}
+
+.md-typeset .skill-list {
+  color: var(--cv-slate);
+  margin-top: 0.3rem;
+}
+
+/* Accessibility */
+.md-typeset a:focus-visible,
+.md-typeset button:focus-visible,
+.md-nav__link:focus-visible {
+  outline: 2px solid var(--cv-steel);
+  outline-offset: 2px;
+}
+
+.md-header a:focus-visible,
+.md-header button:focus-visible,
+.md-footer a:focus-visible {
+  outline-color: #fbfaf7;
+}
+
+@media screen and (max-width: 44.984375em) {
+  .md-typeset h1 {
+    font-size: 1.55rem;
+  }
+
+  .md-typeset .hero-role {
+    font-size: 0.95rem;
+  }
+
+  .md-typeset .hero-contact span {
+    display: block;
+  }
+
+  .md-typeset .hero-contact .sep {
+    display: none;
+  }
+
+  .md-typeset .hero-contact span + span {
+    margin-top: 0.1rem;
+  }
+
+  .md-typeset .button-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    margin: 1.2rem 0 1.4rem;
+  }
+
+  .md-typeset .button-row .md-button {
+    width: 100%;
+    margin: 0;
+    padding: 0.65rem 1rem;
+  }
+}
+
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-content__button,
+  .button-row {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  body,
+  .md-typeset {
+    font-size: 10pt;
+    color: #000000;
+  }
+
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3 {
+    color: #000000;
+  }
+
+  .md-typeset h2 {
+    border-bottom: 0.5pt solid #999999;
+    page-break-after: avoid;
+  }
+
+  .md-typeset h2::before {
+    background: #000000;
+  }
+
+  .md-typeset li,
+  .md-typeset p {
+    page-break-inside: avoid;
+  }
+}

@@ -3,63 +3,79 @@ title: Engineering Manager
 start: 2022-01
 end: 2025-06
 
-summary: >
-  Engineering Manager responsible for engineering effectiveness, platform
-  initiatives and operational excellence across multiple squads. Developed
-  Python-based analytics pipelines to surface DORA and SPACE metrics from
-  GitLab data, enabling data-driven improvements to engineering performance.
-  Led engineering delivery for ISO27001 compliance, introducing automated
-  vulnerability reporting and security monitoring processes. Built reusable
-  backend and frontend service templates to accelerate development and improve
-  consistency across teams. Redesigned incident management practices,
-  introducing structured reporting and blameless post-mortems that improved
-  operational maturity and learning across the organisation.
+summary: >-
+  Engineering Manager running engineering effectiveness, platform initiatives
+  and operational maturity across multiple squads. Built the measurement that
+  made delivery visible, led engineering delivery for ISO 27001 and replaced ad
+  hoc operations with a documented incident process.
+
+stack:
+  - Python
+  - TypeScript
+  - Node.js
+  - GitLab API
+  - Slack API
+  - AWS
 
 achievements:
-  - title: Developed Python pipelines for DORA/SPACE metrics from GitLab data
-    description: Ingested GitLab data to surface DORA and SPACE metrics, enabling early detection of delivery bottlenecks and improving cycle time across the board.
+  - title: Built DORA and SPACE metrics from GitLab data
+    description: >-
+      Wrote Python pipelines that ingested GitLab history and surfaced delivery
+      and engineering-health metrics, making bottlenecks visible and improving
+      cycle time across the department.
     impact: high
+    include_pdf: true
     tags:
       - devops
       - python
       - automation
       - data
-      - delivery
       - leadership
 
-  - title: Built Python Slack bots for weekly eNPS pulse surveys and on-call rotas
-    description: Automated engineering pulse surveys and surfaced on-call rotas, improving team engagement and operational visibility.
-    impact: medium
-    tags:
-      - automation
-      - python
-      - process-improvement
-      - leadership
-
-  - title: Led engineering ISO27001 delivery
-    description: Worked with general counsel to ensure compliance with ISO27001 standards; built automated CVE reporting into pipelines, resulting in zero active CVEs.
+  - title: Led engineering delivery for ISO 27001
+    description: >-
+      Worked with general counsel on the control set and put automated CVE
+      reporting into the pipelines, finishing with no active CVEs.
     impact: high
+    include_pdf: true
     tags:
       - security
       - delivery
       - management
       - automation
-      - leadership
 
-  - title: Built template services for backend and frontend development
-    description: Created template services for backend (Node/TypeScript) and frontend (Next/TypeScript) with detailed documentation, reducing TTL for new service development.
+  - title: Built service templates for backend and frontend teams
+    description: >-
+      Created documented Node and Next.js templates so a new service started
+      from a known-good baseline, cutting time to a deployed service.
     impact: high
+    include_pdf: true
     tags:
       - platform
       - architecture
       - automation
       - delivery
 
-  - title: Redesigned incident management processes
-    description: Improved reliability and reduced recovery time through structured reporting and root-cause analysis via blameless post-mortems.
+  - title: Redesigned incident management
+    description: >-
+      Introduced structured reporting, blameless post-mortems and follow-up
+      tracking, improving reliability and reducing recovery time.
     impact: medium
+    include_pdf: true
     tags:
       - process-improvement
       - management
       - leadership
       - delivery
+
+  - title: Automated engineering pulse surveys and on-call rotas
+    description: >-
+      Built Python Slack bots for weekly eNPS surveys and the on-call rota,
+      replacing manual chasing with something people could see.
+    impact: medium
+    include_pdf: false
+    tags:
+      - automation
+      - python
+      - process-improvement
+      - leadership

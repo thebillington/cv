@@ -1,95 +1,57 @@
-# CV-as-Code
+# CV as code
 
-A CV management system that treats career history as structured data rather than a manually maintained document. Both the PDF and website are generated from the same YAML source files.
+Billy Rebecchi's CV. Facts live in `data/` as YAML; the two-page PDF and the
+website are both generated from it, so they cannot disagree.
 
-## Architecture
+Aimed at senior software engineering and engineering management roles in the
+UK. The design and content decisions are recorded, with the evidence behind
+them, in `docs/`.
+
+## Layout
 
 ```
-data/               YAML source-of-truth files
-templates/          Typst PDF template
-scripts/            Python build and generation tools
-docs/               MkDocs website templates (Jinja2)
-output/             Generated PDF and website
-.github/workflows/  CI/CD pipeline
+data/          facts and wording (profile, skills, experience, projects, keywords)
+templates/     one Typst template, cv.typ
+scripts/       build, PDF checks, preview, tailoring
+docs/          the website; itself generated from data/
+assets/fonts/  Source Sans 3 / Source Serif 4 (SIL OFL), embedded in the PDF
 ```
 
-## Quick Start
+## Build
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Install Typst (macOS)
-brew install typst
-
-# Build everything
-python scripts/build.py
-
-# Build only PDF
-python scripts/build.py --pdf
-
-# Build only website
-python scripts/build.py --website
+python -m venv .venv && .venv/bin/pip install -r requirements.txt
+make build          # PDF, checks, website
+make pdf            # PDF and checks only
+make check          # re-run the PDF gates
+make preview        # page images + site screenshots for visual review
 ```
 
-Output: `output/cv-billy-rebecchi.pdf` and website at `output/site/`.
+The build fails rather than shipping a broken PDF: wrong page count, missing
+sections, contact details that do not extract, banned filler or a missing core
+skill all stop it (`scripts/check_pdf.py`).
 
-## Generate CV
+## Tailoring a CV to a job description
 
 ```bash
-python scripts/generate_cv.py
+python scripts/score_job.py jd.txt
+python scripts/generate_variant.py -j jd.txt -o output/tailored.pdf
 ```
 
-## Tailor CV from Job Description
+Both read the keyword bank in `data/keywords.yml`. The variant build only
+selects which achievements lead; it never rewrites a sentence.
 
-```bash
-python scripts/generate_variant.py \
-  --job-description path/to/job-description.txt \
-  --output output/cv-tailored.pdf
-```
+## Adding or editing a role
 
-## Score a Job Description
+1. Edit `data/experience/<company>.yml`.
+2. Keep Billy's own wording. If something is not evidenced in the file, it does
+   not go in the CV.
+3. Tag achievements with the terms in `data/keywords.yml`.
+4. Mark the ones that belong on the two-page PDF with `include_pdf: true`.
+5. `make build`. If it no longer fits two pages, cut an older bullet rather
+   than shrinking the type.
 
-```bash
-python scripts/score_job.py path/to/job-description.txt
-```
+## Deploy
 
-## Data Model
-
-Each role in `data/experience/` contains:
-
-```yaml
-company: Company Name
-title: Job Title
-start: YYYY-MM
-end: YYYY-MM or "present"
-
-summary: >
-  Brief description of the role.
-
-achievements:
-  - title: Achievement title
-    description: Detailed description
-    impact: high|medium|low
-    tags:
-      - architecture
-      - leadership
-      - terraform
-```
-
-## CI/CD
-
-On every push to `main`:
-1. PDF is generated from YAML data
-2. Website is built with MkDocs (pulling content from YAML via macros plugin)
-3. Both are deployed to GitHub Pages
-
-## AI Support
-
-Prompts are available in `docs/ai-prompts.md` for using LLMs to:
-- Rewrite achievements
-- Generate summaries
-- Write cover letters
-
-Source YAML should never be modified automatically.
-
+Push to `main`. GitHub Actions builds, runs the checks, and publishes to
+Pages at <https://billy.rebecchi.uk/>. A failing check fails the deploy.

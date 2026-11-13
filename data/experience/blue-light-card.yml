@@ -2,124 +2,136 @@ company: Blue Light Card
 title: Full Stack Engineer
 start: 2026-02
 end: present
+team: Growth and Engagement
 
-summary: >
-  Full Stack Engineer within the Growth & Engagement team, owning
-  authentication and member services. Driving technical decisions across
-  architecture, quarterly planning and delivery for strategic platform
-  initiatives. Led the extraction of the Members service from a legacy
-  monorepo into a standalone repository and infrastructure stack, establishing
-  the foundation for future globalisation efforts and retirement of legacy PHP
-  services. Delivered dedicated infrastructure, deployment pipelines, migration
-  tooling and operational runbooks while coordinating rollout strategies
-  including traffic splitting and rollback planning. Improved platform
-  reliability by optimising Auth0 integrations, reducing dependency on
-  downstream services through JWT claim enrichment and delivering secure
-  native-to-web session transfer capabilities. Built automation and data
-  validation tooling supporting large-scale migrations and platform
-  modernisation efforts. Established AI adoption policy and tooling standards
-  to de-risk the transition to AI-assisted development, built custom MCP
-  servers delegating tasks to local open-source LLMs to reduce token spend,
-  and created tooling for automated CloudWatch investigations, Grafana
-  dashboard generation and API changes validation with agent-targeted
-  documentation.
+summary: >-
+  Full Stack Engineer in the Growth and Engagement team, owning authentication
+  and member services and driving technical decisions across architecture,
+  quarterly planning and delivery. Led the extraction of the Members service
+  from a legacy monorepo into its own repository and Terraform stack, with a
+  deployment pipeline, endpoint parity suite and runbook. Improved reliability
+  by optimising Auth0 integrations, enriching JWT claims and delivering secure
+  native-to-web session transfer. Set AI adoption policy and built the MCP
+  tooling that delegates work to local models.
+
+stack:
+  - TypeScript
+  - AWS
+  - Terraform
+  - Auth0
+  - Cognito
+  - GitHub Actions
+  - Python
 
 achievements:
-  - title: Extracted Members service from monorepo to standalone repo
-    description: Replaced SST with Terraform, built a deployment and dev pipeline, automated endpoint parity test suite covering all API endpoints and wrote a runbook to support other devs on similar stack migrations.
+  - title: Extracted the Members service from a legacy monorepo
+    description: >-
+      Moved the service to its own repository and Terraform stack, built the
+      deployment and development pipeline, and added an endpoint parity suite
+      covering the full API so the cutover could be verified rather than
+      assumed.
     impact: high
+    include_pdf: true
     tags:
       - architecture
-      - migration
       - terraform
       - aws
       - platform
+      - migration
       - testing
-      - automation
 
-  - title: Wrote Python scripts for legacy JSON-to-database migration validation
-    description: Validated data integrity across three brands during migration, diffing thousands of employer records to identify and fix inconsistencies.
+  - title: Built migration validation tooling for three brands
+    description: >-
+      Wrote Python scripts that diffed thousands of employer records between
+      the legacy JSON store and the new database, finding and fixing
+      inconsistencies before they reached members.
     impact: high
+    include_pdf: true
     tags:
-      - automation
       - python
       - data
       - migration
+      - automation
 
-  - title: Mapped complete auth infrastructure across Auth0, Cognito and legacy PHP
-    description: Documented action pipelines, migration flows and the custom authorizer to inform architecture decisions.
+  - title: Replaced SSO tokens in the AU deployment pipeline
+    description: >-
+      Swapped long-lived PATs for ephemeral GitHub Actions tokens, removing a
+      manual rotation step that had to happen every three days.
     impact: medium
-    tags:
-      - architecture
-      - security
-      - documentation
-
-  - title: Fixed P1 critical bugs in renewal and profile API flows
-    description: Resolved issue where members hitting renewal weren't triggering the profile API call, preventing access to the renewal flow; investigated and resolved associated UX race conditions.
-    impact: high
-    tags:
-      - delivery
-      - testing
-
-  - title: Migrated AU deployment pipeline to ephemeral GitHub Actions tokens
-    description: Replaced SSO-authenticated PAT tokens with ephemeral GitHub Actions tokens, eliminating manual intervention required every 3 days due to token expiry.
-    impact: medium
+    include_pdf: true
     tags:
       - devops
       - github-actions
       - security
       - aws
-      - automation
 
-  - title: Built local MCP server delegating tasks to open-source LLMs
-    description: Deployed Qwen3:30b via opencode MCP to offload simple implementation tasks from Claude Enterprise, significantly reducing token spend while maintaining code quality.
+  - title: Set the AI adoption policy and tooling standards
+    description: >-
+      Defined how engineers use AI on proprietary code: open tooling over
+      unvetted private agents, review rules and secure handling of the
+      codebase.
     impact: high
+    include_pdf: true
     tags:
       - ai
-      - automation
-      - architecture
-      - platform
-
-  - title: Established AI adoption policy and tooling standards
-    description: Defined guidelines for responsible AI use, de-risked transition by encouraging open tooling over unvetted private agents and ensured secure handling of proprietary codebases.
-    impact: high
-    tags:
-      - ai
-      - management
       - leadership
       - security
 
-  - title: Built Grafana MCP server for automated dashboard creation
-    description: Developed an MCP server allowing AI agents to run CloudWatch investigations and translate findings directly into Grafana dashboards with automated alerting rules.
+  - title: Built MCP servers for agent automation
+    description: >-
+      One lets agents run CloudWatch investigations and turn findings into
+      Grafana dashboards with alerts; another delegates simple implementation
+      work to Qwen3 30B locally, cutting token spend while keeping code
+      quality.
     impact: high
+    include_pdf: true
     tags:
       - ai
       - automation
       - devops
       - architecture
 
-  - title: Built test tooling with UI for API changes validation
-    description: Created tooling that deploys feature branches to dev, runs automated tests against new and staging code and generates diff reports with history files. Each run produces an agent-targeted README enabling engineers to paste a history path and discuss findings with AI.
+  - title: Built a UI for validating API changes
+    description: >-
+      Deploys feature branches to dev, runs the test suite against new and
+      staging code, and writes a diff report with an agent-ready README so an
+      engineer can discuss the findings.
     impact: high
+    include_pdf: true
     tags:
       - testing
       - automation
       - ai
       - platform
 
-  - title: Built knowledge matrix mapping GitHub repos to AWS accounts
-    description: Created a searchable mapping enabling engineers to rapidly identify which AWS profile and CloudWatch log group corresponds to any repository, reducing investigation time.
+  - title: Documented the authentication architecture
+    description: >-
+      Mapped action pipelines, migration flows and the custom authorizer across
+      Auth0, Cognito and legacy PHP to support architecture decisions.
     impact: medium
+    include_pdf: false
+    tags:
+      - architecture
+      - security
+      - documentation
+
+  - title: Fixed P1 defects in renewal and profile flows
+    description: >-
+      Traced why renewal did not trigger the profile API call and resolved the
+      associated race conditions in the UX.
+    impact: high
+    include_pdf: false
+    tags:
+      - delivery
+      - testing
+
+  - title: Built a knowledge matrix of repositories to AWS accounts
+    description: >-
+      Made it quick to find the right AWS profile and CloudWatch log group for
+      any repository.
+    impact: medium
+    include_pdf: false
     tags:
       - automation
       - devops
       - aws
-      - platform
-
-  - title: Resolved verification method defects across brands
-    description: Fixed incorrect missing trusted domain verification and absent UX labels, writing scripts to diff and correct data at scale.
-    impact: medium
-    tags:
-      - delivery
-      - automation
-      - testing

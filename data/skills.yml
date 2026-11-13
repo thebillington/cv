@@ -1,7 +1,24 @@
+# Skills, in two shapes:
+#
+#   core       the four to six lines that appear in the PDF. Hard, searchable
+#              terms only: nothing that cannot be evidenced in the roles.
+#              Quoted so each line stays a string ("Label: values").
+#   categories the full matrix, used by the website only.
+#
+# Order matters. The first line of each is the one a keyword search hits.
+
+core:
+  - "Languages: TypeScript, Python, Kotlin, Swift, Java"
+  - "Frontend: React, Next.js, Tailwind, HTML/CSS"
+  - "Backend: Node.js, REST, OpenAPI, Lambda, Auth0, Cognito"
+  - "Platform: AWS, Terraform, GitHub Actions, CI/CD, CloudWatch, Grafana"
+  - "Mobile: Android (Kotlin), iOS (Swift)"
+  - "Practice: service extraction, data migration, automated testing, incident response, mentoring"
+
 categories:
   - name: Languages
     skills:
-      - Typescript
+      - TypeScript
       - Python
       - Kotlin
       - Java
@@ -11,50 +28,75 @@ categories:
 
   - name: Frontend
     skills:
-      - Next
-      - HTML/CSS
-      - Tailwind
       - React
+      - Next.js
+      - Tailwind
+      - HTML/CSS
 
-  - name: Backend & API
+  - name: Backend and APIs
     skills:
-      - Node
-      - API Gateway
-      - Lambda
+      - Node.js
+      - REST
       - OpenAPI
+      - AWS Lambda
+      - API Gateway
       - Auth0
       - Cognito
 
   - name: Mobile
     skills:
-      - Android/Kotlin
-      - Swift/iOS
+      - Android (Kotlin)
+      - iOS (Swift)
+      - Room
+      - OkHttp
 
-  - name: Platform & Infrastructure
+  - name: Platform and infrastructure
     skills:
       - AWS
       - Terraform
-      - Terraform Cloud
-      - CI/CD
       - GitHub Actions
+      - CI/CD
       - Serverless
+      - CloudWatch
+      - Grafana
 
-  - name: AI & ML
+  - name: Data
     skills:
-      - LLMs / Local Models
-      - MCP Protocol
-      - AI Agent Development
-      - Prompt Engineering
-      - OpenCode
-      - Qwen
+      - Python data pipelines
+      - GitLab API
+      - Iglu schemas
+      - Looker
+      - migration validation
 
-  - name: Leadership & Management
+  - name: AI and tooling
     skills:
-      - Team Building
-      - Engineering Strategy
-      - Technical Architecture
-      - Stakeholder Management
-      - Coaching & Mentoring
-      - Delivery Management
-      - Agile / Scrum
-      - OKR Planning
+      - LLMs
+      - MCP servers
+      - AI agent development
+      - prompt engineering
+      - opencode
+      - local models
+
+  - name: Engineering practice
+    skills:
+      - technical architecture
+      - service extraction
+      - automated testing
+      - API contract testing
+      - incident management
+      - on-call
+      - DORA metrics
+      - ISO 27001
+      - code review
+      - mentoring
+
+  - name: Leadership
+    skills:
+      - line management
+      - hiring
+      - quarterly planning
+      - technical direction
+      - stakeholder management
+      - coaching
+      - OKRs
+      - agile delivery

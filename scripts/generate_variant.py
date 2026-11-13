@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Generate a tailored CV from a job description.
+"""Generate a CV tailored to one job description.
+
+Selects the most relevant achievements per role using the keyword bank, then
+renders the normal template. It never rewrites Billy's sentences, only chooses
+which evidence leads.
 
 Usage:
-    python scripts/generate_variant.py \\
-        --job-description jd.txt \\
-        --output tailored.pdf
+    python scripts/generate_variant.py --job-description jd.txt --output output/tailored.pdf
 """
 
 import argparse
@@ -13,139 +15,86 @@ import os
 import subprocess
 import sys
 
-from data_loader import load_all
-from score_job import score_jd
+from data_loader import load_all, load_keywords
+from score_job import flatten, rank_achievements, score_jd
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.join(SCRIPT_DIR, "..")
 OUTPUT_DIR = os.path.join(ROOT_DIR, "output")
 TEMPLATES_DIR = os.path.join(ROOT_DIR, "templates")
+FONTS_DIR = os.path.join(ROOT_DIR, "assets", "fonts")
 
 
-def rank_achievements_by_relevance(jd_keywords, experience):
-    ranked = []
-    for role in experience:
-        roles = [role] if isinstance(role, dict) else role
-        for r in roles:
-            for achievement in r.get("achievements", []):
-                tag_matches = sum(
-                    1 for t in achievement.get("tags", [])
-                    if t.lower() in jd_keywords
-                )
-                title_words = set(achievement["title"].lower().split())
-                jd_words = set(jd_keywords.keys())
-                title_matches = len(title_words & jd_words)
-
-                score = tag_matches * 3 + title_matches * 2
-                if achievement.get("impact") == "high":
-                    score += 1
-
-                ranked.append({
-                    "achievement": achievement,
-                    "role": r,
-                    "score": score,
-                })
-
-    ranked.sort(key=lambda x: x["score"], reverse=True)
-    return ranked
-
-
-def select_achievements(ranked, max_per_role=3):
-    selected = {}
-    for item in ranked:
-        company = item["role"]["company"]
-        if company not in selected:
-            selected[company] = []
-        if len(selected[company]) < max_per_role:
-            selected[company].append(item["achievement"])
-    return selected
-
-
-def generate_tailored_pdf(jd_text, output_path):
-    data = load_all()
-    score_result = score_jd(jd_text)
-    jd_keywords = score_result["matched"].copy()
-    jd_keywords.update(score_result["missing"])
-
-    ranked = rank_achievements_by_relevance(jd_keywords, data["experience"])
-    selected = select_achievements(ranked)
-
-    tailored_experience = []
-    for role in data["experience"]:
-        roles = [role] if isinstance(role, dict) else role
-        for r in roles:
-            if r["company"] in selected:
-                tailored = r.copy()
-                tailored["achievements"] = selected[r["company"]]
-                tailored_experience.append(tailored)
-
-    if not tailored_experience:
-        tailored_experience = data["experience"]
-
-    tailored_data = data.copy()
-    tailored_data["experience"] = tailored_experience
-
-    os.makedirs(os.path.dirname(output_path) or OUTPUT_DIR, exist_ok=True)
-
-    # Write data file
-    data_path = output_path.replace(".pdf", ".json")
-    with open(data_path, "w") as f:
-        json.dump(tailored_data, f, indent=2)
-
-    out_dir = os.path.dirname(output_path) or "."
-    template_rel = os.path.relpath(
-        os.path.join(TEMPLATES_DIR, "senior-engineer.typ"), out_dir
-    )
-    data_rel = os.path.relpath(data_path, out_dir)
-
-    typst_content = f'''
-#import "{template_rel}": cv
-#let data = json.decode(read("{data_rel}"))
-#cv(data)
-'''
-
-    typ_file = output_path.replace(".pdf", ".typ")
-    with open(typ_file, "w") as f:
-        f.write(typst_content)
-
-    result = subprocess.run(
-        ["typst", "compile", "--root", ROOT_DIR, typ_file, output_path],
-        capture_output=True,
-        text=True,
-    )
-
-    if result.returncode != 0:
-        print(f"Error: {result.stderr}", file=sys.stderr)
-        sys.exit(1)
-
-    print(f"Generated: {output_path}")
-
-    print(f"\nTailoring Report")
-    print(f"{'=' * 40}")
-    print(f"Matched skills: {', '.join(sorted(score_result['matched'].keys()))}")
-    print(f"Missing skills: {', '.join(sorted(score_result['missing'].keys()))}")
-    print(f"Selected achievements: {sum(len(v) for v in selected.values())} across {len(selected)} roles")
-
-    for company, achievements in selected.items():
-        print(f"\n  {company}:")
-        for a in achievements:
-            print(f"    - {a['title']}")
+def typst_bin():
+    local = os.path.expanduser("~/.local/bin/typst")
+    return local if os.path.exists(local) else "typst"
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate tailored CV from job description")
-    parser.add_argument("--job-description", "-j", required=True,
-                        help="Path to job description text file")
-    parser.add_argument("--output", "-o",
-                        default=os.path.join(OUTPUT_DIR, "cv-tailored.pdf"),
-                        help="Output PDF path")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--job-description", "-j", required=True)
+    parser.add_argument("--output", "-o", default=os.path.join(OUTPUT_DIR, "Billy-Rebecchi-CV-tailored.pdf"))
+    parser.add_argument("--max-per-role", type=int, default=4)
     args = parser.parse_args()
 
-    with open(args.job_description, "r") as f:
+    with open(args.job_description) as f:
         jd_text = f.read()
 
-    generate_tailored_pdf(jd_text, args.output)
+    data = load_all()
+    score = score_jd(jd_text)
+    jd_terms = set(score["matched"]) | set(score["missing"])
+
+    bank = flatten(load_keywords()["groups"])
+    ranked = rank_achievements(jd_terms, data["experience"])
+
+    selected = {}
+    for item in ranked:
+        company = item["role"]["company"]
+        bucket = selected.setdefault(company, [])
+        if len(bucket) < args.max_per_role:
+            bucket.append(item["achievement"])
+
+    for role in data["experience"]:
+        role["achievements"] = selected.get(role["company"], role.get("achievements", []))
+        role["include_pdf"] = True
+
+    os.makedirs(os.path.dirname(args.output), exist_ok=True)
+    data_path = os.path.splitext(args.output)[0] + ".json"
+    with open(data_path, "w") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    typ_file = os.path.splitext(args.output)[0] + ".typ"
+    template_rel = os.path.relpath(os.path.join(TEMPLATES_DIR, "cv.typ"), os.path.dirname(args.output))
+    data_rel = os.path.relpath(data_path, os.path.dirname(args.output))
+    with open(typ_file, "w") as f:
+        f.write(f'#import "{template_rel}": cv\n#let data = json("{data_rel}")\n#cv(data)\n')
+
+    result = subprocess.run(
+        [
+            typst_bin(), "compile",
+            "--root", ROOT_DIR,
+            "--font-path", FONTS_DIR,
+            "--pdf-standard", "ua-1",
+            typ_file, args.output,
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(result.stderr, file=sys.stderr)
+        return 1
+
+    print(f"Generated: {args.output}")
+    print(f"\nCoverage: {score['score']:.0f}% of the advert's bank terms")
+    print(f"Matched: {', '.join(sorted(score['matched'])) or 'none'}")
+    print(f"Gaps:    {', '.join(sorted(score['missing'])) or 'none'}\n")
+    for company, achievements in selected.items():
+        print(f"{company}:")
+        for a in achievements:
+            print(f"  - {a['title']}")
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

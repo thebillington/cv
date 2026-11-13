@@ -1,0 +1,158 @@
+# Keyword bank for score_job.py and the PDF coverage check.
+# Sourced from docs/research/market-keywords.md (UK software engineering, 2026).
+# Terms are matched case-insensitively as phrases.
+
+groups:
+  Languages:
+    - TypeScript
+    - JavaScript
+    - Python
+    - Kotlin
+    - Swift
+    - Java
+
+  Frontend:
+    - React
+    - Next.js
+    - Tailwind
+    - HTML
+    - CSS
+    - accessibility
+
+  Backend and API:
+    - Node.js
+    - REST
+    - OpenAPI
+    - microservices
+    - serverless
+    - Lambda
+    - API Gateway
+    - event-driven
+    - API design
+
+  Mobile:
+    - Android
+    - iOS
+    - Room
+    - OkHttp
+
+  Cloud and platform:
+    - AWS
+    - Terraform
+    - infrastructure as code
+    - CI/CD
+    - GitHub Actions
+    - deployment pipeline
+    - CloudWatch
+    - Grafana
+    - AWS accounts
+
+  Testing and quality:
+    - automated testing
+    - contract testing
+    - integration testing
+    - test automation
+    - parity test
+    - code review
+    - release
+
+  Observability and operations:
+    - monitoring
+    - alerting
+    - dashboards
+    - incident management
+    - incident response
+    - post-mortem
+    - on-call
+    - runbook
+    - reliability
+    - recovery time
+
+  Security:
+    - authentication
+    - authorisation
+    - Auth0
+    - Cognito
+    - JWT
+    - ISO 27001
+    - CVE
+    - security
+
+  Architecture:
+    - system design
+    - technical architecture
+    - service extraction
+    - monorepo
+    - migration
+    - technical debt
+    - scalability
+    - platform
+
+  Delivery:
+    - quarterly planning
+    - roadmap
+    - delivery
+    - agile
+    - OKRs
+
+  Leadership:
+    - engineering manager
+    - line management
+    - hiring
+    - mentoring
+    - coaching
+    - technical direction
+    - stakeholder management
+    - team health
+    - DORA
+    - SPACE
+
+  AI and tooling:
+    - LLM
+    - LLMs
+    - MCP
+    - AI agents
+    - AI-assisted development
+    - prompt engineering
+    - local models
+    - token spend
+
+# Terms that senior engineers, recruiters and hiring managers consistently flag
+# as filler or as a dated signal. check_pdf.py fails the build if any appear.
+avoid:
+  - passionate about
+  - results-driven
+  - results driven
+  - dynamic
+  - self-starter
+  - self motivated
+  - self-motivated
+  - team player
+  - hard-working
+  - hard working
+  - detail-oriented
+  - detail oriented
+  - rockstar
+  - ninja
+  - guru
+  - 10x
+  - synergy
+  - synergies
+  - holistic
+  - spearheaded
+  - leveraged
+  - orchestrated
+  - streamlined
+  - fostered
+  - responsible for
+  - duties included
+  - cutting-edge
+  - go-getter
+  - outside the box
+  - wear many hats
+  - proven track record
+  - value-add
+  - visionary
+  - thought leader
+  - works well under pressure
+  - fast-paced environment

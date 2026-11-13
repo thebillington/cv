@@ -1,21 +1,31 @@
 name: Billy Rebecchi
+title: Senior Software Engineer
 email: billy.rebecchi@googlemail.com
 phone: "+44 7736 381977"
 location: United Kingdom
-title: Full Stack Software Engineer & Engineering Manager
 
 summary: >-
-  Senior Full Stack Software Engineer with 7+ years' experience delivering
-  platform, backend, frontend and mobile systems. Experienced leading
-  large-scale migrations, decomposing legacy platforms and driving technical
-  initiatives from discovery through production. Background spanning software
-  engineering, engineering management, startup leadership and education,
-  combining strong technical execution with effective stakeholder management
-  and strategic thinking. Skilled across TypeScript, Python, Kotlin, Terraform
-  and AWS, with extensive experience modernising systems, improving developer
-  experience and delivering business-critical services. Experienced integrating
-  AI agents and LLMs into engineering workflows, building custom MCP servers
-  and leading AI adoption strategy.
+  Software engineer with seven years building and modernising production
+  systems, mostly in TypeScript, Python and Kotlin on AWS. Engineering manager
+  for four years, running multiple squads through service extraction, data
+  migration and ISO 27001 delivery, and now hands-on again as a full-stack
+  engineer. Comfortable owning a problem from architecture through rollout,
+  runbooks and support.
+
+intro: >-
+  I build and modernise production systems, mostly in TypeScript, Python and
+  Kotlin, usually on AWS with Terraform. I spent four years managing engineers,
+  which taught me that delivery is a design problem as much as an engineering
+  one. Before that I taught computer science, and I still build things for the
+  classroom when I get the chance.
+
+highlights:
+  - Extracted a member service from a legacy monorepo onto its own Terraform
+    stack, pipeline and runbook
+  - Managed multiple engineering squads through migrations, incident response
+    and ISO 27001 delivery
+  - Built an open-source Python game engine that runs in locked-down school
+    environments
 
 links:
   github: https://github.com/thebillington

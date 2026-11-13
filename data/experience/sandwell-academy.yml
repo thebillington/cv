@@ -3,34 +3,22 @@ title: Curriculum Leader for Computer Science
 start: 2017-09
 end: 2019-06
 
-summary: >
-  Curriculum Leader for Computer Science responsible for delivery of GCSE and
-  A-Level Computer Science. Designed curriculum materials, delivered classroom
-  teaching and managed assessment processes. Developed strong communication,
-  presentation and stakeholder management skills while translating complex
-  technical concepts into accessible learning experiences.
+summary: >-
+  Taught GCSE and A-Level Computer Science and wrote the open-source curriculum
+  and teaching materials the department still uses.
+
+stack:
+  - Python
+  - Java
 
 achievements:
-  - title: Delivered A-Level and GCSE Computer Science to classes of 30
-    description: Classroom teacher managing behaviour, planning lessons and delivering formative and summative assessment.
-    impact: medium
-    tags:
-      - communication
-      - delivery
-      - leadership
-
-  - title: Designed open-source Computer Science curriculum
-    description: Designed GCSE and A-Level (J276/H446) curriculum content available open source and still widely used today in classrooms via Staffs University CSISC.
+  - title: Designed an open-source Computer Science curriculum
+    description: >-
+      Wrote GCSE and A-Level (J276/H446) materials that are still used in
+      classrooms through the Staffs University computing network.
     impact: high
+    include_pdf: false
     tags:
-      - leadership
-      - delivery
-      - communication
+      - education
       - documentation
-
-  - title: Developed soft skills in high-pressure environment
-    description: Gained confidence in public speaking, ability to work under pressure, managed difficult conversations and adhered to tight deadlines during exam season.
-    impact: low
-    tags:
-      - communication
       - leadership
