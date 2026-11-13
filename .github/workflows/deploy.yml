@@ -1,4 +1,4 @@
-name: Build and Deploy CV
+name: Build and deploy CV
 
 on:
   push:
@@ -27,27 +27,29 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
           pip install -r requirements.txt
 
       - name: Set up Typst
         uses: typst-community/setup-typst@v3
         with:
-          typst-version: "0.14.0"
+          typst-version: "0.15.1"
 
-      - name: Build PDFs and website
+      - name: Build PDF, check it, build the site
         run: python scripts/build.py
 
-      - name: Upload artifact
+      - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: output/site
 
-      - name: Upload PDFs as build artifact
+      - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdfs
+          name: cv-pdf
           path: output/*.pdf
 
   deploy:

@@ -1,20 +1,19 @@
 # Projects
 
-{% for p in data.projects %}
-## {{ p.name }}
+Open source and side projects, mostly built to solve a problem I had.
 
-**Status:** {{ p.status }}
+{% for p in data.projects %}
+<h2><a href="{{ p.url }}">{{ p.name }}</a></h2>
+
+<p class="role-meta">{{ p.status }}</p>
 
 {{ p.summary }}
 
 {% if p.highlights %}
+<ul class="role-list">
 {% for h in p.highlights %}
-- {{ h }}
+  <li>{{ h }}</li>
 {% endfor %}
+</ul>
 {% endif %}
-
-{% if p.url %}
-**URL:** [{{ p.url }}]({{ p.url }})
-{% endif %}
-
 {% endfor %}

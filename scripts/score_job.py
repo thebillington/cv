@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Score a job description against the CV.
+"""Score a job description against the keyword bank.
 
-Analyses a job description, extracts keywords, and scores how well the
-current CV matches. Used by generate_variant.py and for gap analysis.
+Reports which market terms the advert uses, which of those the CV already
+covers, and which are gaps. Used by generate_variant.py and for gap analysis.
 
 Usage:
     python scripts/score_job.py jd.txt
@@ -12,115 +12,95 @@ import argparse
 import re
 import sys
 
-from data_loader import load_all, load_skills, load_experience
+from data_loader import load_all, load_keywords
 
 
-SKILL_KEYWORDS = [
-    "typescript", "python", "kotlin", "java", "go", "ruby", "sql",
-    "react", "next.js", "node.js", "express", "fastapi", "graphql",
-    "rest", "postgres", "redis",
-    "android", "jetpack compose", "compose multiplatform",
-    "aws", "terraform", "docker", "kubernetes", "ci/cd", "github actions",
-    "serverless", "ecs", "rds", "lambda", "cloudfront",
-    "architecture", "microservices", "migration", "platform",
-    "leadership", "management", "team building", "stakeholder",
-    "agile", "scrum", "okr",
-    "testing", "automation", "devops", "security",
-    "frontend", "backend", "api", "full stack",
-]
+def flatten(groups):
+    terms = []
+    for group in groups.values():
+        terms.extend(group)
+    return terms
 
 
-def extract_keywords(text):
-    """Extract relevant keywords from job description text."""
-    text_lower = text.lower()
-    found = {}
-    for keyword in SKILL_KEYWORDS:
-        pattern = re.compile(re.escape(keyword), re.IGNORECASE)
-        matches = pattern.findall(text_lower)
-        if matches:
-            found[keyword] = len(matches)
-    return found
+def cv_text(data):
+    parts = [data["profile"]["summary"], str(data["profile"].get("highlights", []))]
+    for line in data["skills"].get("core", []):
+        parts.append(line)
+    for cat in data["skills"].get("categories", []):
+        parts.extend(cat.get("skills", []))
+    for role in data["experience"]:
+        parts.append(role.get("summary", ""))
+        parts.extend(role.get("stack", []))
+        for a in role.get("achievements", []):
+            parts.append(a.get("title", ""))
+            parts.append(a.get("description", ""))
+    return "\n".join(parts).lower()
 
 
-def load_skill_set():
-    """Return a flat set of all skills from the CV."""
-    skills = load_skills()
-    skill_set = set()
-    for cat in skills["categories"]:
-        for s in cat["skills"]:
-            skill_set.add(s.lower())
-    return skill_set
+def rank_achievements(jd_terms, experience):
+    """Score each achievement against the advert's terms.
 
-
-def load_achievement_tags():
-    """Return all tags used across achievements."""
-    experience = load_experience()
-    tags = set()
+    Tags weigh most, then words in the title, then a small nudge for the
+    achievement already being marked high impact.
+    """
+    terms = {t.lower() for t in jd_terms}
+    ranked = []
     for role in experience:
-        roles = [role] if isinstance(role, dict) else role
-        for r in roles:
-            for a in r.get("achievements", []):
-                for t in a.get("tags", []):
-                    tags.add(t.lower())
-    return tags
+        for achievement in role.get("achievements", []):
+            tag_score = sum(1 for t in achievement.get("tags", []) if t.lower() in terms) * 3
+            title_words = set(achievement.get("title", "").lower().split())
+            title_score = len(title_words & terms) * 2
+            impact_score = 1 if achievement.get("impact") == "high" else 0
+            ranked.append(
+                {
+                    "achievement": achievement,
+                    "role": role,
+                    "score": tag_score + title_score + impact_score,
+                }
+            )
+    ranked.sort(key=lambda x: x["score"], reverse=True)
+    return ranked
 
 
 def score_jd(jd_text):
-    """Score a job description against the CV."""
-    jd_keywords = extract_keywords(jd_text)
-    my_skills = load_skill_set()
-    my_tags = load_achievement_tags()
+    bank = flatten(load_keywords()["groups"])
+    lower = jd_text.lower()
+    data = load_all()
+    mine = cv_text(data)
 
-    matched = {}
-    missing = {}
-    for keyword, count in sorted(jd_keywords.items(), key=lambda x: x[1], reverse=True):
-        if keyword in my_skills or keyword in my_tags or keyword.replace("/", "").replace("-", "").replace(" ", "") in {s.replace("/", "").replace("-", "").replace(" ", "") for s in my_skills}:
-            matched[keyword] = count
-        else:
-            missing[keyword] = count
+    matched, missing = {}, {}
+    for term in bank:
+        if term.lower() not in lower:
+            continue
+        bucket = matched if term.lower() in mine else missing
+        bucket[term] = bucket.get(term, 0) + lower.count(term.lower())
 
+    total = len(matched) + len(missing)
     return {
-        "total_keywords": len(jd_keywords),
         "matched": matched,
-        "matched_count": len(matched),
         "missing": missing,
-        "missing_count": len(missing),
-        "match_rate": len(matched) / len(jd_keywords) * 100 if jd_keywords else 0,
+        "score": (100 * len(matched) / total) if total else 0.0,
     }
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Score a job description against CV")
-    parser.add_argument("job_description_file", help="Path to job description text file")
-    parser.add_argument("--verbose", "-v", action="store_true", help="Show detailed output")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("jd")
     args = parser.parse_args()
 
-    with open(args.job_description_file, "r") as f:
-        jd_text = f.read()
+    with open(args.jd) as f:
+        result = score_jd(f.read())
 
-    result = score_jd(jd_text)
+    print(f"Coverage: {result['score']:.0f}% of the advert's bank terms\n")
+    print("Covered:")
+    for term in sorted(result["matched"], key=result["matched"].get, reverse=True):
+        print(f"  {term} ({result['matched'][term]})")
+    print("\nGaps:")
+    for term in sorted(result["missing"], key=result["missing"].get, reverse=True):
+        print(f"  {term} ({result['missing'][term]})")
 
-    print(f"Job Description Analysis")
-    print(f"{'=' * 40}")
-    print(f"Total keywords found: {result['total_keywords']}")
-    print(f"Matched: {result['matched_count']}")
-    print(f"Missing: {result['missing_count']}")
-    print(f"Match rate: {result['match_rate']:.1f}%")
-    print()
-
-    if result["matched"]:
-        print("Matched Skills:")
-        for k, v in sorted(result["matched"].items()):
-            print(f"  \u2713 {k} (x{v})")
-
-    if result["missing"]:
-        print()
-        print("Missing Skills:")
-        for k, v in sorted(result["missing"].items()):
-            print(f"  \u2717 {k} (x{v})")
-
-    return result
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

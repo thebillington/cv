@@ -1,21 +1,49 @@
-# {{ data.profile.name }}
+{% set here = data.experience[0] %}
 
-**{{ data.profile.title }}**
+<div class="hero">
+  <div class="hero-text">
+    <h1>{{ data.profile.name }}</h1>
+    <p class="hero-role">{{ data.profile.title }}</p>
+    <p class="hero-contact">
+      <span>{{ data.profile.location }}</span>
+      <span class="sep">·</span>
+      <span><a href="mailto:{{ data.profile.email }}">{{ data.profile.email }}</a></span>
+      <span class="sep">·</span>
+      <span><a href="tel:{{ data.profile.phone.replace(' ', '') }}">{{ data.profile.phone }}</a></span>
+    </p>
+  </div>
+</div>
 
----
+<div class="button-row">
+  <a class="md-button md-button--primary" href="Billy-Rebecchi-CV.pdf">Download CV (PDF)</a>
+  <a class="md-button" href="{{ data.profile.links.github }}">GitHub</a>
+  <a class="md-button" href="{{ data.profile.links.linkedin }}">LinkedIn</a>
+  <a class="md-button" href="{{ data.profile.links.portfolio }}">Portfolio</a>
+</div>
 
-{{ data.profile.summary }}
+{{ data.profile.intro }}
 
-## Quick Links
+## Currently
 
-- [Download CV (PDF)](cv-{{ data.profile.name.lower().replace(" ", "-") }}.pdf)
-- [View Experience](experience.md)
-- [View Projects](projects.md)
-- [View Skills](skills.md)
-- [Showreel]({{ data.profile.links.portfolio }})
+**{{ here.title }}** at **{{ here.company }}** ({{ here.start }} to now), in the
+{{ here.team }} team.
 
-## Contact
+## Selected work
 
-- **Email:** {{ data.profile.email }}
-- **GitHub:** [{{ data.profile.links.github }}]({{ data.profile.links.github }})
-- **LinkedIn:** [{{ data.profile.links.linkedin }}]({{ data.profile.links.linkedin }})
+<ul class="outcomes">
+{% for item in data.profile.highlights %}
+  <li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+## Core skills
+
+<div class="expertise">
+{% for line in data.skills.core %}
+{% set parts = line.split(':') %}
+<p><strong>{{ parts[0] }}</strong> {{ parts[1:] | join(':') | trim }}</p>
+{% endfor %}
+</div>
+
+The [experience](experience.md) page has the full history with every role, or
+you can [download the two-page CV](Billy-Rebecchi-CV.pdf).

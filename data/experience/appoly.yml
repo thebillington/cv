@@ -3,36 +3,48 @@ title: Junior Software Engineer
 start: 2019-06
 end: 2020-08
 
-summary: >
-  Software Engineer working across a wide range of client projects spanning
-  Android, iOS, backend systems and hardware integrations. Regularly delivered
-  features within unfamiliar codebases and technology stacks, requiring rapid
-  understanding of business requirements and technical constraints. Developed
-  custom networking solutions including binary image processing services over
-  raw TCP/IP and low-level FTP integrations supporting communication with
-  legacy industrial hardware systems.
+summary: >-
+  Software engineer on client projects spanning Android, iOS, backend services
+  and hardware integration, usually dropped into an unfamiliar codebase and
+  asked to deliver in it.
+
+stack:
+  - Java
+  - Kotlin
+  - Python
+  - Swift
+  - Laravel
 
 achievements:
   - title: Delivered features across legacy Java and modern Kotlin apps
-    description: Regularly jumped into unfamiliar codebases on behalf of clients to deliver new features and deploy to the Play Store.
+    description: >-
+      Worked in client codebases with no prior context, shipped features and
+      took releases through to the Play Store.
     impact: medium
+    include_pdf: true
     tags:
       - android
       - java
       - kotlin
       - delivery
 
-  - title: Built Python server for binary image streams over raw TCP/IP
-    description: Handled hardware integration by parsing images out of an open TCP connection and sending them to a Laravel server.
+  - title: Built a Python service for binary image streams over TCP
+    description: >-
+      Integrated with industrial hardware by parsing images out of an open
+      socket and forwarding them to a Laravel backend.
     impact: medium
+    include_pdf: true
     tags:
       - python
       - architecture
       - backend
 
-  - title: Implemented socket-level FTP client in iOS
-    description: Supported Windows NT server communication to pull pressure and flow statistics from a gas refill monitoring device.
+  - title: Implemented a socket-level FTP client on iOS
+    description: >-
+      Pulled pressure and flow statistics from a gas refill monitoring device
+      talking to a Windows NT server.
     impact: low
+    include_pdf: false
     tags:
       - ios
       - data

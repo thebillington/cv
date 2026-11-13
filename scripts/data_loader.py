@@ -42,6 +42,10 @@ def load_skills():
     return load_yaml(os.path.join(DATA_DIR, "skills.yml"))
 
 
+def load_keywords():
+    return load_yaml(os.path.join(DATA_DIR, "keywords.yml"))
+
+
 def format_item_dates(items):
     for item in items:
         if "start" in item:
