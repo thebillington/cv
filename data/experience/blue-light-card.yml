@@ -6,8 +6,7 @@ team: Growth and Engagement
 
 summary: >-
   Full Stack Engineer in the Growth and Engagement team, owning authentication
-  and member services and leading technical direction for current platform
-  workstreams. Delivered the Members service extraction by RFC and is now
+  and member services and leading technical direction for current workstreams. Delivered the Members service extraction by RFC and is now
   removing the legacy PHP proxy dependency and building auditable query
   pipelines for the administration panel.
 

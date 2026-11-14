@@ -8,12 +8,13 @@
 # Order matters. The first line of each is the one a keyword search hits.
 
 core:
-  - "Languages: TypeScript, Python, Kotlin, Swift, Java"
+  - "Languages: TypeScript, Python, Kotlin, Java, Swift, C, C++"
   - "Frontend: React, Next.js, Tailwind, HTML/CSS"
   - "Backend: Node.js, REST, OpenAPI, Lambda, Auth0, Cognito"
   - "Platform: AWS, Terraform, GitHub Actions, CI/CD, CloudWatch, Grafana"
+  - "Systems: 6502 and gbZ80 assembly, compilers, emulators, game engines"
   - "Mobile: Android (Kotlin), iOS (Swift)"
-  - "Practice: service extraction, data migration, automated testing, incident response, mentoring"
+  - "Practice: migrations, automated testing, observability, incident response, mentoring"
 
 categories:
   - name: Languages

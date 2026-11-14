@@ -5,26 +5,28 @@ phone: "+44 7736 381977"
 location: United Kingdom
 
 summary: >-
-  Software engineer with seven years building and modernising production systems
-  in TypeScript, Python and Kotlin on AWS. Engineering manager for four years
-  across three squads, now hands-on again and leading the extraction of a
-  members service from a legacy monorepo.
+  Software engineer with seven years across greenfield products and enterprise
+  systems: C, C++ and assembly at the low level, TypeScript, Python and Kotlin
+  in production on AWS. Plans and delivers large migrations with the testing,
+  monitoring and rollback that make them safe, on systems serving 16 million
+  requests per day. Leads incident response and architectural planning across
+  owned services, and is a steady technical voice for engineers at every level.
 
 intro: >-
-  I build and modernise production systems, mostly in TypeScript, Python and
-  Kotlin on AWS. I managed engineers for four years before returning to
-  hands-on delivery, which is why I design for operability as well as delivery.
-  Before that I taught computer science, and I still maintain open-source tools
-  built for classrooms.
+  I build systems, greenfield and at enterprise scale. Some of it is C, C++ and
+  Game Boy assembly; most of it is TypeScript, Python and Kotlin services on
+  AWS. I plan the long migrations and write the tests and monitoring that make
+  them reversible, including on systems taking 16 million requests a day. I lead
+  incidents and architecture for the services I own, and I try to be the calm
+  read other engineers can lean on.
 
 highlights:
-  - Proposed and delivered the extraction of the Members service from a legacy
-    monorepo, including its Terraform stack, deployment pipeline and endpoint
-    parity suite
-  - Built DORA and SPACE measurement from scratch for 20+ engineers across three
-    squads, and led engineering delivery for ISO 27001
-  - Established the squad's AI-assisted engineering standard, including MCP
-    tooling that delegates work to local models
+  - Delivered the Members service extraction by RFC to 100% of production
+    traffic with no rollback, on a platform serving 16 million requests per day
+  - Built the automated testing, monitoring and runbooks that make large
+    migrations reversible, rather than hopeful
+  - Lead incident response and architectural planning across owned services,
+    and mentor engineers at every level
 
 links:
   github: https://github.com/thebillington
