@@ -4,38 +4,56 @@ start: 2022-01
 end: 2025-06
 
 summary: >-
-  Engineering Manager for engineering effectiveness, platform initiatives and
-  operational maturity across multiple squads. Built the measurement that
-  made delivery visible, led engineering delivery for ISO 27001 and replaced ad
-  hoc operations with a documented incident process.
+  Engineering Manager for 20+ engineers across three squads (two web, one
+  backend), owning line management, hiring, delivery metrics and
+  technical direction. Built the delivery measurement from scratch, led
+  engineering delivery for ISO 27001 and redesigned incident management.
 
 stack:
   - Python
   - TypeScript
   - Node.js
   - GitLab API
-  - Slack API
-  - AWS
+  - Redshift
+  - Looker
+  - Airflow
+  - AWS Glue
 
 achievements:
-  - title: Built DORA and SPACE metrics from GitLab data
+  - title: Built DORA and SPACE measurement from scratch
     description: >-
-      Wrote Python pipelines that ingested GitLab history and surfaced delivery
-      and engineering-health metrics, making bottlenecks visible and improving
-      cycle time across the department.
+      Python pipelines ingested GitLab history into Redshift, with Looker
+      dashboards built with the data team, giving 50+ engineers and the senior
+      management team a fortnightly view of delivery and team health that made
+      bottlenecks visible.
     impact: high
     include_pdf: true
     tags:
       - devops
       - python
-      - automation
       - data
       - leadership
+      - dora
+
+  - title: Managed 20+ engineers across three squads
+    description: >-
+      Line management and coaching for leads and engineers, a progression
+      framework and performance playbook, hiring and level calibration, and the
+      delivery of the Level 4 and Level 6 software engineering apprenticeships
+      (76% eNPS).
+    impact: high
+    include_pdf: true
+    tags:
+      - management
+      - hiring
+      - leadership
+      - coaching
 
   - title: Led engineering delivery for ISO 27001
     description: >-
       Worked with general counsel on the control set and put automated CVE
-      reporting into the pipelines, finishing with no active CVEs.
+      reporting into the pipelines, finishing with no active CVEs across the
+      projects in scope.
     impact: high
     include_pdf: true
     tags:
@@ -44,38 +62,16 @@ achievements:
       - management
       - automation
 
-  - title: Built service templates for backend and frontend teams
-    description: >-
-      Created documented Node and Next.js templates so a new service started
-      from a known-good baseline, cutting time to a deployed service.
-    impact: high
-    include_pdf: true
-    tags:
-      - platform
-      - architecture
-      - automation
-      - delivery
-
   - title: Redesigned incident management
     description: >-
-      Introduced structured reporting, blameless post-mortems and follow-up
-      tracking, improving reliability and reducing recovery time.
-    impact: medium
+      Introduced earlier priority alerting, structured reporting, blameless
+      post-mortems and follow-up tracking, improving reliability and reducing
+      recovery time.
+    impact: high
     include_pdf: true
     tags:
       - process-improvement
       - management
+      - reliability
       - leadership
-      - delivery
 
-  - title: Automated engineering pulse surveys and on-call rotas
-    description: >-
-      Built Python Slack bots for weekly eNPS surveys and the on-call rota,
-      replacing manual chasing with something people could see.
-    impact: medium
-    include_pdf: false
-    tags:
-      - automation
-      - python
-      - process-improvement
-      - leadership

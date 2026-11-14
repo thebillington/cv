@@ -2,25 +2,43 @@ company: Pion
 title: Android Engineer
 start: 2020-09
 end: 2022-01
+team: Student Beans
 
 summary: >-
-  Android Engineer for the Student Beans application, owning the data and
-  navigation architecture and the impression tracking platform on which client
-  reporting depended.
+  Android Engineer on the Student Beans consumer application, owning the data
+  and navigation architecture and building the impression tracking platform that
+  client reporting depended on.
 
 stack:
   - Kotlin
   - Android
   - Room
+  - Dagger/Hilt
   - OkHttp
   - Iglu
+  - Snowplow
   - Looker
 
 achievements:
-  - title: Modernised the app data layer
+  - title: Built impression tracking from the ground up
     description: >-
-      Migrated networking from Retrofit to OkHttp and moved local state into
-      Room, improving performance and making the data layer easier to work in.
+      Designed the Iglu schemas with data engineering, built the client-side
+      tracking services that recorded loaded, viewed and clicked offers, and
+      shipped Looker dashboards into the self-serve CMS so clients could see
+      their own paid placement performance.
+    impact: high
+    include_pdf: true
+    tags:
+      - data
+      - architecture
+      - android
+      - platform
+
+  - title: Modernised the app architecture
+    description: >-
+      Migrated networking from Retrofit to OkHttp, introduced Room for local
+      persistence and Navigation components, and rebuilt navigation with scoped
+      ViewModels to reduce coupling.
     impact: high
     include_pdf: true
     tags:
@@ -29,39 +47,3 @@ achievements:
       - architecture
       - migration
 
-  - title: Owned delivery of the impression tracking platform
-    description: >-
-      Defined Iglu event schemas with data engineering, built the client-side
-      tracking services and shipped Looker dashboards so clients could see
-      their own performance.
-    impact: high
-    include_pdf: true
-    tags:
-      - data
-      - delivery
-      - automation
-      - architecture
-      - platform
-
-  - title: Rebuilt navigation with scoped ViewModels
-    description: >-
-      Removed the shared state that made screens hard to change, reducing
-      coupling across the app.
-    impact: medium
-    include_pdf: false
-    tags:
-      - android
-      - kotlin
-      - architecture
-
-  - title: Delivered features end to end in Kotlin
-    description: >-
-      Agreed API contracts with backend engineers and shipped across the full
-      mobile stack.
-    impact: medium
-    include_pdf: false
-    tags:
-      - android
-      - kotlin
-      - delivery
-      - api

@@ -4,9 +4,7 @@ start: 2017-09
 end: 2019-06
 
 summary: >-
-  Taught GCSE and A-Level Computer Science, led a department of two teachers,
-  designed the curriculum and wrote open-source teaching materials still used by
-  the department.
+  Taught GCSE and A-Level Computer Science and led a department of two teachers.
 
 stack:
   - Python

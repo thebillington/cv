@@ -4,11 +4,9 @@ start: 2019-06
 end: 2020-08
 
 summary: >-
-  Software engineer across client applications in Android, iOS and backend
-  services, usually the technical lead on projects that spanned a client, a
-  hardware team and an API. Worked in Java and Kotlin, and integrated devices
-  over Bluetooth Low Energy, raw sockets and FTP where no maintained library
-  existed.
+  Software engineer on client applications in Android, iOS and backend
+  services, integrating hardware over Bluetooth Low Energy, raw sockets and FTP
+  where no maintained library existed.
 
 stack:
   - Java
@@ -19,19 +17,6 @@ stack:
   - Laravel
 
 achievements:
-  - title: Led the AutoRing Android client and its hardware integration
-    description: >-
-      Built the majority of the application infrastructure and UI, acted as the
-      main point of contact for the client and hardware team, wrote the accepted
-      V2 proposal and the iOS specification.
-    impact: high
-    include_pdf: true
-    tags:
-      - android
-      - kotlin
-      - architecture
-      - stakeholder-management
-
   - title: Integrated medical and industrial devices over BLE and sockets
     description: >-
       Implemented a Bluetooth state machine for the TPI DC710 flue gas analyser
@@ -47,24 +32,14 @@ achievements:
       - hardware
       - architecture
 
-  - title: Delivered release parity across Android and iOS
+  - title: Led the AutoRing client and its hardware integration
     description: >-
-      Took the V2 iOS application through QA and release and brought the Android
-      client to feature and visual parity.
-    impact: medium
-    include_pdf: false
+      Built most of the Android application infrastructure and UI, acted as the
+      main contact for the client and hardware team, and wrote the accepted V2
+      proposal and the iOS specification.
+    impact: high
+    include_pdf: true
     tags:
-      - delivery
-      - quality
-      - mobile
-
-  - title: Mentored graduate developers
-    description: >-
-      Reviewed work and introduced architecture components and the MVVM pattern
-      to a team still working in legacy Java.
-    impact: medium
-    include_pdf: false
-    tags:
-      - leadership
-      - mentoring
       - android
+      - kotlin
+      - stakeholder-management

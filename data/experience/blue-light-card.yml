@@ -7,16 +7,9 @@ team: Growth and Engagement
 summary: >-
   Full Stack Engineer in the Growth and Engagement team, owning authentication
   and member services and leading technical direction for current platform
-  workstreams. Proposed and delivered the extraction of the Members service from
-  a legacy monorepo by RFC, including the Terraform stack, deployment pipeline,
-  endpoint parity suite and the monitoring and rollback design that made the
-  cutover reversible. Currently removing the legacy PHP proxy dependency,
-  building pipelines that allow the administration panel to run auditable
-  database queries, and supporting the rollout of a forced client update across
-  the member base. Improved reliability by enriching JWT claims to remove
-  downstream service calls and delivering secure native-to-web session
-  transfer. Established the squad's AI-assisted engineering standard and
-  represents the squad in architecture and planning decisions.
+  workstreams. Delivered the Members service extraction by RFC and is now
+  removing the legacy PHP proxy dependency and building auditable query
+  pipelines for the administration panel.
 
 stack:
   - TypeScript
@@ -44,19 +37,6 @@ achievements:
       - migration
       - testing
       - rfc
-
-  - title: Designed monitoring and rollback for the migration
-    description: >-
-      Instrumented the service so the cutover could be observed accurately and
-      reversed quickly, which is what made the approach acceptable to
-      engineering leadership.
-    impact: high
-    include_pdf: true
-    tags:
-      - observability
-      - reliability
-      - architecture
-      - migration
 
   - title: Removing the legacy PHP proxy dependency
     description: >-

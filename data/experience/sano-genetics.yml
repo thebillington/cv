@@ -53,18 +53,6 @@ achievements:
       - stakeholder-management
       - architecture
 
-  - title: Built ingestion and matching for external genetic data
-    description: >-
-      Matched records to participants by UUID and built cohorts for targeted
-      communication at scale.
-    impact: medium
-    include_pdf: true
-    tags:
-      - data
-      - python
-      - automation
-      - architecture
-
   - title: Built a Slack bot for the triage rota
     description: >-
       Automated the current rota into a bot, making triage ownership visible

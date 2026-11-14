@@ -75,7 +75,9 @@ def load_experience():
                 roles.extend(data)
             else:
                 roles.append(data)
-    roles.sort(key=lambda r: r.get("start", ""), reverse=True)
+    # Reverse chronology by end date: a role that finished later sits higher,
+    # which keeps concurrent roles (a founder role alongside a day job) readable.
+    roles.sort(key=lambda r: "9999-99" if r.get("end") == "present" else r.get("end", ""), reverse=True)
     format_experience_dates(roles)
     return roles
 

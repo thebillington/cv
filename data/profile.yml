@@ -6,26 +6,28 @@ location: United Kingdom
 
 summary: >-
   Software engineer with seven years building and modernising production systems
-  in TypeScript, Python and Kotlin on AWS. Four years in engineering management,
-  followed by a deliberate return to hands-on delivery. Currently leading the
-  extraction of a members service from a legacy monorepo, the removal of a
-  legacy PHP dependency and the squad's standard for AI-assisted engineering.
+  in TypeScript, Python and Kotlin on AWS. Engineering manager for four years
+  across three squads, and co-founder of a funded marketplace that he built and
+  ran as its only engineer. Currently leading the extraction of a members
+  service from a legacy monorepo and the squad's standard for AI-assisted
+  engineering.
 
 intro: >-
   I build and modernise production systems, mostly in TypeScript, Python and
   Kotlin on AWS. I managed engineers for four years before returning to
   hands-on delivery, which is why I design for operability as well as delivery.
-  Before that I taught computer science, and I still maintain open-source tools
-  built for classrooms.
+  I also co-founded and ran a marketplace as its only engineer, which is where I
+  learned to care about cost, support and the parts of a product that nobody
+  demos.
 
 highlights:
   - Proposed and delivered the extraction of the Members service from a legacy
     monorepo, including its Terraform stack, deployment pipeline and endpoint
     parity suite
-  - Leading removal of a legacy PHP proxy dependency, retiring the applications
-    that depended on it
-  - Established the squad's AI-assisted engineering standard, covering process,
-    shared configuration and guardrails
+  - Built DORA and SPACE measurement from scratch for 20+ engineers across three
+    squads, and led engineering delivery for ISO 27001
+  - Co-founded Paperound, raised £120,000 and ran it as the only engineer to
+    £15k per month gross revenue
 
 links:
   github: https://github.com/thebillington

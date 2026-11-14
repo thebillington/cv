@@ -1,0 +1,46 @@
+company: Paperound
+title: Co-founder and CTO
+start: 2020-10
+end: 2022-11
+
+summary: >-
+  Co-founded a marketplace for student work experience and built it as the sole
+  engineer, taking it from nothing to £15k per month gross revenue. Raised
+  £120,000 in seed funding and ran the platform, its integrations and its
+  infrastructure.
+
+stack:
+  - Python
+  - PHP
+  - JavaScript
+  - PostgreSQL
+  - AWS Lambda
+  - Sharetribe
+
+achievements:
+  - title: Raised £120,000 and ran the platform to £15k per month
+    description: >-
+      Led the technical side of the seed round and built the marketplace on
+      Sharetribe Go as the only engineer, owning delivery, reliability and
+      iteration. The services built then still run today.
+    impact: high
+    include_pdf: true
+    tags:
+      - startup
+      - architecture
+      - delivery
+      - operations
+
+  - title: Built the data and automation layer
+    description: >-
+      Wrote a Python scraper (requests, lxml) that extracted users, listings and
+      transactions into PostgreSQL on RDS, and scheduled AWS Lambda jobs for
+      hourly and daily notifications, which drove a clear increase in engagement
+      and recurring revenue.
+    impact: high
+    include_pdf: true
+    tags:
+      - python
+      - data
+      - aws
+      - automation
