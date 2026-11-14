@@ -5,28 +5,35 @@ end: present
 team: Growth and Engagement
 
 summary: >-
-  Full Stack Engineer in the Growth and Engagement team, owning authentication
-  and member services and leading technical direction for current workstreams. Delivered the Members service extraction by RFC and is now
-  removing the legacy PHP proxy dependency and building auditable query
-  pipelines for the administration panel.
+  Owns the member data platform: signup, eligibility, login and renewals, across
+  the private member data store, the member service and Auth0. It serves 16
+  million requests per day through API Gateway and serverless Lambdas. Manages
+  retention policies for member data, GDPR right to erasure and subject access
+  requests, and S3 retention for member document uploads.
 
 stack:
   - TypeScript
-  - AWS
-  - Terraform
-  - Auth0
-  - Cognito
-  - GitHub Actions
   - Python
+  - AWS
+  - Terraform Cloud
+  - API Gateway
+  - Lambda
+  - DynamoDB
+  - PostgreSQL
+  - Valkey
+  - Auth0
+  - GitHub Actions
+  - Cloudflare
 
 achievements:
   - title: Proposed and delivered the Members service extraction
     description: >-
-      Authored the RFC, then built the standalone repository, Terraform stack,
-      deployment and development pipelines, and an endpoint parity suite
-      covering all API endpoints. Wrote a runbook so other developers could run
-      similar migrations, and the service reached 100% of production traffic
-      without a rollback.
+      Authored the RFC, then built the standalone repository, the Terraform and
+      HCL stack on Terraform Cloud, and GitHub Actions pipelines deploying to
+      AWS and Cloudflare. Added an endpoint parity suite covering all API
+      endpoints and wrote a runbook so other developers could run similar
+      migrations. The service reached 100% of production traffic without a
+      rollback.
     impact: high
     include_pdf: true
     tags:
@@ -36,9 +43,21 @@ achievements:
       - platform
       - migration
       - testing
-      - rfc
 
-  - title: Removing the legacy PHP proxy dependency
+  - title: Built the retention and deletion controls for member data
+    description: >-
+      Implemented right-to-be-forgotten and subject access request handling,
+      retention policies for the member data store, and S3 lifecycle and
+      deletion rules for member document uploads.
+    impact: high
+    include_pdf: true
+    tags:
+      - gdpr
+      - data
+      - security
+      - compliance
+
+  - title: Removed the legacy PHP proxy dependency
     description: >-
       Aligned the approach with engineering leadership, built the pipelines that
       let the admin panel run auditable database queries, and supported the web
@@ -50,19 +69,6 @@ achievements:
       - architecture
       - delivery
       - stakeholder-management
-      - php
-
-  - title: Owned the forced client update workstream
-    description: >-
-      Took on the technical complexity of forcing client updates across the
-      member base, working with the wider business on communications and member
-      operations support.
-    impact: high
-    include_pdf: false
-    tags:
-      - delivery
-      - stakeholder-management
-      - mobile
 
   - title: Established the squad's AI-assisted engineering standard
     description: >-
@@ -102,6 +108,43 @@ achievements:
       - ai
       - platform
 
+  - title: Validated data migrations across three brands
+    description: >-
+      Wrote Python scripts that diffed thousands of employer records between the
+      legacy JSON store and the PostgreSQL database, finding and fixing
+      inconsistencies before release.
+    impact: high
+    include_pdf: false
+    tags:
+      - python
+      - data
+      - migration
+      - automation
+
+  - title: Replaced SSO tokens in the AU deployment pipeline
+    description: >-
+      Swapped long-lived PATs for ephemeral GitHub Actions tokens, removing a
+      manual rotation step that had to happen every three days.
+    impact: medium
+    include_pdf: false
+    tags:
+      - devops
+      - github-actions
+      - security
+      - aws
+
+  - title: Owned the forced client update workstream
+    description: >-
+      Took on the technical complexity of forcing client updates across the
+      member base, working with the wider business on communications and member
+      operations support.
+    impact: high
+    include_pdf: false
+    tags:
+      - delivery
+      - stakeholder-management
+      - mobile
+
   - title: Ran mob sessions through the renewals rebuild
     description: >-
       Organised collaborative sessions during the renewals decoupling and
@@ -113,31 +156,6 @@ achievements:
       - leadership
       - delivery
       - quality
-
-  - title: Validated data migrations across three brands
-    description: >-
-      Wrote the Python tooling that diffed thousands of employer records between
-      the legacy JSON store and the new database, finding and fixing
-      inconsistencies before release.
-    impact: high
-    include_pdf: false
-    tags:
-      - python
-      - data
-      - migration
-      - automation
-
-  - title: Triaged Australian member data issues
-    description: >-
-      Worked directly with the Australian team to analyse and resolve data
-      problems, communicating findings in business terms rather than technical
-      detail.
-    impact: medium
-    include_pdf: false
-    tags:
-      - data
-      - stakeholder-management
-      - analysis
 
   - title: Documented the authentication architecture
     description: >-
