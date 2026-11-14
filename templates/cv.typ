@@ -16,6 +16,11 @@
   let body-2 = rgb("#3F4A56")
   let rule = rgb("#C9D2DA")
 
+  let base = 16pt
+  let gap-par = 6pt
+  let gap-role = 16pt
+  let gap-section = 26pt
+
   let sans = "Source Sans 3"
   let serif = "Source Serif 4"
   let mono = "IBM Plex Mono"
@@ -41,13 +46,13 @@
     fill: white,
   )
 
-  set text(font: sans, size: 9.8pt, fill: ink, lang: "en", region: "GB", hyphenate: false)
-  set par(justify: false, leading: 0.62em, spacing: 1em)
+  set text(font: sans, size: 9.6pt, fill: ink, lang: "en", region: "GB", hyphenate: false)
+  set par(justify: false, leading: 0.633em, spacing: gap-par)
   set list(
     marker: text(fill: accent)[•],
     indent: 0.55em,
     body-indent: 0.5em,
-    spacing: 0.36em,
+    spacing: 5pt,
   )
 
   // Name: the only serif on the page.
@@ -57,8 +62,8 @@
 
   // Section labels: mono, uppercase, ruled. No numbering: parsers match the word.
   show heading.where(level: 2): it => block(
-    above: 14pt,
-    below: 7pt,
+    above: gap-section,
+    below: 8pt,
     width: 100%,
     sticky: true,
     stroke: (bottom: 0.6pt + rule),
@@ -113,7 +118,7 @@
     }
     let end = if role.end == "present" { "Present" } else { role.end }
 
-    block(above: 13pt, below: 0pt, breakable: false, sticky: true)[
+    block(above: gap-role, below: 0pt, breakable: false, sticky: true)[
       #text(size: 11pt, weight: 700, fill: name-col)[#role.company]
       #linebreak()
       #text(size: 10.2pt, weight: 600)[#title_line]
@@ -128,9 +133,9 @@
     ]
 
     if achievements.len() > 0 [
-      #block(inset: (top: 8pt))[
+      #block(inset: (top: gap-par))[
         #list(
-          spacing: 0.36em,
+          spacing: 5pt,
           ..achievements.map(a => text(size: 9.4pt)[*#a.title.* #a.description]),
         )
       ]
