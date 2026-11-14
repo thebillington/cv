@@ -18,7 +18,8 @@ classrooms, and [pydle.uk](https://pydle.uk), a browser Python REPL.
 
 ## Apps
 
-Flutter apps on the App Store and Play Store, including
-[Steno Start](https://stenostart.uk).
+I build apps from a custom Flutter template that handles the store builds and
+deployment. That covers [Steno Start](https://stenostart.uk) and the
+[No Nonsense revision series](https://nononsenserevision.uk).
 
 More repositories on [GitHub]({{ data.profile.links.github }}).

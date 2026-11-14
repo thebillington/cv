@@ -12,12 +12,12 @@ stack:
   - Java
 
 achievements:
-  - title: Designed an open-source Computer Science curriculum
+  - title: Designed an open source Computer Science curriculum
     description: >-
       Wrote GCSE and A-Level (J276/H446) materials that are still used in
       classrooms through the Staffs University computing network.
     impact: high
-    include_pdf: false
+    include_pdf: true
     tags:
       - education
       - documentation

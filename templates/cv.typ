@@ -165,6 +165,11 @@
       text(size: 9.7pt, weight: 600)[#item.label.]
       h(0.3em)
       text(size: 9.4pt)[#item.text]
+      if item.at("links", default: ()).len() > 0 {
+        h(0.4em)
+        let links = item.links.map(l => link(l.url)[#l.name])
+        text(font: mono, size: 7.8pt, fill: muted)[#links.join([#h(0.5em) · #h(0.5em)])]
+      }
       parbreak()
       v(2.5pt)
     }
