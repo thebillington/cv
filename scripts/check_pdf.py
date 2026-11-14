@@ -101,9 +101,6 @@ def main():
     email = profile.get("email", "")
     if email and email.lower() not in lower:
         failures.append(f"email does not extract: {email}")
-    location = profile.get("location", "")
-    if location and location.split(",")[0].lower() not in lower:
-        failures.append(f"location does not extract: {location}")
 
     # Broken glyphs
     for glyph in ("\ufffd", "\u25a1", "\u2610"):

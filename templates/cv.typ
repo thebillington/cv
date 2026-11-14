@@ -71,21 +71,21 @@
   )[#text(font: mono, size: 8.6pt, weight: 600, fill: name-col, tracking: 0.12em)[#upper(it.body)]]
 
   // ---------------------------------------------------------------- header
-  heading(level: 1)[#data.profile.name]
+  grid(
+    columns: (auto, 1fr),
+    column-gutter: 10pt,
+    align: (left + bottom, left + bottom),
+    heading(level: 1)[#data.profile.name],
+    text(font: mono, size: 9pt, weight: 600, fill: accent, tracking: 0.06em)[#upper(data.profile.title)],
+  )
 
   stack(spacing: 0pt,
-    v(4pt),
-    text(font: mono, size: 9.4pt, weight: 600, fill: accent, tracking: 0.06em)[#upper(data.profile.title)],
-    v(10pt),
-    text(font: mono, size: 8.4pt, fill: body-2)[
-      #data.profile.location
-      #h(1.2em) #link("mailto:" + data.profile.email)[#data.profile.email]
-    ],
-    v(4.5pt),
-    text(font: mono, size: 8.4pt, fill: body-2)[
-      #link(data.profile.links.website)[#data.profile.links.website.replace("https://", "")]
-      #h(1.2em) #link(data.profile.links.github)[#data.profile.links.github.replace("https://", "")]
-      #h(1.2em) #link(data.profile.links.linkedin)[#data.profile.links.linkedin.replace("https://", "")]
+    v(8pt),
+    text(font: mono, size: 7.4pt, fill: body-2)[
+      #link("mailto:" + data.profile.email)[#data.profile.email]
+      #h(0.45em) #link(data.profile.links.website)[#data.profile.links.website.replace("https://", "")]
+      #h(0.45em) #link(data.profile.links.github)[#data.profile.links.github.replace("https://", "")]
+      #h(0.45em) #link(data.profile.links.linkedin)[#data.profile.links.linkedin.replace("https://", "")]
     ],
     v(10pt),
     block(width: 100%, height: 1.2pt, fill: accent),
