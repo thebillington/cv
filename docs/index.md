@@ -8,8 +8,6 @@
       <span>{{ data.profile.location }}</span>
       <span class="sep">·</span>
       <span><a href="mailto:{{ data.profile.email }}">{{ data.profile.email }}</a></span>
-      <span class="sep">·</span>
-      <span><a href="tel:{{ data.profile.phone.replace(' ', '') }}">{{ data.profile.phone }}</a></span>
     </p>
   </div>
 </div>
@@ -25,16 +23,8 @@
 
 ## Currently
 
-**{{ here.title }}** at **{{ here.company }}** ({{ here.start }} to now), in the
-{{ here.team }} team.
-
-## Selected work
-
-<ul class="outcomes">
-{% for item in data.profile.highlights %}
-  <li>{{ item }}</li>
-{% endfor %}
-</ul>
+I lead the Engagement Pod at Blue Light Card and own the Auth0 and members
+service handling 16 million requests per day.
 
 ## Core skills
 
@@ -45,5 +35,6 @@
 {% endfor %}
 </div>
 
-The [experience](experience.md) page carries the full history; the two-page
-CV is available above.
+The [experience](experience.md) page carries the full history, including
+[additional work](experience.md#additional-experience). The [projects](projects.md)
+page has the homelab, the Game Boy work and the apps.

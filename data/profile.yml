@@ -5,34 +5,54 @@ phone: "+44 7736 381977"
 location: United Kingdom
 
 summary: >-
-  I am an AI-enabled Full Stack Engineer with a background in Management and
-  Education. I am proficient with modern stacks across the spectrum; Node and
-  Python backends talking to Postgres and DynamoDB data stores, Next/React web
-  frontend, native iOS and Android; Flutter; IaC with Terraform and HCL; and
-  CI/CD with Wrangler and Fastlane for builds, deployment and networking
-  configurations, including Lambda, API Gateway and VPC configurations as well
-  as DNS and Load Balancer configurations via Cloudflare. In my current role at
-  Blue Light Card I lead the Growth and Engagement squad and own our Auth0 and
-  members service, serving 16 million requests per day.
+  I am an AI enabled Full Stack Engineer with a background in Management and
+  Education. I am proficient with modern stacks across the spectrum and am
+  comfortable working in Backend and Frontend codebases across mobile and web as
+  well as managing the IaC and CI/CD pipelines for builds and deployments. I
+  prioritise independently, work closely with product and the wider team and
+  manage stakeholder expectations with communication suited to the audience. In
+  my current role at Blue Light Card I lead the Engagement Pod and own the Auth0
+  and members service, handling 16 million requests per day.
 
 intro: >-
-  I am an AI-enabled Full Stack Engineer with a background in Management and
-  Education. I am proficient with modern stacks across the spectrum; Node and
-  Python backends talking to Postgres and DynamoDB data stores, Next/React web
-  frontend, native iOS and Android; Flutter; IaC with Terraform and HCL; and
-  CI/CD with Wrangler and Fastlane for builds, deployment and networking
-  configurations, including Lambda, API Gateway and VPC configurations as well
-  as DNS and Load Balancer configurations via Cloudflare. In my current role at
-  Blue Light Card I lead the Growth and Engagement squad and own our Auth0 and
-  members service, serving 16 million requests per day.
+  I am an AI enabled Full Stack Engineer with a background in Management and
+  Education. I am proficient with modern stacks across the spectrum and am
+  comfortable working in Backend and Frontend codebases across mobile and web as
+  well as managing the IaC and CI/CD pipelines for builds and deployments. I
+  prioritise independently, work closely with product and the wider team and
+  manage stakeholder expectations with communication suited to the audience. In
+  my current role at Blue Light Card I lead the Engagement Pod and own the Auth0
+  and members service, handling 16 million requests per day.
 
-highlights:
-  - Own the member data platform (signup, eligibility, login and renewals)
-    across the private member data store, the members service and Auth0
-  - Moved the members service out of the monorepo onto its own Terraform stack,
-    with an endpoint parity test suite and a rollback plan
-  - Handle GDPR erasure and subject access requests, and retention policies for
-    member data and uploaded documents
+additional:
+  - company: Paperound
+    title: Co founder and CTO
+    dates: 2021 to 2022
+    text: >-
+      Built the marketplace as the only engineer and raised SEIS funding from
+      Jenson Funding Partners.
+    url: https://jensonventures.com/jenson-seis-fund-invest-in-paperound/
+  - company: OCR
+    title: A Level Computer Science moderator
+    dates: March 2022 to present
+    text: >-
+      Moderated the H446/03 and H446/04 coursework components.
+
+outside:
+  - label: Homelab
+    text: >-
+      Runs my own infrastructure so my data stays mine: Terraform and Ansible,
+      self hosted services, DNS, backups and hardening, and local models rather
+      than hosted APIs.
+  - label: Game Boy
+    text: >-
+      Writes games in gbZ80 assembly for original hardware; maintains
+      tphysics.uk, a dependency free Python engine for classrooms and pydle.uk, a
+      browser Python REPL.
+  - label: Apps
+    text: >-
+      Ships Flutter apps to the App Store and Play Store, including Steno Start
+      (stenostart.uk).
 
 links:
   github: https://github.com/thebillington

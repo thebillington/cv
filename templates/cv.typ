@@ -74,7 +74,6 @@
     v(8pt),
     text(font: mono, size: 8.4pt, fill: body-2)[
       #data.profile.location
-      #h(1.4em) #link("tel:" + data.profile.phone.replace(" ", ""))[#data.profile.phone]
       #h(1.4em) #link("mailto:" + data.profile.email)[#data.profile.email]
     ],
     v(3.5pt),
@@ -144,8 +143,7 @@
   heading(level: 2)[Education]
   for edu in data.education.education [
     #let end = if edu.end == "present" { "Present" } else { edu.end }
-    #text(size: 9.8pt, weight: 600)[#edu.degree]
-    #text(size: 9.6pt, fill: body-2)[, #edu.institution]
+    #text(size: 9.8pt, weight: 600)[#edu.degree]#text(size: 9.6pt, fill: body-2)[, #edu.institution]
     #if edu.at("grade", default: none) != none [
       #text(size: 9.6pt, fill: body-2)[, #edu.grade]
     ]
@@ -154,4 +152,16 @@
     #v(3pt)
   ]
 
+
+  // ------------------------------------------------------------ outside work
+  if data.profile.at("outside", default: ()).len() > 0 {
+    heading(level: 2)[Projects]
+    for item in data.profile.outside {
+      text(size: 9.7pt, weight: 600)[#item.label.]
+      h(0.3em)
+      text(size: 9.4pt)[#item.text]
+      parbreak()
+      v(2.5pt)
+    }
+  }
 }

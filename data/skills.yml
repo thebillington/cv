@@ -1,16 +1,9 @@
-# Skills, in two shapes:
-#
-#   core       the lines that appear in the PDF. Hard, searchable terms only,
-#              and only things with professional use.
-#   categories the full matrix, used by the website only.
-
 core:
-  - "Languages: TypeScript, Python, Swift, Kotlin"
-  - "Frontend: Next.js, React, Tailwind, HTML/CSS"
-  - "Backend: Node.js, REST, API Gateway, Lambda, Auth0"
+  - "Frontend: TypeScript, React, Next.js, Tailwind, HTML/CSS"
+  - "Backend: TypeScript, Python, Node.js, REST, API Gateway, Lambda, Auth0"
   - "Data: PostgreSQL, DynamoDB, Valkey (Redis)"
   - "Platform: AWS, Terraform (HCL), Terraform Cloud, GitHub Actions, Cloudflare, Docker"
-  - "Mobile: native Android (Kotlin), native iOS (Swift)"
+  - "Mobile: Swift, Kotlin, native Android, native iOS"
   - "Practice: migrations, contract and parity testing, incident response, mentoring"
 
 categories:
@@ -55,10 +48,10 @@ categories:
       - Terraform Cloud
       - GitHub Actions
       - Cloudflare
-      - Docker
       - CI/CD
       - CloudWatch
       - Grafana
+      - Docker
 
   - name: Mobile
     skills:
@@ -73,7 +66,7 @@ categories:
       - automated testing
       - API contract testing
       - incident management
-      - on-call
+      - on call
       - DORA metrics
       - ISO 27001
       - GDPR and subject access requests

@@ -109,7 +109,10 @@ body,
   max-width: 46rem;
 }
 
-.md-typeset {
+.md-typeset p,
+.md-typeset li,
+.md-typeset .expertise,
+.md-typeset .outcomes {
   max-width: 68ch;
 }
 

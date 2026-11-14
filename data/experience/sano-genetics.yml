@@ -6,7 +6,7 @@ team: Logistics
 
 summary: >-
   I managed the Logistics squad, leading delivery and keeping feature work
-  aligned with long-term business goals. I led the migration of kits and orders
+  aligned with long term business goals. I led the migration of kits and orders
   from legacy studies into a single V2 workflow, and designed the integrations
   with logistics providers.
 
@@ -17,17 +17,6 @@ stack:
   - Slack API
 
 achievements:
-  - title: Led delivery of the squad against the product strategy
-    description: >-
-      Ran planning and delivery for a cross-functional team, keeping feature
-      work tied to long-term business goals and participant value.
-    impact: high
-    include_pdf: false
-    tags:
-      - management
-      - leadership
-      - delivery
-
   - title: Migrated kits and orders to a single V2 workflow
     description: >-
       Moved data out of legacy studies, created parity across databases and
@@ -45,17 +34,29 @@ achievements:
       Worked with logistics providers on their APIs to automate kit dispatch,
       return and assay, turning manual operations into a documented system.
     impact: high
-    include_pdf: true
+    include_pdf: false
     tags:
       - delivery
       - management
       - stakeholder-management
       - architecture
 
+  - title: Built ingestion and matching for external genetic data
+    description: >-
+      Matched records to participants by UUID and built cohorts for targeted
+      communication at scale.
+    impact: medium
+    include_pdf: false
+    tags:
+      - data
+      - python
+      - automation
+      - architecture
+
   - title: Built a Slack bot for the triage rota
     description: >-
-      Automated the current rota into a bot, making triage ownership visible
-      and cutting response times.
+      Automated the current rota into a bot, making triage ownership visible and
+      cutting response times.
     impact: medium
     include_pdf: false
     tags:

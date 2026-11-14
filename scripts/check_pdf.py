@@ -99,11 +99,8 @@ def main():
 
     # Contact details, extracted from the body
     email = profile.get("email", "")
-    phone_digits = re.sub(r"\D", "", profile.get("phone", ""))
     if email and email.lower() not in lower:
         failures.append(f"email does not extract: {email}")
-    if phone_digits and phone_digits not in re.sub(r"\D", "", text):
-        failures.append("phone number does not extract")
     location = profile.get("location", "")
     if location and location.split(",")[0].lower() not in lower:
         failures.append(f"location does not extract: {location}")

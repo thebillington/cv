@@ -19,3 +19,17 @@
 </ul>
 {% endif %}
 {% endfor %}
+
+## Additional experience
+
+{% for a in data.profile.additional %}
+<h3>{{ a.company }}, {{ a.title }}</h3>
+
+<p class="role-meta">{{ a.dates }}</p>
+
+<p class="role-summary">{{ a.text }}</p>
+
+{% if a.url %}
+<p class="role-meta"><a href="{{ a.url }}">Jenson SEIS Fund investment, April 2021</a></p>
+{% endif %}
+{% endfor %}

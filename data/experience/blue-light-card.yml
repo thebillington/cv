@@ -7,10 +7,11 @@ team: Growth and Engagement
 summary: >-
   I own the member data platform: signup, eligibility, login and renewals, across
   the private member data store, the member service and Auth0. It serves 16
-  million requests per day through API Gateway and serverless Lambdas. I also own
-  retention, GDPR erasure and subject access requests, and S3 retention for
-  member document uploads. The squad is 10 engineers and 2 QE; I now lead a pod
-  of two full-stack and four mobile engineers.
+  million requests per day through API Gateway and serverless Lambdas. I keep the
+  members service and Auth0 compliant with our retention, right to erasure and
+  subject access requirements, including S3 retention for member document
+  uploads. I lead the Engagement Pod (two full stack and four mobile engineers)
+  within a squad of 10 engineers and 2 QE.
 
 stack:
   - TypeScript
@@ -31,9 +32,9 @@ achievements:
     description: >-
       Wrote the RFC, then built the standalone repository, the Terraform stack on
       Terraform Cloud and GitHub Actions pipelines deploying to AWS and
-      Cloudflare. Added an endpoint parity suite covering all API endpoints and
-      wrote a runbook so other developers could run similar migrations. It
-      reached 100% of production traffic without a rollback.
+      Cloudflare. Added an endpoint parity suite covering all API endpoints,
+      designed the monitoring and a rollback path shared with the on call team,
+      and it reached 100% of production traffic with no rollback needed.
     impact: high
     include_pdf: true
     tags:
@@ -48,7 +49,7 @@ achievements:
     description: >-
       We were on PHP 7.3 with no upgrade path, so over 29 hours I moved members
       from the PHP database proxy onto the admin backend service, replacing the
-      PHP functionality with Lambda-to-Lambda calls, then switched PHP off. With
+      PHP functionality with Lambda to Lambda calls, then switched PHP off. With
       another engineer I removed the PHP auth route from the web app and the
       monorepo, and disabled the reverse proxy that exposed the legacy routes.
     impact: high
@@ -60,7 +61,7 @@ achievements:
       - architecture
       - aws
 
-  - title: Managed the switch-off of the legacy apps
+  - title: Managed the switch off of the legacy apps
     description: >-
       Identified members still signing in through Cognito and the PHP routes and
       migrated them to Auth0, worked with CRM on the comms and triggered
@@ -74,37 +75,47 @@ achievements:
       - delivery
       - stakeholder-management
 
-  - title: Built the retention and deletion controls for member data
+  - title: Set the team's standard for AI assisted work
     description: >-
-      Implemented right to erasure and subject access request handling, retention
-      policies for the member data store, and S3 lifecycle and deletion rules for
-      member document uploads.
+      Built the MCP servers, a shared document store and the training on using
+      context windows, and fed back to leadership on model usage and which
+      tooling to fund.
     impact: high
     include_pdf: true
-    tags:
-      - gdpr
-      - data
-      - security
-      - compliance
-
-  - title: Set the squad's standard for AI-assisted work
-    include_pdf: false
-    description: >-
-      Defined the documentation process, shared configs with the wider team and
-      set the rules for handling proprietary code. Built two MCP servers: one for
-      CloudWatch investigations into Grafana dashboards, one that sends small
-      implementation tasks to a local Qwen3 30B model to cut token spend.
-    impact: high
     tags:
       - ai
       - leadership
       - automation
       - security
 
+  - title: Ran the forced update rollout
+    description: >-
+      Worked with CRM and external stakeholders and used revenue and operational
+      cost data to get leadership buy in, on work that had to go right first time.
+    impact: high
+    include_pdf: true
+    tags:
+      - delivery
+      - stakeholder-management
+      - mobile
+
+  - title: Built the retention and deletion controls for member data
+    description: >-
+      Implemented right to erasure and subject access request handling, retention
+      policies for the member data store, and S3 lifecycle and deletion rules for
+      member document uploads.
+    impact: high
+    include_pdf: false
+    tags:
+      - gdpr
+      - data
+      - security
+      - compliance
+
   - title: Built a UI for validating API changes
     description: >-
       Deploys feature branches to dev, runs the test suite against new and
-      staging code, and writes a diff report with an agent-ready README.
+      staging code, and writes a diff report with an agent ready README.
     impact: medium
     include_pdf: false
     tags:
@@ -126,7 +137,7 @@ achievements:
 
   - title: Replaced SSO tokens in the AU deployment pipeline
     description: >-
-      Swapped long-lived PATs for ephemeral GitHub Actions tokens, removing a
+      Swapped long lived PATs for ephemeral GitHub Actions tokens, removing a
       manual rotation step that had to happen every three days.
     impact: medium
     include_pdf: false

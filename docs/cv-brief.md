@@ -71,14 +71,25 @@ least-recent role bullet. Do not cut a Blue Light Card bullet or shrink the type
 | 14 Nov | "Selected work" is removed from the website: it duplicates the headline and uses the best space on the page for it |
 | 14 Nov | AI stays at the top. If it filters a company out, that is the filter working |
 
+## Decisions on the outside work and additional experience
+
+- **Sections**: "Projects" in the PDF (homelab, Game Boy, apps); the site keeps a
+  Projects page plus an "Additional experience" section on the Experience page.
+- **Paperound** goes in Additional experience, site only, linked to the live
+  Jenson page (April 2021). Fallbacks if the domain moves again:
+  `https://web.archive.org/web/20260512130208/https://jensonventures.com/jenson-seis-fund-invest-in-paperound/`
+  and
+  `https://web.archive.org/web/20210423095542/https://jensonfundingpartners.com/2021/04/20/jenson-seis-fund-invest-in-paperound/`
+  The £120,000 is Billy's figure and is not in the article.
+- **OCR** goes in Additional experience, site only.
+- **Phone number** removed from the PDF and the site.
+- **No dashes of any kind** anywhere: no em dash, no en dash, no dash as
+  punctuation.
+- **No Oxford commas.** Serial lists take no comma before the final "and".
+
 ## Open
 
-1. Outside work: three items (homelab, Game Boy/tphysics, apps) or two?
-2. Apps: name one, or keep it generic?
-3. Homelab: "local models and automation" as the AI link, or say what it runs?
-4. tphysics: keep in the Game Boy line, or drop it?
-5. Whether to revert the live site to the last reviewed build while the batch is
-   being agreed.
+Nothing outstanding.
 
 ## Process
 
