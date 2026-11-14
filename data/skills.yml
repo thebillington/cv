@@ -4,7 +4,7 @@ core:
   - "Data: PostgreSQL, DynamoDB, Valkey (Redis)"
   - "Platform: AWS, Terraform (HCL), Terraform Cloud, GitHub Actions, Cloudflare, Docker"
   - "Mobile: Swift, Kotlin, native Android, native iOS"
-  - "AI: LLM integration, MCP servers, context engineering, local models"
+  - "AI: LLM integration, MCP servers, custom harnesses, context engineering, local models"
   - "Practice: migrations, contract and parity testing, incident response, mentoring"
 
 categories:
@@ -60,6 +60,14 @@ categories:
       - iOS (Swift)
       - Room
       - OkHttp
+
+  - name: AI and tooling
+    skills:
+      - LLM integration
+      - MCP servers
+      - custom harnesses
+      - context engineering
+      - local models
 
   - name: Engineering practice
     skills:
