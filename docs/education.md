@@ -9,6 +9,3 @@
 <p class="role-summary">Grade: {{ edu.grade }}</p>
 {% endif %}
 {% endfor %}
-
-Two years teaching computer science preceded full-time software engineering;
-the curriculum materials remain in use.

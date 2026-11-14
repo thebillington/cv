@@ -5,8 +5,6 @@
     <h1>{{ data.profile.name }}</h1>
     <p class="hero-role">{{ data.profile.title }}</p>
     <p class="hero-contact">
-      <span>{{ data.profile.location }}</span>
-      <span class="sep">·</span>
       <span><a href="mailto:{{ data.profile.email }}">{{ data.profile.email }}</a></span>
     </p>
   </div>
@@ -20,6 +18,12 @@
 </div>
 
 {{ data.profile.intro }}
+
+## Current position
+
+**{{ here.title }} at {{ here.company }}**, {{ here.start }} to now. I lead the
+Engagement Pod and own the Auth0 and members service, which handles 16 million
+requests per day.
 
 ## Core skills
 

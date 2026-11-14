@@ -299,10 +299,14 @@ body,
 }
 
 .md-typeset .expertise p {
+  display: grid;
+  grid-template-columns: 11.5rem minmax(0, 1fr);
+  column-gap: 0.6rem;
+  align-items: baseline;
   margin: 0.28rem 0;
   color: var(--cv-slate);
-  padding-left: 5.6rem;
-  text-indent: -5.6rem;
+  padding-left: 0;
+  text-indent: 0;
 }
 
 .md-typeset .expertise strong {
@@ -312,7 +316,7 @@ body,
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cv-steel);
-  margin-right: 0.45em;
+  margin-right: 0;
 }
 
 /* Roles */

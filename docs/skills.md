@@ -1,10 +1,7 @@
 # Skills
 
-The CV carries the core set. The full matrix is below, including
-technologies no longer used daily.
-
+<div class="expertise">
 {% for cat in data.skills.categories %}
-<h2>{{ cat.name }}</h2>
-
-<p class="skill-list">{{ cat.skills | join(' · ') }}</p>
+<p><strong>{{ cat.name }}</strong> {{ cat.skills | join('&nbsp;· ') }}</p>
 {% endfor %}
+</div>
