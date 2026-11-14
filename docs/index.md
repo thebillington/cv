@@ -21,11 +21,6 @@
   <a class="md-button" href="{{ data.profile.links.portfolio }}">Portfolio</a>
 </div>
 
-<p class="variant-note">
-  Two-page A4, light. There is also a <a href="{{ pdf_dark }}">dark version</a>
-  for reading on screen.
-</p>
-
 {{ data.profile.intro }}
 
 ## Currently

@@ -109,6 +109,10 @@ body,
   max-width: 46rem;
 }
 
+.md-typeset {
+  max-width: 68ch;
+}
+
 .md-sidebar--secondary {
   display: none !important;
 }
@@ -289,6 +293,8 @@ body,
 .md-typeset .expertise p {
   margin: 0.28rem 0;
   color: var(--cv-slate);
+  padding-left: 5.6rem;
+  text-indent: -5.6rem;
 }
 
 .md-typeset .expertise strong {

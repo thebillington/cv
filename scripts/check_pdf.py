@@ -17,7 +17,7 @@ import sys
 
 from data_loader import load_all, load_keywords
 
-REQUIRED_SECTIONS = ["Profile", "Core skills", "Experience", "Education"]
+REQUIRED_SECTIONS = ["Summary", "Skills", "Experience", "Education"]
 
 # Phrases that senior engineers and recruiters consistently name as filler.
 FALLBACK_AVOID = [

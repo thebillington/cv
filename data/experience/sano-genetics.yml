@@ -5,11 +5,10 @@ end: 2026-02
 team: Logistics
 
 summary: >-
-  Engineering Manager for the Logistics squad of a health research platform,
-  accountable for delivery against product strategy and business objectives. Led the
-  migration of kits and orders from legacy studies into a single V2 workflow,
-  designed the technical integrations with logistics providers and built the
-  systems that pull external genetic datasets into the platform.
+  Engineering Manager for the Logistics squad, leading delivery and aligning
+  feature work with long-term business goals. Led the migration of kits and
+  orders from legacy studies into a single V2 workflow, and designed the
+  integrations with logistics providers.
 
 stack:
   - Python

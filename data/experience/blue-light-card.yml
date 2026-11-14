@@ -24,8 +24,9 @@ achievements:
     description: >-
       Authored the RFC, then built the standalone repository, Terraform stack,
       deployment and development pipelines, and an endpoint parity suite
-      covering the full API so the cutover could be verified rather than
-      assumed.
+      covering all API endpoints. Wrote a runbook so other developers could run
+      similar migrations, and the service reached 100% of production traffic
+      without a rollback.
     impact: high
     include_pdf: true
     tags:
@@ -40,9 +41,8 @@ achievements:
   - title: Removing the legacy PHP proxy dependency
     description: >-
       Aligned the approach with engineering leadership, built the pipelines that
-      let the administration panel run auditable database queries, and supported
-      the rollout of the new web and forced update changes, putting retirement
-      of the legacy applications within reach.
+      let the admin panel run auditable database queries, and supported the web
+      and forced update rollouts with the wider business.
     impact: high
     include_pdf: true
     tags:
@@ -66,9 +66,9 @@ achievements:
 
   - title: Established the squad's AI-assisted engineering standard
     description: >-
-      Defined the process for documenting AI-assisted work, published shared
-      configuration to the wider engineering team, ran demonstrations and set the
-      guardrails for handling proprietary code.
+      Defined the process for documenting AI-assisted work, shared configs with
+      the wider engineering team, ran demos and set the rules for handling
+      proprietary code.
     impact: high
     include_pdf: true
     tags:
@@ -79,9 +79,9 @@ achievements:
 
   - title: Built MCP servers for agent automation
     description: >-
-      One lets agents run CloudWatch investigations and turn findings into
-      Grafana dashboards with alerts; another delegates implementation work to a
-      local Qwen3 30B model, reducing token spend while keeping code quality.
+      One runs CloudWatch investigations and turns findings into Grafana
+      dashboards with alerts; another delegates small implementation tasks to a
+      local Qwen3 30B model to cut token spend.
     impact: high
     include_pdf: true
     tags:
@@ -92,9 +92,8 @@ achievements:
 
   - title: Built a UI for validating API changes
     description: >-
-      Deploys feature branches to a development environment, runs the suite
-      against new and staging code, and writes a diff report with agent-ready
-      documentation so an engineer can review the findings.
+      Deploys feature branches to dev, runs the test suite against new and
+      staging code, and writes a diff report with an agent-ready README.
     impact: high
     include_pdf: true
     tags:

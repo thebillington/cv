@@ -12,4 +12,3 @@ def define_env(env):
     # Keep the download links in one place: the same names build.py writes.
     stem = data["profile"]["name"].replace(" ", "-")
     env.variables["pdf_name"] = f"{stem}-CV.pdf"
-    env.variables["pdf_dark"] = f"{stem}-CV-dark.pdf"

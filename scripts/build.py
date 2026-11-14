@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Main build orchestrator.
 
-One source of facts in data/, two outputs (light and dark PDF), plus the site.
+One source of facts in data/, one PDF and the website.
 
 Usage:
     python scripts/build.py              # PDFs + checks + website
@@ -52,7 +52,7 @@ def write_data_json(data, name="data"):
     return path
 
 
-def build_pdf(data_file, output_name, template=TEMPLATE, dark=False):
+def build_pdf(data_file, output_name, template=TEMPLATE):
     template_rel = os.path.relpath(
         os.path.join(TEMPLATES_DIR, template), OUTPUT_DIR
     )
@@ -61,7 +61,7 @@ def build_pdf(data_file, output_name, template=TEMPLATE, dark=False):
     typst_content = f'''
 #import "{template_rel}": cv
 #let data = json("{data_rel}")
-#cv(data, dark: {"true" if dark else "false"})
+#cv(data)
 '''
     typ_file = os.path.join(OUTPUT_DIR, f"{output_name}.typ")
     pdf_file = os.path.join(OUTPUT_DIR, f"{output_name}.pdf")
@@ -156,8 +156,6 @@ def main():
     else:
         data_file = write_data_json(data)
         success = build_pdf(data_file, name)
-        if success:
-            success = build_pdf(data_file, f"{name}-dark", dark=True)
         if success and not args.no_check:
             success = run_checks(data["profile"])
         if success and not args.pdf:
