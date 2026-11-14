@@ -122,7 +122,7 @@
       #text(font: mono, size: 8.4pt, fill: body-2)[#role.start to #end]
       #if role.at("stack", default: ()).len() > 0 [
         #linebreak()
-        #text(font: mono, size: 7.9pt, fill: muted)[#role.stack.join(" · ")]
+        #text(font: mono, size: 7.9pt, fill: muted)[#role.stack.join("\u{00A0}· ")]
       ]
       #v(5pt)
       #text(size: 9.6pt)[#role.summary]
