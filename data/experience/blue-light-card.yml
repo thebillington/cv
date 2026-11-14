@@ -13,7 +13,9 @@ summary: >-
   cutover reversible. Currently removing the legacy PHP proxy dependency,
   building pipelines that allow the administration panel to run auditable
   database queries, and supporting the rollout of a forced client update across
-  the member base. Established the squad's AI-assisted engineering standard and
+  the member base. Improved reliability by enriching JWT claims to remove
+  downstream service calls and delivering secure native-to-web session
+  transfer. Established the squad's AI-assisted engineering standard and
   represents the squad in architecture and planning decisions.
 
 stack:

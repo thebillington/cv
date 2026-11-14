@@ -4,48 +4,67 @@ start: 2019-06
 end: 2020-08
 
 summary: >-
-  Software engineer on client engagements spanning Android, iOS, backend
-  services and hardware integration, typically entering an unfamiliar codebase
-  and delivering within it.
+  Software engineer across client applications in Android, iOS and backend
+  services, usually the technical lead on projects that spanned a client, a
+  hardware team and an API. Worked in Java and Kotlin, and integrated devices
+  over Bluetooth Low Energy, raw sockets and FTP where no maintained library
+  existed.
 
 stack:
   - Java
   - Kotlin
   - Python
   - Swift
+  - BLE
   - Laravel
 
 achievements:
-  - title: Delivered features across legacy Java and modern Kotlin apps
+  - title: Led the AutoRing Android client and its hardware integration
     description: >-
-      Worked in client codebases with no prior context, shipped features and
-      took releases through to the Play Store.
-    impact: medium
+      Built the majority of the application infrastructure and UI, acted as the
+      main point of contact for the client and hardware team, wrote the accepted
+      V2 proposal and the iOS specification.
+    impact: high
     include_pdf: true
     tags:
       - android
-      - java
       - kotlin
-      - delivery
+      - architecture
+      - stakeholder-management
 
-  - title: Built a Python service for binary image streams over TCP
+  - title: Integrated medical and industrial devices over BLE and sockets
     description: >-
-      Integrated with industrial hardware by parsing images out of an open
-      socket and forwarding them to a Laravel backend.
-    impact: medium
+      Implemented a Bluetooth state machine for the TPI DC710 flue gas analyser
+      and a socket-level FTP client for the Smartfill device, both against
+      undocumented or deprecated protocols, and a Python service that parsed
+      binary image streams out of an open TCP connection.
+    impact: high
     include_pdf: true
     tags:
+      - android
+      - ios
       - python
+      - hardware
       - architecture
-      - backend
 
-  - title: Implemented a socket-level FTP client on iOS
+  - title: Delivered release parity across Android and iOS
     description: >-
-      Pulled pressure and flow statistics from a gas refill monitoring device
-      talking to a Windows NT server.
-    impact: low
+      Took the V2 iOS application through QA and release and brought the Android
+      client to feature and visual parity.
+    impact: medium
     include_pdf: false
     tags:
-      - ios
-      - data
-      - architecture
+      - delivery
+      - quality
+      - mobile
+
+  - title: Mentored graduate developers
+    description: >-
+      Reviewed work and introduced architecture components and the MVVM pattern
+      to a team still working in legacy Java.
+    impact: medium
+    include_pdf: false
+    tags:
+      - leadership
+      - mentoring
+      - android
