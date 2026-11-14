@@ -15,14 +15,14 @@ templates/     one Typst template, cv.typ
 scripts/       build, PDF checks, preview, tailoring
 docs/          the website; itself generated from data/
 docs/interview/ the questions a new claim has to survive before it goes in
-assets/fonts/  Source Sans 3 / Source Serif 4 (SIL OFL), embedded in the PDF
+assets/fonts/  Source Sans 3, Source Serif 4 and IBM Plex Mono (SIL OFL), embedded in the PDF
 ```
 
 ## Build
 
 ```bash
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
-make build          # PDF, checks, website
+make build          # light and dark PDF, checks, website
 make pdf            # PDF and checks only
 make check          # re-run the PDF gates
 make preview        # page images + site screenshots for visual review
@@ -31,6 +31,10 @@ make preview        # page images + site screenshots for visual review
 The build fails rather than shipping a broken PDF: wrong page count, missing
 sections, contact details that do not extract, banned filler or a missing core
 skill all stop it (`scripts/check_pdf.py`).
+
+Two PDFs come out of the same source: `Billy-Rebecchi-CV.pdf` (light, the one
+you send) and `Billy-Rebecchi-CV-dark.pdf` (for reading on screen). The site
+follows the system colour scheme and has a toggle.
 
 ## Tailoring a CV to a job description
 

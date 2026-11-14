@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Main build orchestrator.
 
-One source of facts in data/, two outputs: the PDF and the website.
+One source of facts in data/, two outputs (light and dark PDF), plus the site.
 
 Usage:
-    python scripts/build.py              # PDF + checks + website
-    python scripts/build.py --pdf        # PDF + checks
+    python scripts/build.py              # PDFs + checks + website
+    python scripts/build.py --pdf        # PDFs + checks
     python scripts/build.py --website    # website only
     python scripts/build.py --no-check   # skip the PDF gates
 """
@@ -52,7 +52,7 @@ def write_data_json(data, name="data"):
     return path
 
 
-def build_pdf(data_file, output_name, template=TEMPLATE):
+def build_pdf(data_file, output_name, template=TEMPLATE, dark=False):
     template_rel = os.path.relpath(
         os.path.join(TEMPLATES_DIR, template), OUTPUT_DIR
     )
@@ -61,7 +61,7 @@ def build_pdf(data_file, output_name, template=TEMPLATE):
     typst_content = f'''
 #import "{template_rel}": cv
 #let data = json("{data_rel}")
-#cv(data)
+#cv(data, dark: {"true" if dark else "false"})
 '''
     typ_file = os.path.join(OUTPUT_DIR, f"{output_name}.typ")
     pdf_file = os.path.join(OUTPUT_DIR, f"{output_name}.pdf")
@@ -149,11 +149,15 @@ def main():
 
     ensure_output_dirs()
     data = load_all()
+    name = cv_pdf_name(data["profile"])
 
     if args.website:
         success = build_website(data["profile"])
     else:
-        success = build_pdf(write_data_json(data), cv_pdf_name(data["profile"]))
+        data_file = write_data_json(data)
+        success = build_pdf(data_file, name)
+        if success:
+            success = build_pdf(data_file, f"{name}-dark", dark=True)
         if success and not args.no_check:
             success = run_checks(data["profile"])
         if success and not args.pdf:

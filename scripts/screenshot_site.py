@@ -30,6 +30,7 @@ def main():
     parser.add_argument("--height", type=int, default=900)
     parser.add_argument("--mobile", action="store_true")
     parser.add_argument("--page", default=None, help="one of: " + ", ".join(PAGES))
+    parser.add_argument("--dark", action="store_true", help="emulate a dark colour scheme")
     args = parser.parse_args()
 
     os.makedirs(OUT, exist_ok=True)
@@ -37,18 +38,21 @@ def main():
 
     with sync_playwright() as p:
         browser = p.chromium.launch()
+        scheme = "dark" if args.dark else "light"
         if args.mobile:
             ctx = browser.new_context(
-                viewport={"width": 390, "height": 844}, device_scale_factor=2
+                viewport={"width": 390, "height": 844}, device_scale_factor=2,
+                color_scheme=scheme,
             )
         else:
             ctx = browser.new_context(
-                viewport={"width": args.width, "height": args.height}
+                viewport={"width": args.width, "height": args.height},
+                color_scheme=scheme,
             )
         page = ctx.new_page()
         for name, rel in pages.items():
             url = "file://" + os.path.join(ROOT_DIR, "output", "site", rel)
-            suffix = ".mobile" if args.mobile else ""
+            suffix = (".mobile" if args.mobile else "") + (".dark" if args.dark else "")
             out = os.path.join(OUT, f"site-{name}{suffix}.png")
             page.goto(url)
             page.wait_for_timeout(250)
