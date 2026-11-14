@@ -81,11 +81,11 @@
 
   stack(spacing: 0pt,
     v(8pt),
-    text(font: mono, size: 7.4pt, fill: body-2)[
+    text(font: mono, size: 7.2pt, fill: body-2)[
       #link("mailto:" + data.profile.email)[#data.profile.email]
-      #h(0.45em) #link(data.profile.links.website)[#data.profile.links.website.replace("https://", "")]
-      #h(0.45em) #link(data.profile.links.github)[#data.profile.links.github.replace("https://", "")]
-      #h(0.45em) #link(data.profile.links.linkedin)[#data.profile.links.linkedin.replace("https://", "")]
+      #h(0.22em) · #h(0.22em) #link(data.profile.links.website)[#data.profile.links.website.replace("https://", "")]
+      #h(0.22em) · #h(0.22em) #link(data.profile.links.github)[#data.profile.links.github.replace("https://", "")]
+      #h(0.22em) · #h(0.22em) #link(data.profile.links.linkedin)[#data.profile.links.linkedin.replace("https://", "")]
     ],
     v(10pt),
     block(width: 100%, height: 1.2pt, fill: accent),
