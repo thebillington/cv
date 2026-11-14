@@ -33,9 +33,9 @@ found the rest; that was the miss.
 
 ## What changed in the CV
 
-- **Paperound added** as a role (Oct 2020 to Nov 2022): co-founder and CTO, £120k
-  raised, built as the only engineer, £15k/month gross revenue, Python scraper to
-  Postgres on RDS, AWS Lambda jobs.
+- **Paperound deliberately excluded.** The files describe it in detail (co-founder
+  and CTO, £120k raised, sole engineer, £15k/month revenue), but Billy has asked
+  for it to stay off the CV.
 - **Pion EM**: 20+ engineers across three squads, DORA/SPACE pipelines used by
   50+ engineers with fortnightly reporting to the SMT, Level 4 and 6
   apprenticeships at 76% eNPS, ISO 27001 with zero active CVEs, incident redesign.
@@ -58,14 +58,15 @@ found the rest; that was the miss.
   system reliability"); only the numbers that appear in more than one source
   were taken.
 
+## Excluded by decision (13 November 2026)
+
+- **Paperound**: removed from the CV at Billy's request.
+- **OCR A-Level moderation**: not main experience and, in his words, akin to a
+  side hustle. Kept off the CV.
+- **Nottingham Trent lecturing**: not used.
+- **Ecoworks trusteeship** and the monitoring system built for it: not used.
+- **CoderDojo**: not used.
+
 ## Still to confirm
 
-- **OCR A-Level moderator** (H446/03 and H446/04): two CVs say March 2022 to
-  present. Worth a line if still current.
-- **Nottingham Trent lecturer** (Level 6 apprenticeship): appears in a 2025 CV as
-  February 2023 to present. Current?
-- **Ecoworks trustee** and the monitoring system he built for them: current, and
-  worth one line?
-- **CoderDojo lead volunteer**: still running it?
-- Whether the £120k raise and £15k/month revenue are publishable on a public CV.
 - Team size and hiring numbers at Pion, if they can be stated.

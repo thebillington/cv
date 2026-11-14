@@ -36,7 +36,7 @@
 
   set page(
     paper: "a4",
-    margin: (x: 17mm, top: 12mm, bottom: 11mm),
+    margin: (x: 18mm, top: 13mm, bottom: 12mm),
     fill: white,
     footer: context {
       let total = counter(page).final().first()
@@ -47,13 +47,13 @@
     },
   )
 
-  set text(font: sans, size: 9.3pt, fill: ink, lang: "en", region: "GB", hyphenate: false)
-  set par(justify: false, leading: 0.6em, spacing: 1em)
+  set text(font: sans, size: 9.5pt, fill: ink, lang: "en", region: "GB", hyphenate: false)
+  set par(justify: false, leading: 0.62em, spacing: 1em)
   set list(
     marker: text(fill: steel)[•],
     indent: 0.55em,
     body-indent: 0.5em,
-    spacing: 0.33em,
+    spacing: 0.36em,
   )
 
   show heading.where(level: 1): it => block(above: 0pt, below: 2pt)[
@@ -61,7 +61,7 @@
   ]
 
   show heading.where(level: 2): it => block(
-    above: 12pt,
+    above: 14pt,
     below: 6pt,
     width: 100%,
     sticky: true,
@@ -120,7 +120,7 @@
 
     // Header and summary stay together and keep with the first bullet;
     // the bullet list itself can break, so a long role never leaves a hole.
-    block(above: 11pt, below: 0pt, breakable: false, sticky: true)[
+    block(above: 12.5pt, below: 0pt, breakable: false, sticky: true)[
       #text(size: 11.2pt, weight: 700, fill: navy)[#role.company]
       #h(1fr)
       #text(size: 9.2pt, fill: slate)[#role.start to #role.end]
@@ -135,9 +135,9 @@
     ]
 
     if achievements.len() > 0 [
-      #block(inset: (top: 8pt))[
+      #block(inset: (top: 9pt))[
         #list(
-          spacing: 0.33em,
+          spacing: 0.36em,
           ..achievements.map(a => text(size: 9.4pt)[*#a.title.* #a.description]),
         )
       ]

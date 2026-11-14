@@ -4,10 +4,9 @@ start: 2022-01
 end: 2025-06
 
 summary: >-
-  Engineering Manager for 20+ engineers across three squads (two web, one
-  backend), owning line management, hiring, delivery metrics and
-  technical direction. Built the delivery measurement from scratch, led
-  engineering delivery for ISO 27001 and redesigned incident management.
+  Engineering Manager for 20+ engineers across three squads, owning line
+  management, hiring, delivery metrics and technical direction. Built the
+  delivery measurement from scratch and led engineering delivery for ISO 27001.
 
 stack:
   - Python
@@ -75,3 +74,13 @@ achievements:
       - reliability
       - leadership
 
+  - title: Built service templates for backend and frontend teams
+    description: >-
+      Documented Node and Next.js templates so a new service started from a
+      known-good baseline, cutting time to a deployed service.
+    impact: medium
+    include_pdf: true
+    tags:
+      - platform
+      - architecture
+      - delivery

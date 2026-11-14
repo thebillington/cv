@@ -47,3 +47,14 @@ achievements:
       - architecture
       - migration
 
+  - title: Shipped high-traffic product features
+    description: >-
+      Delivered the homepage redesign, onboarding flow and in-store QR scanning
+      used for high-street partner offers, working with design and product as a
+      product engineer.
+    impact: medium
+    include_pdf: true
+    tags:
+      - android
+      - delivery
+      - product
