@@ -18,7 +18,8 @@ stack:
 achievements:
   - title: Migrated kits and orders to a single V2 workflow
     description: >-
-      Moved data out of legacy studies and removed the deprecated fields.
+      Moved data out of legacy studies, created parity across databases and
+      removed the deprecated nullable fields the old paths depended on.
     impact: high
     include_pdf: true
     tags:
@@ -29,8 +30,8 @@ achievements:
 
   - title: Designed and delivered PRDs for logistics integrations
     description: >-
-      Worked with providers on their APIs to automate kit dispatch, return and
-      assay.
+      Worked with logistics providers on their APIs to automate kit dispatch,
+      return and assay, turning manual operations into a documented system.
     impact: high
     include_pdf: true
     tags:
