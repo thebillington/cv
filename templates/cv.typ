@@ -17,7 +17,7 @@
   let rule = rgb("#C9D2DA")
 
   let base = 16pt
-  let gap-par = 7pt
+  let gap-par = 6pt
   let gap-role = 16pt
   let gap-section = 26pt
 
@@ -128,7 +128,7 @@
         #linebreak()
         #text(font: mono, size: 7.9pt, fill: muted)[#role.stack.join("\u{00A0}· ")]
       ]
-      #v(6pt)
+      #v(5pt)
       #text(size: 9.6pt)[#role.summary]
     ]
 

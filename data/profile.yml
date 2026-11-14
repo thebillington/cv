@@ -17,11 +17,9 @@ additional:
   text: Moderated the H446/03 and H446/04 coursework components.
 outside:
 - label: Homelab
-  text: 'I run my own infrastructure so my data stays mine: Terraform and Ansible, self hosted services, DNS, backups and hardening, and local models rather than hosted APIs.'
+  text: 'I run my own infrastructure so my data stays mine: Terraform and Ansible, self hosted services, DNS, backups and local models.'
 - label: Game Boy
-  text: I write games in gbZ80 assembly for original hardware.
-- label: tphysics
-  text: I maintain tphysics.uk, a dependency free Python game engine used in classrooms, and pydle.uk, a browser Python REPL.
+  text: I write gbZ80 assembly games for original hardware and maintain tphysics.uk and pydle.uk.
 links:
   github: https://github.com/thebillington
   linkedin: https://linkedin.com/in/thebillington

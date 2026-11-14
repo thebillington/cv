@@ -34,12 +34,10 @@ achievements:
       - leadership
       - dora
 
-  - title: Managed 20+ engineers across three squads
+  - title: Built the progression framework and performance playbook
     description: >-
-      Line management and coaching for leads and engineers, a progression
-      framework and performance playbook, hiring and level calibration, and the
-      delivery of the Level 4 and Level 6 software engineering apprenticeships
-      (76% eNPS).
+      Ran hiring and level calibration, and delivered the Level 4 and Level 6
+      software engineering apprenticeships (76% eNPS).
     impact: high
     include_pdf: true
     tags:

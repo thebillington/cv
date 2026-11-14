@@ -10,8 +10,7 @@ summary: >-
   million requests per day through API Gateway and serverless Lambdas. I keep the
   members service and Auth0 compliant with our retention, right to erasure and
   subject access requirements, including S3 retention for member document uploads.
-  I lead the Engagement Pod (two full stack and four mobile engineers)
-  within a squad of 10 engineers and 2 QE.
+  I lead the Engagement Pod within a squad of 10 engineers and 2 QE.
 
 stack:
   - TypeScript
@@ -63,9 +62,12 @@ achievements:
 
   - title: Managed the switch off of the legacy apps
     description: >-
-      Identified members still signing in through Cognito and the PHP routes and
-      migrated them to Auth0, worked with CRM on the comms and triggered
-      automated password resets. It was the direct enabler of the PHP cutover.
+      Leadership buy in was difficult, so I built pipelines that ran scripts
+      against the database and Auth0 from templates on ephemeral EC2, so every
+      change was auditable and within rate limits. Identified members still
+      signing in through Cognito and the PHP routes and moved them to Auth0, with
+      CRM comms and automated password resets. It was the direct enabler of the
+      PHP cutover.
     impact: high
     include_pdf: true
     tags:
@@ -77,8 +79,9 @@ achievements:
 
   - title: Set the team's standard for AI assisted work
     description: >-
-      Built the MCP servers, a shared document store and the context window
-      training, and advised leadership on model usage and tooling.
+      Built the MCP servers, one for CloudWatch investigations into Grafana
+      dashboards and one for delegating work to local models, plus a shared
+      document store and context window training. Advised leadership on tooling.
     impact: high
     include_pdf: true
     tags:
