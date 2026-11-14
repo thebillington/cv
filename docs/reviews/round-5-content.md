@@ -38,6 +38,19 @@ judging the writing rather than re-litigating facts.
   actually point at).
 - "right-to-be-forgotten" → "GDPR right to erasure" (the statutory term).
 
+## Answers received (14 Nov)
+
+- **Stores**: declined the "which store holds what" clause. The stack line stands.
+- **16M**: daily request rate; no peak or path figure to add.
+- **Cutover staging**: declined. The "no rollback" clause stays as a fact.
+- **Squad**: 10 engineers + 2 QE; he now leads a pod of two full-stack and four
+  mobile engineers, no title change. Added to the role summary.
+- **Docker**: partial. Added to PLATFORM.
+- **Person**: first person, matching his older CVs. Summary and role summaries
+  now first person; bullets keep the implied past tense his CVs use.
+- **PHP CVE**: he led it, moving member services off PHP entirely within 24
+  hours. Replaces the vaguer proxy-removal bullet.
+
 ## Open, needs his answer
 
 | Question | Why it matters |

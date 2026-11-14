@@ -9,7 +9,7 @@ core:
   - "Frontend: Next.js, React, Tailwind, HTML/CSS"
   - "Backend: Node.js, REST, API Gateway, Lambda, Auth0"
   - "Data: PostgreSQL, DynamoDB, Valkey (Redis)"
-  - "Platform: AWS, Terraform (HCL), Terraform Cloud, GitHub Actions, Cloudflare"
+  - "Platform: AWS, Terraform (HCL), Terraform Cloud, GitHub Actions, Cloudflare, Docker"
   - "Mobile: native Android (Kotlin), native iOS (Swift)"
   - "Practice: migrations, contract and parity testing, incident response, mentoring"
 
@@ -55,6 +55,7 @@ categories:
       - Terraform Cloud
       - GitHub Actions
       - Cloudflare
+      - Docker
       - CI/CD
       - CloudWatch
       - Grafana

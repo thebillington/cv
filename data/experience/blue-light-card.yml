@@ -5,11 +5,12 @@ end: present
 team: Growth and Engagement
 
 summary: >-
-  Owns the member data platform: signup, eligibility, login and renewals, across
+  I own the member data platform: signup, eligibility, login and renewals, across
   the private member data store, the member service and Auth0. It serves 16
-  million requests per day through API Gateway and serverless Lambdas. Manages
-  retention policies for member data, GDPR right to erasure and subject access
-  requests, and S3 retention for member document uploads.
+  million requests per day through API Gateway and serverless Lambdas. I also own
+  retention, GDPR erasure and subject access requests, and S3 retention for
+  member document uploads. The squad is 10 engineers and 2 QE; I now lead a pod
+  of two full-stack and four mobile engineers.
 
 stack:
   - TypeScript
@@ -26,14 +27,13 @@ stack:
   - Cloudflare
 
 achievements:
-  - title: Proposed and delivered the Members service extraction
+  - title: Extracted the members service from the monorepo
     description: >-
-      Authored the RFC, then built the standalone repository, the Terraform and
-      HCL stack on Terraform Cloud, and GitHub Actions pipelines deploying to
-      AWS and Cloudflare. Added an endpoint parity suite covering all API
-      endpoints and wrote a runbook so other developers could run similar
-      migrations. The service reached 100% of production traffic without a
-      rollback.
+      Wrote the RFC, then built the standalone repository, the Terraform stack on
+      Terraform Cloud, and GitHub Actions pipelines deploying to AWS and
+      Cloudflare. Added an endpoint parity suite covering all API endpoints and
+      wrote a runbook so other developers could run similar migrations. It reached
+      100% of production traffic without a rollback.
     impact: high
     include_pdf: true
     tags:
@@ -46,9 +46,9 @@ achievements:
 
   - title: Built the retention and deletion controls for member data
     description: >-
-      Implemented right-to-be-forgotten and subject access request handling,
-      retention policies for the member data store, and S3 lifecycle and
-      deletion rules for member document uploads.
+      Implemented right to erasure and subject access request handling, retention
+      policies for the member data store, and S3 lifecycle and deletion rules for
+      member document uploads.
     impact: high
     include_pdf: true
     tags:
@@ -57,11 +57,11 @@ achievements:
       - security
       - compliance
 
-  - title: Removed the legacy PHP proxy dependency
+  - title: Led the PHP CVE response
     description: >-
-      Aligned the approach with engineering leadership, built the pipelines that
-      let the admin panel run auditable database queries, and supported the web
-      and forced update rollouts with the wider business.
+      Moved member services off PHP entirely within 24 hours, including the
+      pipelines that let the admin panel run auditable database queries, and
+      supported the web and forced update rollouts with the wider business.
     impact: high
     include_pdf: true
     tags:

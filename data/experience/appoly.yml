@@ -4,9 +4,9 @@ start: 2019-06
 end: 2020-08
 
 summary: >-
-  Software engineer on client applications in Android, iOS and backend
-  services, integrating hardware over Bluetooth Low Energy, TCP sockets and FTP
-  where no maintained library existed.
+  I worked on client applications in Android, iOS and backend services,
+  integrating hardware over Bluetooth Low Energy, TCP sockets and FTP where no
+  maintained library existed.
 
 stack:
   - Java
