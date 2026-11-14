@@ -161,7 +161,7 @@
   // ------------------------------------------------------------ outside work
   if data.profile.at("outside", default: ()).len() > 0 {
     heading(level: 2)[Projects]
-    for item in data.profile.outside.filter(i => i.label != "Apps") {
+    for item in data.profile.outside {
       text(size: 9.7pt, weight: 600)[#item.label.]
       h(0.3em)
       text(size: 9.4pt)[#item.text]

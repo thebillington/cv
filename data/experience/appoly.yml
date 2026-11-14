@@ -33,7 +33,6 @@ achievements:
       - architecture
 
   - title: Led the AutoRing client and its hardware integration
-    include_pdf: false
     description: >-
       Built most of the Android application infrastructure and UI, acted as the
       main contact for the client and hardware team, and wrote the accepted V2
