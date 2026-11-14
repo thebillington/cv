@@ -5,18 +5,26 @@ phone: "+44 7736 381977"
 location: United Kingdom
 
 summary: >-
-  I am a software engineer with seven years in software and four years managing
-  engineering teams. Since 2026 I have owned the member data platform at Blue
-  Light Card: signup, eligibility, login and renewals. I work in TypeScript and
-  Python with Next.js, Terraform and AWS, and I have native Android and iOS
-  experience from earlier roles.
+  I am an AI-enabled Full Stack Engineer with a background in Management and
+  Education. I am proficient with modern stacks across the spectrum; Node and
+  Python backends talking to Postgres and DynamoDB data stores, Next/React web
+  frontend, native iOS and Android; Flutter; IaC with Terraform and HCL; and
+  CI/CD with Wrangler and Fastlane for builds, deployment and networking
+  configurations, including Lambda, API Gateway and VPC configurations as well
+  as DNS and Load Balancer configurations via Cloudflare. In my current role at
+  Blue Light Card I lead the Growth and Engagement squad and own our Auth0 and
+  members service, serving 16 million requests per day.
 
 intro: >-
-  I am a software engineer with seven years in software and four years managing
-  engineering teams. I own the member data platform at Blue Light Card, from
-  signup and eligibility through login and renewals, and it serves 16 million
-  requests a day. I work in TypeScript and Python with Next.js, Terraform and
-  AWS, and I have native Android and iOS experience from earlier roles.
+  I am an AI-enabled Full Stack Engineer with a background in Management and
+  Education. I am proficient with modern stacks across the spectrum; Node and
+  Python backends talking to Postgres and DynamoDB data stores, Next/React web
+  frontend, native iOS and Android; Flutter; IaC with Terraform and HCL; and
+  CI/CD with Wrangler and Fastlane for builds, deployment and networking
+  configurations, including Lambda, API Gateway and VPC configurations as well
+  as DNS and Load Balancer configurations via Cloudflare. In my current role at
+  Blue Light Card I lead the Growth and Engagement squad and own our Auth0 and
+  members service, serving 16 million requests per day.
 
 highlights:
   - Own the member data platform (signup, eligibility, login and renewals)

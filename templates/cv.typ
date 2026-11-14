@@ -154,15 +154,4 @@
     #v(3pt)
   ]
 
-  // ------------------------------------------------------------ open source
-  heading(level: 2)[Open source]
-  for name in ("tphysics",) {
-    for proj in data.projects {
-      if proj.name == name {
-        text(size: 9.4pt)[*#link(proj.url)[#proj.name].* #proj.summary]
-        parbreak()
-        v(2.5pt)
-      }
-    }
-  }
 }

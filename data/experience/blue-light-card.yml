@@ -88,13 +88,13 @@ achievements:
       - compliance
 
   - title: Set the squad's standard for AI-assisted work
+    include_pdf: false
     description: >-
       Defined the documentation process, shared configs with the wider team and
       set the rules for handling proprietary code. Built two MCP servers: one for
       CloudWatch investigations into Grafana dashboards, one that sends small
       implementation tasks to a local Qwen3 30B model to cut token spend.
     impact: high
-    include_pdf: true
     tags:
       - ai
       - leadership
