@@ -39,7 +39,6 @@ achievements:
       main contact for the client and hardware team, and wrote the accepted V2
       proposal and the iOS specification.
     impact: high
-    include_pdf: true
     tags:
       - android
       - kotlin

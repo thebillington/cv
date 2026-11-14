@@ -34,7 +34,7 @@ achievements:
       Worked with logistics providers on their APIs to automate kit dispatch,
       return and assay, turning manual operations into a documented system.
     impact: high
-    include_pdf: false
+    include_pdf: true
     tags:
       - delivery
       - management

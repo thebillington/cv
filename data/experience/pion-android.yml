@@ -53,7 +53,7 @@ achievements:
       used for high-street partner offers, working with design and product as a
       product engineer.
     impact: medium
-    include_pdf: true
+    include_pdf: false
     tags:
       - android
       - delivery
