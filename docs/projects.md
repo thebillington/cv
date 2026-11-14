@@ -1,25 +1,17 @@
 # Projects
 
-Things I build when nobody is paying me. The homelab is the big one, because it
-is where I keep my own data and run models locally.
+Things I build when nobody is paying me.
 
-## Homelab
+{% for item in data.profile.outside %}
+<h2>{{ item.label }}</h2>
 
-I run my own infrastructure so my data stays mine. Terraform and Ansible manage
-the hosts and services, with my own DNS, backups and hardening, and local models
-rather than hosted APIs. It is also where I test automation before it reaches
-work.
+<p>{{ item.text }}</p>
 
-## Game Boy
-
-Games written in gbZ80 assembly for original hardware. I also maintain
-[tphysics.uk](https://tphysics.uk), a dependency free Python engine built for
-classrooms, and [pydle.uk](https://pydle.uk), a browser Python REPL.
-
-## Apps
-
-I build apps from a custom Flutter template that handles the store builds and
-deployment. That covers [Steno Start](https://stenostart.uk) and the
-[No Nonsense revision series](https://nononsenserevision.uk).
+{% if item.links %}
+<p class="project-links">
+  {% for l in item.links %}<a href="{{ l.url }}">{{ l.name }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+</p>
+{% endif %}
+{% endfor %}
 
 More repositories on [GitHub]({{ data.profile.links.github }}).

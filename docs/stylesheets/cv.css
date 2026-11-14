@@ -340,6 +340,17 @@ body,
   margin: 0.15rem 0 0.5rem;
 }
 
+.md-typeset .project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--cv-meta);
+  margin: 0.3rem 0 0.6rem;
+}
+
 .md-typeset .role-summary {
   margin: 0.4rem 0 0.3rem;
 }
