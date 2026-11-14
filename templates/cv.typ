@@ -80,9 +80,9 @@
       stroke: (bottom: 0.6pt + rule),
       inset: (bottom: 3pt),
     )[
-      #text(font: mono, size: 8pt, weight: 600, fill: accent)[#context counter("section").display("01")]
-      #h(0.9em)
       #text(font: mono, size: 8.6pt, weight: 600, fill: name-col, tracking: 0.14em)[#upper(it.body)]
+      #h(1fr)
+      #text(font: mono, size: 8pt, weight: 600, fill: accent)[#context counter("section").display("01")]
     ]
   }
 
