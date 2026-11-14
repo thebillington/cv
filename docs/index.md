@@ -21,11 +21,6 @@
 
 {{ data.profile.intro }}
 
-## Currently
-
-I lead the Engagement Pod at Blue Light Card and own the Auth0 and members
-service handling 16 million requests per day.
-
 ## Core skills
 
 <div class="expertise">
@@ -34,7 +29,3 @@ service handling 16 million requests per day.
 <p><strong>{{ parts[0] }}</strong> {{ parts[1:] | join(':') | trim }}</p>
 {% endfor %}
 </div>
-
-The [experience](experience.md) page carries the full history, including
-[additional work](experience.md#additional-experience). The [projects](projects.md)
-page has the homelab, the Game Boy work and the apps.

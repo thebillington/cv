@@ -21,13 +21,4 @@ classrooms, and [pydle.uk](https://pydle.uk), a browser Python REPL.
 Flutter apps on the App Store and Play Store, including
 [Steno Start](https://stenostart.uk).
 
-## Repositories
-
-{% for p in data.projects %}
-<h3><a href="{{ p.url }}">{{ p.name }}</a></h3>
-
-<p class="role-meta">{{ p.status }}</p>
-
-{{ p.summary }}
-
-{% endfor %}
+More repositories on [GitHub]({{ data.profile.links.github }}).

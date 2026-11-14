@@ -49,6 +49,7 @@
 }
 
 :root {
+  --measure: 68ch;
   /* The same palette as the PDF. Light is the printed document; dark is the
      screen version, kept deliberately close to an editor theme. */
   --cv-navy: #14314e;
@@ -111,9 +112,13 @@ body,
 
 .md-typeset p,
 .md-typeset li,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
 .md-typeset .expertise,
-.md-typeset .outcomes {
-  max-width: 68ch;
+.md-typeset .outcomes,
+.md-typeset .button-row {
+  max-width: var(--measure);
 }
 
 .md-sidebar--secondary {
@@ -312,9 +317,20 @@ body,
 
 /* Roles */
 .md-typeset .role-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
   color: var(--cv-slate);
   font-size: 0.95rem;
   margin: 0.15rem 0 0;
+}
+
+.md-typeset .role-meta .dates {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--cv-meta);
+  white-space: nowrap;
 }
 
 .md-typeset .role-stack {
@@ -349,7 +365,32 @@ body,
   outline-offset: 2px;
 }
 
+@media screen and (max-width: 35em) {
+  .md-typeset .expertise p {
+    padding-left: 0;
+    text-indent: 0;
+  }
+
+  .md-typeset .expertise strong {
+    display: block;
+    margin: 0 0 2px;
+  }
+}
+
 @media screen and (max-width: 44.984375em) {
+  .md-typeset {
+    font-size: 0.9rem;
+  }
+
+  .md-typeset .role-meta {
+    display: block;
+  }
+
+  .md-typeset .role-meta .dates {
+    display: block;
+    margin-top: 2px;
+  }
+
   .md-typeset h1 {
     font-size: 1.55rem;
   }
