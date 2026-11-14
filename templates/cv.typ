@@ -17,7 +17,7 @@
   let rule = rgb("#C9D2DA")
 
   let base = 16pt
-  let gap-par = 6pt
+  let gap-par = 7pt
   let gap-role = 16pt
   let gap-section = 26pt
 
@@ -42,7 +42,7 @@
 
   set page(
     paper: "a4",
-    margin: (x: 21mm, top: 15mm, bottom: 15mm),
+    margin: (x: 21mm, top: 13mm, bottom: 12mm),
     fill: white,
   )
 
@@ -52,7 +52,7 @@
     marker: text(fill: accent)[•],
     indent: 0.55em,
     body-indent: 0.5em,
-    spacing: 5pt,
+    spacing: 5.5pt,
   )
 
   // Name: the only serif on the page.
@@ -128,14 +128,14 @@
         #linebreak()
         #text(font: mono, size: 7.9pt, fill: muted)[#role.stack.join("\u{00A0}· ")]
       ]
-      #v(5pt)
+      #v(6pt)
       #text(size: 9.6pt)[#role.summary]
     ]
 
     if achievements.len() > 0 [
-      #block(inset: (top: gap-par))[
+      #block(inset: (top: 7pt))[
         #list(
-          spacing: 5pt,
+          spacing: 5.5pt,
           ..achievements.map(a => text(size: 9.4pt)[*#a.title.* #a.description]),
         )
       ]
@@ -161,7 +161,7 @@
   // ------------------------------------------------------------ outside work
   if data.profile.at("outside", default: ()).len() > 0 {
     heading(level: 2)[Projects]
-    for item in data.profile.outside {
+    for item in data.profile.outside.filter(i => i.label != "Apps") {
       text(size: 9.7pt, weight: 600)[#item.label.]
       h(0.3em)
       text(size: 9.4pt)[#item.text]
