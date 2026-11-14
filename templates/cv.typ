@@ -17,9 +17,9 @@
   let rule = rgb("#C9D2DA")
 
   let base = 16pt
-  let gap-par = 6pt
-  let gap-role = 16pt
-  let gap-section = 26pt
+  let gap-par = 5.5pt
+  let gap-role = 15pt
+  let gap-section = 25pt
 
   let sans = "Source Sans 3"
   let serif = "Source Serif 4"
@@ -52,7 +52,7 @@
     marker: text(fill: accent)[•],
     indent: 0.55em,
     body-indent: 0.5em,
-    spacing: 5.5pt,
+    spacing: 5pt,
   )
 
   // Name: the only serif on the page.
@@ -135,7 +135,7 @@
     if achievements.len() > 0 [
       #block(inset: (top: 7pt))[
         #list(
-          spacing: 5.5pt,
+          spacing: 5pt,
           ..achievements.map(a => text(size: 9.4pt)[*#a.title.* #a.description]),
         )
       ]

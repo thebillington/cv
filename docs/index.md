@@ -21,9 +21,9 @@
 
 ## Current position
 
-**{{ here.title }} at {{ here.company }}**, {{ here.start }} to now. I lead the
-Engagement Pod and own the Auth0 and members service, which handles 16 million
-requests per day.
+**{{ here.title }} at {{ here.company }}**, {{ here.start }} to now. I have
+stepped back into a hands on IC role leading the Engagement Pod and own the Auth0
+and members service, which handles 16 million requests per day.
 
 ## Core skills
 

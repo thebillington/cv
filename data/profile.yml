@@ -3,8 +3,8 @@ title: Senior Full Stack Engineer
 email: billy.rebecchi@googlemail.com
 phone: +44 7736 381977
 location: United Kingdom
-summary: I am a Full Stack Engineer with a background in Management and Education. I am proficient with modern stacks and am comfortable working in Backend and Frontend codebases across mobile and web as well as building and maintaining IaC and CI/CD pipelines. I work with AI day to day and build the tooling the team uses; MCP servers, shared memory and custom harnesses. In my current role at Blue Light Card I lead the Engagement Pod and own the Auth0 and members service, handling 16 million requests per day.
-intro: I am a Full Stack Engineer with a background in Management and Education. I am proficient with modern stacks and am comfortable working in Backend and Frontend codebases across mobile and web as well as building and maintaining IaC and CI/CD pipelines. I work with AI day to day and build the tooling the team uses; MCP servers, shared memory and custom harnesses.
+summary: I am a Full Stack Engineer with a background in Engineering Management and Education. I am proficient with modern stacks and am comfortable working in Backend and Frontend codebases across mobile and web as well as building and maintaining IaC and CI/CD pipelines. I work with AI day to day and build the tooling the team uses; MCP servers, shared memory and custom harnesses. In my current role at Blue Light Card I have stepped back into a hands on IC role leading the Engagement Pod and own the Auth0 and members service, handling 16 million requests per day.
+intro: I am a Full Stack Engineer with a background in Engineering Management and Education. I am proficient with modern stacks and am comfortable working in Backend and Frontend codebases across mobile and web as well as building and maintaining IaC and CI/CD pipelines. I work with AI day to day and build the tooling the team uses; MCP servers, shared memory and custom harnesses.
 additional:
 - company: Paperound
   title: Co founder and CTO
@@ -17,13 +17,13 @@ additional:
   text: Moderated the H446/03 and H446/04 coursework components.
 outside:
 - label: Homelab
-  text: 'I run my own infrastructure so my data stays mine: Terraform and Ansible, DNS, backups and local models rather than hosted APIs.'
+  text: 'I run my own infrastructure so my data stays mine: Terraform and Ansible, DNS, backups and local models.'
 - label: Game Boy
   text: I write games in gbZ80 assembly for original hardware.
 - label: tphysics
   text: I maintain tphysics.uk, a dependency free Python game engine built for classrooms, and pydle.uk, a browser Python REPL.
 - label: Apps
-  text: I build apps from a custom Flutter template that handles the store builds and deployment, including Steno Start and the No Nonsense revision series.
+  text: I build apps from a custom Flutter template for store builds and deployment, including Steno Start and No Nonsense.
   links:
   - name: stenostart.uk
     url: https://stenostart.uk
