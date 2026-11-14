@@ -4,6 +4,7 @@ core:
   - "Data: PostgreSQL, DynamoDB, Valkey (Redis)"
   - "Platform: AWS, Terraform (HCL), Terraform Cloud, GitHub Actions, Cloudflare, Docker"
   - "Mobile: Swift, Kotlin, native Android, native iOS"
+  - "AI: LLM integration, MCP servers, context engineering, local models"
   - "Practice: migrations, contract and parity testing, incident response, mentoring"
 
 categories:

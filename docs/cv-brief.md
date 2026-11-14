@@ -69,7 +69,7 @@ least-recent role bullet. Do not cut a Blue Light Card bullet or shrink the type
 | 14 Nov | First person in summaries, implied subject in bullets |
 | 14 Nov | Skills block stays as the keyword surface; the summary names only the spine |
 | 14 Nov | "Selected work" is removed from the website: it duplicates the headline and uses the best space on the page for it |
-| 14 Nov | AI stays at the top. If it filters a company out, that is the filter working |
+| 14 Nov | AI stays visible, but as evidence rather than a label: "Full Stack Engineer" in the summary, plus a line on AI tooling and an AI row in skills |
 
 ## Decisions on the outside work and additional experience
 
