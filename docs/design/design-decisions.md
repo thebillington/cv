@@ -13,11 +13,15 @@ be parsed or ignored. Every choice below follows from that.
 
 - **Source Serif 4** (SIL OFL) for the name only. One serif accent gives the
   document a masthead without turning the body into a magazine.
-- **Source Sans 3** (SIL OFL) for everything else: narrow enough to fit a lot of
-  evidence at 9.5pt, and unambiguous for `l`, `I` and `1`, which matters in a
-  document full of `l`/`1` noise like `LLM`, `ISO 27001`, `GitLab`.
-- Both statically instanced at 400/600/700 and embedded, so the PDF renders
-  identically on every machine and in every viewer.
+- **Source Sans 3** (SIL OFL) for prose: narrow enough to fit a lot of evidence
+  at 9.4pt, and unambiguous for `l`, `I` and `1`, which matters in a document
+  full of `LLM`, `ISO 27001` and `GitLab`.
+- **IBM Plex Mono** (SIL OFL) for anything structural: section labels, dates,
+  stack lines, contact details and the page folio. This is the change that makes
+  the document read as a spec rather than a brochure, and it is the one
+  typographic signal engineers actually recognise.
+- All three statically instanced and embedded, so the PDF renders identically
+  everywhere.
 - No italics. No hyphenation, so `Terraform` and `TypeScript` never split.
 
 ## Colour
@@ -35,7 +39,9 @@ a CV in an employer's colours reads as over-eager.
 
 ## Layout
 
-- A4, 18mm sides, 13mm top, 12mm bottom.
+- Sections are numbered (`01 PROFILE`, `02 CORE SKILLS`, ...) in mono, so the
+  page has an outline rather than a series of bold lines. It costs no space.
+- A4, 17mm sides, 12mm top, 11mm bottom.
 - Employer first, then title, then the stack, then the evidence. Recruiters scan
   for the company; engineers scan for the stack; the bullet is where the work is.
 - Dates right-aligned on the employer line, so chronology can be scanned down
@@ -54,6 +60,14 @@ a CV in an employer's colours reads as over-eager.
 - A separate tools list: the tools that matter appear inside the work that used
   them, and in the stack line.
 - Any claim not already in `data/`.
+
+## Dark mode
+
+Two PDFs from one source: the light one is what gets sent, because a dark
+document is worse for printing and for accessibility, and recruiters say so.
+The dark variant exists for a different reader, the engineer who opens the site
+or the file on a screen. The website follows the system colour scheme and has a
+toggle, using the same palette as the dark PDF.
 
 ## Website
 
