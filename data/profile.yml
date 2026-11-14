@@ -19,9 +19,9 @@ outside:
 - label: Homelab
   text: 'I run my own infrastructure so my data stays mine: Terraform and Ansible, self hosted services, DNS, backups and hardening, and local models rather than hosted APIs.'
 - label: Game Boy
-  text: I write games in gbZ80 assembly for original hardware. I also maintain tphysics.uk (a dependency free Python engine for classrooms) and pydle.uk (a browser Python REPL).
-- label: Apps
-  text: I ship Flutter apps to the App Store and Play Store, including Steno Start (stenostart.uk).
+  text: I write games in gbZ80 assembly for original hardware.
+- label: tphysics
+  text: I maintain tphysics.uk, a dependency free Python game engine used in classrooms, and pydle.uk, a browser Python REPL.
 links:
   github: https://github.com/thebillington
   linkedin: https://linkedin.com/in/thebillington

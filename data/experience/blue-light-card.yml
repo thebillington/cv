@@ -77,9 +77,8 @@ achievements:
 
   - title: Set the team's standard for AI assisted work
     description: >-
-      Built the MCP servers, a shared document store and the training on using
-      context windows, and fed back to leadership on model usage and which
-      tooling to fund.
+      Built the MCP servers, a shared document store and the context window
+      training, and advised leadership on model usage and tooling.
     impact: high
     include_pdf: true
     tags:

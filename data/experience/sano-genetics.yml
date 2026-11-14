@@ -5,10 +5,9 @@ end: 2026-02
 team: Logistics
 
 summary: >-
-  I managed the Logistics squad, leading delivery and keeping feature work
-  aligned with long term business goals. I led the migration of kits and orders
-  from legacy studies into a single V2 workflow, and designed the integrations
-  with logistics providers.
+  I managed the Logistics squad, keeping feature work aligned with long term
+  business goals and leading the migration of kits and orders into a V2
+  workflow.
 
 stack:
   - Python
@@ -19,8 +18,7 @@ stack:
 achievements:
   - title: Migrated kits and orders to a single V2 workflow
     description: >-
-      Moved data out of legacy studies, created parity across databases and
-      removed the deprecated nullable fields the old paths depended on.
+      Moved data out of legacy studies and removed the deprecated fields.
     impact: high
     include_pdf: true
     tags:
@@ -31,8 +29,8 @@ achievements:
 
   - title: Designed and delivered PRDs for logistics integrations
     description: >-
-      Worked with logistics providers on their APIs to automate kit dispatch,
-      return and assay, turning manual operations into a documented system.
+      Worked with providers on their APIs to automate kit dispatch, return and
+      assay.
     impact: high
     include_pdf: true
     tags:
