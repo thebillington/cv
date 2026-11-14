@@ -10,7 +10,7 @@ summary: >-
   million requests per day through API Gateway and serverless Lambdas. I keep the
   members service and Auth0 compliant with our retention, right to erasure and
   subject access requirements, including S3 retention for member document uploads.
-  I lead the Engagement Pod within a squad of 10 engineers and 2 QE.
+  I lead the Engagement Pod, in a squad of 10 engineers and 2 QE.
 
 stack:
   - TypeScript

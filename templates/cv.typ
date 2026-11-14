@@ -56,7 +56,7 @@
   )
 
   // Name: the only serif on the page.
-  show heading.where(level: 1): it => block(above: 0pt, below: 1pt)[
+  show heading.where(level: 1): it => block(above: 0pt, below: 4pt)[
     #text(font: serif, size: 26pt, weight: 600, fill: name-col, tracking: -0.01em)[#it.body]
   ]
 
@@ -74,18 +74,18 @@
   heading(level: 1)[#data.profile.name]
 
   stack(spacing: 0pt,
-    v(2pt),
+    v(4pt),
     text(font: mono, size: 9.4pt, weight: 600, fill: accent, tracking: 0.06em)[#upper(data.profile.title)],
-    v(8pt),
+    v(10pt),
     text(font: mono, size: 8.4pt, fill: body-2)[
       #data.profile.location
-      #h(1.4em) #link("mailto:" + data.profile.email)[#data.profile.email]
+      #h(1.2em) #link("mailto:" + data.profile.email)[#data.profile.email]
     ],
-    v(3.5pt),
+    v(4.5pt),
     text(font: mono, size: 8.4pt, fill: body-2)[
       #link(data.profile.links.website)[#data.profile.links.website.replace("https://", "")]
-      #h(1.4em) #link(data.profile.links.github)[#data.profile.links.github.replace("https://", "")]
-      #h(1.4em) #link(data.profile.links.linkedin)[#data.profile.links.linkedin.replace("https://", "")]
+      #h(1.2em) #link(data.profile.links.github)[#data.profile.links.github.replace("https://", "")]
+      #h(1.2em) #link(data.profile.links.linkedin)[#data.profile.links.linkedin.replace("https://", "")]
     ],
     v(10pt),
     block(width: 100%, height: 1.2pt, fill: accent),
