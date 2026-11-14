@@ -49,7 +49,7 @@
 }
 
 :root {
-  --measure: 68ch;
+  --measure: 650px;
   /* The same palette as the PDF. Light is the printed document; dark is the
      screen version, kept deliberately close to an editor theme. */
   --cv-navy: #14314e;
@@ -238,12 +238,12 @@ body,
 
 .md-typeset .button-row .md-button {
   margin: 0;
-  padding: 0.5rem 1.1rem;
+  padding: 0.45rem 0.8rem;
   border-radius: 2px;
   border: 1px solid var(--cv-steel);
   color: var(--cv-steel);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   line-height: 1.3;
