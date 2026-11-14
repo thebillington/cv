@@ -79,9 +79,10 @@ achievements:
 
   - title: Set the team's standard for AI assisted work
     description: >-
-      Built the MCP servers, one for CloudWatch investigations into Grafana
-      dashboards and one for delegating work to local models, plus a shared
-      document store and context window training. Advised leadership on tooling.
+      Built MCP servers for CloudWatch investigations into Grafana dashboards and
+      for delegating work to local models, plus a shared document store. Trained
+      the team on using AI effectively, including keeping a clean and intentional
+      context window, and advised leadership on tooling.
     impact: high
     include_pdf: true
     tags:
