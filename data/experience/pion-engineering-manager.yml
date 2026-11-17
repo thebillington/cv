@@ -23,8 +23,7 @@ achievements:
     description: >-
       Python pipelines ingested GitLab history into Redshift, with Looker
       dashboards built with the data team, giving 50+ engineers and the senior
-      management team a fortnightly view of delivery and team health that made
-      bottlenecks visible.
+      management team a fortnightly view of delivery and team health.
     impact: high
     include_pdf: true
     tags:

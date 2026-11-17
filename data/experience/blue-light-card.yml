@@ -149,8 +149,11 @@ achievements:
 
   - title: Ran mob sessions through the renewals rebuild
     description: >-
-      Organised collaborative sessions during the renewals decoupling and
-      rebuild.
+      Ran mob sessions during the rebuild of our renewal journey; I designed the
+      core router to centralise navigation logic within a complex flow, then
+      delegated within the team to work together to build and thoroughly test the
+      flow. We delivered well tested, high quality work ahead of schedule, leading
+      to improved trust between the engineering and product team.
     impact: medium
     include_pdf: false
     tags:
