@@ -33,7 +33,7 @@ achievements:
       Terraform Cloud and GitHub Actions pipelines deploying to AWS and
       Cloudflare. Added an endpoint parity suite covering all API endpoints,
       designed the monitoring and a rollback path shared with the on call team,
-      and it reached 100% of production traffic with no rollback needed.
+      and rolled the service out to 100% of production traffic without a rollback.
     impact: high
     include_pdf: true
     tags:
