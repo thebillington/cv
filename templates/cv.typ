@@ -148,10 +148,9 @@
   heading(level: 2)[Education]
   for edu in data.education.education [
     #let end = if edu.end == "present" { "Present" } else { edu.end }
-    #text(size: 9.8pt, weight: 600)[#edu.degree]#text(size: 9.6pt, fill: body-2)[, #edu.institution]
-    #if edu.at("grade", default: none) != none [
-      #text(size: 9.6pt, fill: body-2)[, #edu.grade]
-    ]
+    #let grade = edu.at("grade", default: none)
+    #let grade_text = if grade == none { "" } else { ", " + grade }
+    #text(size: 9.8pt, weight: 600)[#edu.degree]#text(size: 9.6pt, fill: body-2)[, #edu.institution#grade_text]
     #text(size: 9.6pt, fill: body-2)[ · #edu.start to #end]
     #parbreak()
     #v(3pt)

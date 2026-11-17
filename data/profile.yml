@@ -23,7 +23,7 @@ outside:
 - label: tphysics
   text: I maintain tphysics.uk, a dependency free Python game engine built for classrooms, and pydle.uk, a browser Python REPL.
 - label: Apps
-  text: I build apps from a custom Flutter template for store builds and deployment, including Steno Start and No Nonsense.
+  text: 'I build and ship apps from a custom Flutter template: Steno Start, which teaches the steno keyboard on a phone, and the No Nonsense series for GCSE Computer Science and WSET Level 2 revision.'
   links:
   - name: stenostart.uk
     url: https://stenostart.uk
