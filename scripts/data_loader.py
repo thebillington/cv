@@ -35,7 +35,12 @@ def load_yaml(path):
 
 
 def load_profile():
-    return load_yaml(os.path.join(DATA_DIR, "profile.yml"))
+    profile = load_yaml(os.path.join(DATA_DIR, "profile.yml"))
+    # The PDF summary is the site intro plus the current-role sentence, so the
+    # shared paragraph is written once (in `intro`) and never drifts.
+    parts = [profile.get("intro", "").strip(), profile.get("summary_role", "").strip()]
+    profile["summary"] = " ".join(p for p in parts if p)
+    return profile
 
 
 def load_skills():
