@@ -17,11 +17,13 @@
   <a class="md-button" href="{{ data.profile.links.portfolio }}">Portfolio</a>
 </div>
 
-{{ data.profile.summary }}
+{{ data.profile.intro }}
 
 ## Current position
 
-**{{ here.title }} at {{ here.company }}**, {{ here.start }} to now.
+**{{ here.title }} at {{ here.company }}**, {{ here.start }} to now. I returned
+to hands-on engineering as IC lead for the Engagement Pod, owning the Auth0 and
+members service, which serves 16 million requests per day.
 
 ## Core skills
 
