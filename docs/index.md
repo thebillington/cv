@@ -21,9 +21,8 @@
 
 ## Current position
 
-**{{ here.title }} at {{ here.company }}**, {{ here.start }} to now. I returned
-to hands-on engineering as IC lead for the Engagement Pod, owning the Auth0 and
-members service, which serves 16 million requests per day.
+**{{ here.title }} at {{ here.company }}**, {{ here.start }} to now.
+{{ data.profile.summary_role }}
 
 ## Core skills
 
