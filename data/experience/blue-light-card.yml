@@ -92,15 +92,13 @@ achievements:
 
   - title: Ran the forced update rollout
     description: >-
-      Users on five-year-old PHP login routes and two-year-old Cognito routes
-      were still transacting and driving revenue, and the original app code was
-      lost when we left GitLab, so nobody knew what they were running. I pushed
-      for a long time to get leadership buy in to switch them off, then led the
-      rollout independently with the Ops and CRM teams: moved every user to Auth0
-      with a password reset where needed, wrote the Ops documentation, prepared
-      for an influx of login problems and sent the CRM comms. We turned off the
-      old app versions, removed the remaining PHP, deleted the Cognito pools and
-      had minimal contact from users with complaints or queries.
+      Users on legacy app versions were still logging in via deprecated PHP and
+      Cognito routes and were still transacting; the app code was lost when we
+      left GitLab so nobody knew what the member experience was. I pushed for
+      leadership buy in, then led the rollout with Ops and CRM; I migrated users
+      without an Auth0 entry, sent comms and password resets and prepared member
+      ops for queries. After comms were sent, I disabled the old versions by
+      removing the deprecated PHP EC2 instances and deleting the Cognito pools.
     impact: high
     tags:
       - delivery
@@ -110,7 +108,7 @@ achievements:
   - title: Built the retention and deletion controls for member data
     description: >-
       Implemented right to erasure and subject access request handling, retention
-      policies for the member data store, and S3 lifecycle and deletion rules for
+      policies for the member data store and S3 lifecycle and deletion rules for
       member document uploads.
     impact: high
     include_pdf: false

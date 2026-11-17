@@ -21,8 +21,8 @@ achievements:
     description: >-
       Implemented a Bluetooth state machine for the TPI DC710 flue gas analyser
       and a socket-level FTP client for the Smartfill device, both against
-      undocumented or deprecated protocols, and a Python service that parsed
-      binary image streams out of an open TCP connection.
+      undocumented or deprecated protocols. Also built a Python service that
+      parsed binary image streams out of an open TCP connection.
     impact: high
     include_pdf: true
     tags:
