@@ -81,8 +81,7 @@ achievements:
     description: >-
       Built MCP servers for CloudWatch investigations into Grafana dashboards and
       for delegating work to local models, plus a shared document store. Trained
-      the team on using AI effectively, including keeping a clean and intentional
-      context window, and advised leadership on tooling.
+      the team on using them.
     impact: high
     include_pdf: true
     tags:
