@@ -8,6 +8,7 @@ theme:
   custom_dir: overrides
   language: en
   font: false
+  favicon: assets/favicon.svg
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
